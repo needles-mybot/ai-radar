@@ -114,24 +114,100 @@ let ALL = [], activeCat = "All";
 function render() {
   const grid = document.getElementById("grid");
   const items = activeCat === "All" ? ALL : ALL.filter(i => (i.category || "News") === activeCat);
-  if (!items.length) { grid.innerHTML = '<div class="empty">Nothing here yet.</div>'; return; }
-  grid.innerHTML = items.map((it, idx) => `
-    <article class="card" data-i="${idx}">
-      <div class="meta">
-        <span class="chip">${it.source || ""}</span>
-        ${it.category ? `<span class="chip cat">${it.category}</span>` : ""}
-        <span class="when">${fmtWhen(it.published)}</span>
-      </div>
-      <h2>${it.title}</h2>
-      <div class="summary">${it.summary || ""}</div>
-      ${it.money_angle ? `<div class="money"><span class="ico">💰</span><span>${it.money_angle}</span></div>` : ""}
-      <div class="detail">
-        ${it.details ? `<p>${it.details}</p>` : ""}
-        ${(it.money_ideas && it.money_ideas.length) ? `<h3>Ways to make money with this</h3><ul>${it.money_ideas.map(m => `<li>${m}</li>`).join("")}</ul>` : ""}
-        <a class="src" href="${it.url}" target="_blank" rel="noopener">Read the source →</a>
-        ${it.hn_comments ? ` &nbsp; <a class="src" href="${it.hn_comments}" target="_blank" rel="noopener">HN discussion →</a>` : ""}
-      </div>
-    </article>`).join("");
+  if (!items.length) {
+    const empty = document.createElement('div');
+    empty.className = 'empty';
+    empty.textContent = 'Nothing here yet.';
+    grid.innerHTML = '';
+    grid.appendChild(empty);
+    return;
+  }
+  const fragment = document.createDocumentFragment();
+  items.forEach((it, idx) => {
+    const article = document.createElement('article');
+    article.className = 'card';
+    article.dataset.i = idx;
+    
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    const sourceChip = document.createElement('span');
+    sourceChip.className = 'chip';
+    sourceChip.textContent = it.source || '';
+    meta.appendChild(sourceChip);
+    if (it.category) {
+      const catChip = document.createElement('span');
+      catChip.className = 'chip cat';
+      catChip.textContent = it.category;
+      meta.appendChild(catChip);
+    }
+    const whenSpan = document.createElement('span');
+    whenSpan.className = 'when';
+    whenSpan.textContent = fmtWhen(it.published);
+    meta.appendChild(whenSpan);
+    article.appendChild(meta);
+    
+    const h2 = document.createElement('h2');
+    h2.textContent = it.title;
+    article.appendChild(h2);
+    
+    const summary = document.createElement('div');
+    summary.className = 'summary';
+    summary.textContent = it.summary || '';
+    article.appendChild(summary);
+    
+    if (it.money_angle) {
+      const money = document.createElement('div');
+      money.className = 'money';
+      const ico = document.createElement('span');
+      ico.className = 'ico';
+      ico.textContent = '💰';
+      const moneyText = document.createElement('span');
+      moneyText.textContent = it.money_angle;
+      money.appendChild(ico);
+      money.appendChild(moneyText);
+      article.appendChild(money);
+    }
+    
+    const detail = document.createElement('div');
+    detail.className = 'detail';
+    if (it.details) {
+      const p = document.createElement('p');
+      p.textContent = it.details;
+      detail.appendChild(p);
+    }
+    if (it.money_ideas && it.money_ideas.length) {
+      const h3 = document.createElement('h3');
+      h3.textContent = 'Ways to make money with this';
+      detail.appendChild(h3);
+      const ul = document.createElement('ul');
+      it.money_ideas.forEach(m => {
+        const li = document.createElement('li');
+        li.textContent = m;
+        ul.appendChild(li);
+      });
+      detail.appendChild(ul);
+    }
+    const srcLink = document.createElement('a');
+    srcLink.className = 'src';
+    srcLink.href = it.url;
+    srcLink.target = '_blank';
+    srcLink.rel = 'noopener';
+    srcLink.textContent = 'Read the source →';
+    detail.appendChild(srcLink);
+    if (it.hn_comments) {
+      const hnLink = document.createElement('a');
+      hnLink.className = 'src';
+      hnLink.href = it.hn_comments;
+      hnLink.target = '_blank';
+      hnLink.rel = 'noopener';
+      hnLink.textContent = 'HN discussion →';
+      detail.appendChild(hnLink);
+    }
+    article.appendChild(detail);
+    fragment.appendChild(article);
+  });
+  grid.innerHTML = '';
+  grid.appendChild(fragment);
   grid.querySelectorAll(".card").forEach(c => c.addEventListener("click", e => {
     if (e.target.closest("a")) return;
     c.classList.toggle("open");
@@ -140,7 +216,14 @@ function render() {
 function renderFilters() {
   const cats = ["All", ...new Set(ALL.map(i => i.category || "News"))];
   const el = document.getElementById("filters");
-  el.innerHTML = cats.map(c => `<button class="${c === activeCat ? "active" : ""}" data-c="${c}">${c}</button>`).join("");
+  el.innerHTML = ''; // Clear safely
+  cats.forEach(c => {
+    const button = document.createElement('button');
+    button.className = c === activeCat ? "active" : "";
+    button.dataset.c = c;
+    button.textContent = c;
+    el.appendChild(button);
+  });
   el.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
     activeCat = b.dataset.c; renderFilters(); render();
   }));
