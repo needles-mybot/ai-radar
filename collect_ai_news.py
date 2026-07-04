@@ -25,17 +25,37 @@ from datetime import datetime, timedelta, timezone
 HERE = os.path.dirname(os.path.abspath(__file__))
 NEWS_JSON = os.path.join(HERE, "data", "news.json")
 
-FEEDS = [
+# Default sources — used only if sources.json is missing/corrupt.
+# The LIVE source list is ~/ai-radar/sources.json (agent-editable; the cron
+# tunes it monthly based on hit-rate). Bitter-Lesson note: knowledge of WHERE
+# to look lives in data, not code, so the agent can improve it without a deploy.
+DEFAULT_FEEDS = [
     ("TechCrunch", "https://techcrunch.com/category/artificial-intelligence/feed/"),
     ("VentureBeat", "https://venturebeat.com/category/ai/feed/"),
     ("The Verge", "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"),
     ("Ars Technica", "https://arstechnica.com/ai/feed/"),
     ("Simon Willison", "https://simonwillison.net/atom/everything/"),
 ]
-HN_URLS = [
+DEFAULT_HN_URLS = [
     "https://hn.algolia.com/api/v1/search?tags=front_page&query=AI",
     "https://hn.algolia.com/api/v1/search?tags=front_page&query=LLM",
 ]
+SOURCES_JSON = os.path.expanduser("~/ai-radar/sources.json")
+
+def load_sources() -> tuple:
+    """Read agent-editable sources.json; fall back to defaults on any problem."""
+    try:
+        with open(SOURCES_JSON, "r", encoding="utf-8") as fh:
+            cfg = json.load(fh)
+        feeds = [(f["name"], f["url"]) for f in cfg.get("feeds", []) if f.get("url")]
+        hn = [u for u in cfg.get("hn_queries", []) if isinstance(u, str) and u]
+        if feeds:
+            return feeds, hn
+    except Exception as exc:
+        print(f"[warn] sources.json unusable ({exc}); using defaults", file=sys.stderr)
+    return DEFAULT_FEEDS, DEFAULT_HN_URLS
+
+FEEDS, HN_URLS = load_sources()
 
 def _strip_html(text: str) -> str:
     text = re.sub(r"<[^>]+>", " ", text or "")
