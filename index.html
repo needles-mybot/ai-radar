@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Radar — Aaron's Daily AI Dashboard</title>
+<style>
+  :root {
+    --bg: #f4f8fa;
+    --card: #ffffff;
+    --ink: #17303b;
+    --ink-soft: #51707e;
+    --mist: #dcebf1;
+    --accent: #2a7f9e;
+    --accent-deep: #1d5f78;
+    --money: #1e7d4f;
+    --money-bg: #e9f6ef;
+    --chip: #eaf3f7;
+    --shadow: 0 1px 3px rgba(23,48,59,.08), 0 8px 24px rgba(23,48,59,.06);
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(180deg, #eef5f8 0%, var(--bg) 240px);
+    color: var(--ink);
+    min-height: 100vh;
+  }
+  header {
+    padding: 28px 20px 18px;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 1.65rem; letter-spacing: -.02em; }
+  h1 .dot { color: var(--accent); }
+  .sub { color: var(--ink-soft); font-size: .92rem; margin-top: 6px; }
+  .updated { color: var(--ink-soft); font-size: .8rem; margin-top: 4px; }
+  .filters {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    max-width: 1060px; margin: 6px auto 0; padding: 0 20px 8px;
+  }
+  .filters button {
+    border: 1px solid var(--mist); background: var(--card); color: var(--ink-soft);
+    border-radius: 999px; padding: 6px 14px; font-size: .82rem; cursor: pointer;
+    transition: all .15s ease;
+  }
+  .filters button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  main {
+    max-width: 1060px; margin: 0 auto; padding: 10px 20px 60px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 16px;
+    align-items: start;
+  }
+  .card {
+    background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+    padding: 18px; cursor: pointer; border: 1px solid rgba(220,235,241,.7);
+    transition: transform .12s ease, box-shadow .12s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 2px 6px rgba(23,48,59,.1), 0 14px 34px rgba(23,48,59,.1); }
+  .meta { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap; }
+  .chip {
+    background: var(--chip); color: var(--accent-deep); font-size: .72rem;
+    font-weight: 600; padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+  }
+  .chip.cat { background: #f0ecfb; color: #5b4a9e; }
+  .when { color: var(--ink-soft); font-size: .74rem; margin-left: auto; }
+  .card h2 { font-size: 1.02rem; line-height: 1.35; letter-spacing: -.01em; margin-bottom: 8px; }
+  .summary { color: var(--ink-soft); font-size: .88rem; line-height: 1.5; }
+  .money {
+    margin-top: 12px; background: var(--money-bg); border-radius: 10px;
+    padding: 10px 12px; font-size: .84rem; line-height: 1.45; color: var(--money);
+    display: flex; gap: 8px; align-items: flex-start;
+  }
+  .money .ico { flex: 0 0 auto; font-size: .95rem; }
+  .detail { display: none; margin-top: 14px; border-top: 1px solid var(--mist); padding-top: 14px; }
+  .card.open .detail { display: block; }
+  .detail p { font-size: .88rem; line-height: 1.6; color: var(--ink); margin-bottom: 10px; }
+  .detail h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-soft); margin: 12px 0 6px; }
+  .detail ul { padding-left: 18px; }
+  .detail li { font-size: .86rem; line-height: 1.55; color: var(--ink); margin-bottom: 6px; }
+  .src {
+    display: inline-block; margin-top: 10px; color: var(--accent); font-weight: 600;
+    font-size: .85rem; text-decoration: none;
+  }
+  .src:hover { text-decoration: underline; }
+  .hint { text-align: center; color: var(--ink-soft); font-size: .78rem; margin-top: 8px; }
+  .empty { grid-column: 1/-1; text-align: center; color: var(--ink-soft); padding: 60px 0; }
+  footer { text-align: center; color: var(--ink-soft); font-size: .75rem; padding: 0 20px 40px; }
+  @media (max-width: 640px) {
+    main { grid-template-columns: 1fr; }
+    header { padding-top: 20px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>AI Radar<span class="dot">.</span></h1>
+  <div class="sub">What's new in AI — what it does, and how it can make you money.</div>
+  <div class="updated" id="updated"></div>
+</header>
+<div class="filters" id="filters"></div>
+<main id="grid"><div class="empty">Loading…</div></main>
+<footer>Tap a card to expand. Updated automatically every morning.</footer>
+<script>
+const fmtWhen = iso => {
+  if (!iso) return "";
+  const d = new Date(iso), now = new Date(), h = (now - d) / 36e5;
+  if (h < 1) return "just now";
+  if (h < 24) return Math.round(h) + "h ago";
+  if (h < 48) return "yesterday";
+  return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+};
+let ALL = [], activeCat = "All";
+function render() {
+  const grid = document.getElementById("grid");
+  const items = activeCat === "All" ? ALL : ALL.filter(i => (i.category || "News") === activeCat);
+  if (!items.length) { grid.innerHTML = '<div class="empty">Nothing here yet.</div>'; return; }
+  grid.innerHTML = items.map((it, idx) => `
+    <article class="card" data-i="${idx}">
+      <div class="meta">
+        <span class="chip">${it.source || ""}</span>
+        ${it.category ? `<span class="chip cat">${it.category}</span>` : ""}
+        <span class="when">${fmtWhen(it.published)}</span>
+      </div>
+      <h2>${it.title}</h2>
+      <div class="summary">${it.summary || ""}</div>
+      ${it.money_angle ? `<div class="money"><span class="ico">💰</span><span>${it.money_angle}</span></div>` : ""}
+      <div class="detail">
+        ${it.details ? `<p>${it.details}</p>` : ""}
+        ${(it.money_ideas && it.money_ideas.length) ? `<h3>Ways to make money with this</h3><ul>${it.money_ideas.map(m => `<li>${m}</li>`).join("")}</ul>` : ""}
+        <a class="src" href="${it.url}" target="_blank" rel="noopener">Read the source →</a>
+        ${it.hn_comments ? ` &nbsp; <a class="src" href="${it.hn_comments}" target="_blank" rel="noopener">HN discussion →</a>` : ""}
+      </div>
+    </article>`).join("");
+  grid.querySelectorAll(".card").forEach(c => c.addEventListener("click", e => {
+    if (e.target.closest("a")) return;
+    c.classList.toggle("open");
+  }));
+}
+function renderFilters() {
+  const cats = ["All", ...new Set(ALL.map(i => i.category || "News"))];
+  const el = document.getElementById("filters");
+  el.innerHTML = cats.map(c => `<button class="${c === activeCat ? "active" : ""}" data-c="${c}">${c}</button>`).join("");
+  el.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+    activeCat = b.dataset.c; renderFilters(); render();
+  }));
+}
+fetch("data/news.json?t=" + Date.now())
+  .then(r => r.json())
+  .then(d => {
+    ALL = d.items || [];
+    const up = document.getElementById("updated");
+    if (d.updated) up.textContent = "Last updated " + new Date(d.updated).toLocaleString();
+    renderFilters(); render();
+  })
+  .catch(() => { document.getElementById("grid").innerHTML = '<div class="empty">Could not load news data.</div>'; });
+</script>
+</body>
+</html>

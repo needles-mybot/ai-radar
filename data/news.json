@@ -1,0 +1,185 @@
+{
+  "updated": "2026-07-03T22:30:00-07:00",
+  "items": [
+    {
+      "id": "24e2bdc663",
+      "source": "Hacker News",
+      "category": "Local AI",
+      "title": "Jamesob's guide to running SOTA LLMs locally",
+      "url": "https://github.com/jamesob/local-llm",
+      "hn_comments": "https://news.ycombinator.com/item?id=48775921",
+      "published": "2026-07-03T15:03:43Z",
+      "summary": "A practical, widely-discussed guide (305 points on HN) to running state-of-the-art language models on your own hardware instead of paying API fees.",
+      "money_angle": "You own an M5 Max 128GB — you can run near-frontier models at zero marginal cost. Every service you build on local inference has ~100% gross margin.",
+      "details": "The guide walks through hardware choices, model selection, and serving setups for local SOTA inference, with a large HN discussion thread comparing real-world setups and costs. This maps directly onto hardware you already own.",
+      "money_ideas": [
+        "Offer 'private AI' document processing to local businesses that can't send data to the cloud (law offices, medical billing, staffing agencies handling PII).",
+        "Prototype side-hustle apps on local models first — zero API bills while you validate the idea.",
+        "Batch-process lead enrichment / list cleaning overnight on your own metal and sell it as a service."
+      ]
+    },
+    {
+      "id": "0e1005d620",
+      "source": "TechCrunch",
+      "category": "Use Cases",
+      "title": "Meta quietly launches vibe-coded gaming app Pocket",
+      "url": "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/",
+      "published": "2026-07-03T01:44:02+00:00",
+      "summary": "Meta launched Pocket, an experimental app where users generate and share interactive mini-games from plain text prompts.",
+      "money_angle": "Prompt-to-product is going mainstream. If Meta thinks non-coders will build games from prompts, the same motion works for niche tools, quizzes, and branded mini-apps you can sell.",
+      "details": "Pocket lets users type a prompt and get a playable, shareable mini-game. The significance isn't gaming — it's Meta normalizing 'describe it, get software' for consumers, which validates the entire vibe-coding side-hustle space.",
+      "money_ideas": [
+        "Build branded mini-games or interactive promos for local businesses (restaurants, gyms, events) as a productized service.",
+        "Watch what game formats go viral on Pocket and clone the mechanics as standalone web apps with ads/affiliate hooks."
+      ]
+    },
+    {
+      "id": "2eb7b659b8",
+      "source": "TechCrunch",
+      "category": "Big Moves",
+      "title": "Microsoft launches its own AI deployment company with $2.5 billion commitment",
+      "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
+      "published": "2026-07-02T20:53:00+00:00",
+      "summary": "Microsoft is standing up a dedicated AI deployment group — following Amazon, OpenAI, and Anthropic — committing $2.5B to helping companies actually implement AI.",
+      "money_angle": "The giants just told you where the money is: not building models — DEPLOYING them. Implementation is the bottleneck, and it trickles down to small business.",
+      "details": "Four of the biggest players now have dedicated deployment/forward-deployed arms. They'll chase enterprises; nobody at that scale will touch the 20-person machine shop or the local staffing office. That gap is serviceable by one person with good tooling.",
+      "money_ideas": [
+        "Position an 'AI deployment for small business' offer in the East Valley — you already speak ops/staffing language from Masis.",
+        "Package 2-3 fixed-scope automations (intake, scheduling, follow-up) instead of open-ended consulting — mirrors what the big deployment firms do, at 1/100th the price point."
+      ]
+    },
+    {
+      "id": "369bc071c6",
+      "source": "TechCrunch",
+      "category": "Use Cases",
+      "title": "Yep, we're using OpenClaw to date now",
+      "url": "https://techcrunch.com/2026/07/02/yep-were-using-openclaw-to-date-now/",
+      "published": "2026-07-02T19:00:00+00:00",
+      "summary": "A user wired OpenClaw + Claude Code + Instagram trials into an automated dating outreach script — and it's working well enough to make headlines.",
+      "money_angle": "Consumer agent automation is here and people pay for outcomes. The same outreach-automation pattern applies to sales prospecting, recruiting, and lead follow-up.",
+      "details": "The story is fun, but the underlying pattern is serious: personal agents that watch inboxes/DMs, qualify responses, and keep conversations moving. That's a sales-development rep's job description — and a wholesaling acquisitions assistant's.",
+      "money_ideas": [
+        "Adapt the pattern for Cash Home Rescue: automated first-touch and follow-up sequences for motivated-seller leads.",
+        "Recruiting version: automated candidate re-engagement for staffing (dormant candidate pools are gold nobody mines)."
+      ]
+    },
+    {
+      "id": "4c8e751a87",
+      "source": "Simon Willison",
+      "category": "Money Signals",
+      "title": "Open Source AI Gap Map",
+      "url": "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything",
+      "published": "2026-07-04T05:04:31+00:00",
+      "summary": "Current AI (a $400M-backed non-profit building a 'public option for AI') published a Gap Map: an atlas of what's missing in open-source AI.",
+      "money_angle": "A funded organization literally published a map of unmet needs in AI. Gap maps are business-idea lists — each gap is something people want and nobody has built.",
+      "details": "The Gap Map catalogs areas where open-source AI lags proprietary offerings. For a side-hustle hunter, it doubles as a list of validated pain points — including ones solvable at small scale for niche audiences even if the full gap needs institutional money.",
+      "money_ideas": [
+        "Scan the map for gaps where a thin product wrapper (UI + workflow) over existing open models would serve a niche audience.",
+        "Content angle: 'I tried to fill gap X with open tools' writeups feed your LinkedIn/authority pipeline."
+      ]
+    },
+    {
+      "id": "43eacf5122",
+      "source": "TechCrunch",
+      "category": "Big Moves",
+      "title": "Zuckerberg tells staff AI agents haven't progressed as quickly as he'd hoped",
+      "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/",
+      "published": "2026-07-03T06:38:10+00:00",
+      "summary": "At an internal Meta meeting, Zuckerberg reportedly said AI agent development is moving slower than anticipated.",
+      "money_angle": "Reality check from the top: fully-autonomous agents are behind schedule. Human-in-the-loop services stay valuable longer — good news for anyone selling AI-assisted (not AI-replaced) work.",
+      "details": "Even with Meta's resources, agents that reliably complete long-horizon tasks remain hard. The practical takeaway: the winning small-business play right now is AI that drafts/preps/monitors while a human approves — exactly the kind of service an individual can sell.",
+      "money_ideas": [
+        "Sell 'AI-assisted, human-verified' as a feature, not a compromise — businesses burned by chatbot failures will pay for reliability.",
+        "Avoid building side hustles that only work if agents are flawless; build ones where 80% automation + your 20% oversight still profits."
+      ]
+    },
+    {
+      "id": "b7e86ff923",
+      "source": "Hacker News",
+      "category": "Local AI",
+      "title": "GLM5.2 on AMD MI355X at 2626 tok/s/node — 2x lower cost than Blackwell",
+      "url": "https://www.wafer.ai/blog/glm52-amd",
+      "hn_comments": "https://news.ycombinator.com/item?id=48780417",
+      "published": "2026-07-03T21:49:06Z",
+      "summary": "Benchmark showing the open-weights GLM5.2 model running on AMD hardware at over 2x lower cost than NVIDIA Blackwell (158 points on HN).",
+      "money_angle": "Open-model inference costs keep collapsing. Anything priced against 'AI is expensive' assumptions gets cheaper to operate every quarter — margins on AI services widen over time.",
+      "details": "AMD competitiveness on top open models means serious downward pressure on inference pricing across every provider. If you build a service today on paid APIs, expect your unit costs to fall — or run open models yourself and pocket the difference now.",
+      "money_ideas": [
+        "Price AI services on value delivered, not cost-plus — your costs will keep dropping while your price holds.",
+        "Revisit any idea you shelved because 'API costs would eat the margin' — the math may already work."
+      ]
+    },
+    {
+      "id": "dc4677f5bb",
+      "source": "TechCrunch",
+      "category": "Big Moves",
+      "title": "OpenAI proposed donating 5% of its equity to a US sovereign wealth fund",
+      "url": "https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/",
+      "published": "2026-07-02T22:20:51+00:00",
+      "summary": "Sam Altman reportedly proposed giving 5% of OpenAI's equity to a U.S. sovereign wealth fund — floating public participation in AI gains amid mounting backlash.",
+      "money_angle": "Signal, not opportunity: AI wealth concentration is now a political problem. Expect regulation talk, 'AI dividend' schemes, and public-sector AI budgets — government AI spending is a growing market.",
+      "details": "Multiple outlets (TechCrunch, Ars Technica, The Verge) covered the proposal, framed as easing tension with the administration and blunting public backlash against AI. Whatever happens to this specific deal, public-money-meets-AI is accelerating.",
+      "money_ideas": [
+        "Watch for state/local government AI adoption grants — small vendors often qualify for set-asides the giants ignore."
+      ]
+    },
+    {
+      "id": "01284d0383",
+      "source": "Simon Willison",
+      "category": "Tools & Tips",
+      "title": "Fable's judgement — let the model decide how to work",
+      "url": "https://simonwillison.net/2026/Jul/3/judgement/#atom-everything",
+      "published": "2026-07-04T01:51:06+00:00",
+      "summary": "Tip from the Claude Code team: with frontier models like Fable 5, you get better results letting the model use its own judgement rather than micromanaging its approach.",
+      "money_angle": "Prompting skill is shifting from 'write detailed instructions' to 'define outcomes and constraints.' Cheaper to operate, faster to build — lowers the bar for shipping AI side hustles.",
+      "details": "From Simon Willison's fireside chat with Anthropic's Claude Code team at the AI Engineer conference: over-specifying how the model should work now often produces worse results than stating the goal and letting it plan. This changes how you should build automations — define success criteria, not step-by-step scripts.",
+      "money_ideas": [
+        "Rebuild any brittle, over-scripted automation as goal-directed agent prompts — less maintenance, better results, faster client delivery."
+      ]
+    },
+    {
+      "id": "fe70f72516",
+      "source": "TechCrunch",
+      "category": "Money Signals",
+      "title": "Jersey Mike's IPO illustrates how bad the AI hype has become",
+      "url": "https://techcrunch.com/2026/07/02/jersey-mikes-ipo-illustrates-how-bad-the-ai-hype-has-become/",
+      "published": "2026-07-03T03:11:59+00:00",
+      "summary": "Even a sandwich chain's IPO documents now name-drop AI — a marker of how deep the hype has spread into non-tech businesses.",
+      "money_angle": "When sandwich chains cite AI in SEC filings, every mid-size business feels pressure to 'have an AI story.' That pressure is a door-opener for anyone selling practical AI implementation.",
+      "details": "The piece is a hype critique, but read it from the sales side: AI-washing means decision-makers at ordinary companies are actively looking for something real to point to. Walking in with a concrete, small, working automation beats a deck full of buzzwords.",
+      "money_ideas": [
+        "Use 'everyone claims AI, few can demo it' as a differentiator — lead every pitch with a live working demo, not slides."
+      ]
+    },
+    {
+      "id": "b4fd6ded17",
+      "source": "The Verge",
+      "category": "Big Moves",
+      "title": "Anthropic announces Claude Science — and wants to develop its own drugs",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961311/anthropic-claude-science-ai-drug-development",
+      "published": "2026-07-03T20:56:52+00:00",
+      "summary": "Anthropic announced Claude Science, an 'AI workbench for scientists' unifying fragmented tools and datasets, and signaled ambitions in drug development.",
+      "money_angle": "Vertical AI workbenches are the pattern to copy: take a messy multi-tool workflow in ONE industry and unify it. Science is Anthropic's target; yours can be staffing, wholesaling, or any trade you know.",
+      "details": "Claude Science pulls scattered scientific tools and datasets into one environment and generates figures and visuals. The strategic lesson for small builders: domain-specific workbenches beat generic chatbots, and you don't need frontier research to build one for an unglamorous industry.",
+      "money_ideas": [
+        "Sketch a 'workbench' for a domain you know cold — e.g., a BDM cockpit (leads + reviews + outreach in one screen) or an acquisitions cockpit for wholesaling.",
+        "Niche workbenches can charge SaaS pricing because they replace 4-5 subscriptions."
+      ]
+    },
+    {
+      "id": "35ed231cc0",
+      "source": "Simon Willison",
+      "category": "Money Signals",
+      "title": "Course creator reports sales down sharply — is AI eating info products?",
+      "url": "https://simonwillison.net/2026/Jul/3/josh-w-comeau/#atom-everything",
+      "published": "2026-07-04T04:25:52+00:00",
+      "summary": "Well-known course creator Josh Comeau reports his new course is selling ~1/3 of a typical launch, with existing course sales also down significantly year-over-year.",
+      "money_angle": "Caution flag for one classic side hustle: generic 'learn X' info products are getting squeezed — people ask AI instead. Sell outcomes and done-for-you services, not just information.",
+      "details": "One data point, honestly disclosed, but consistent with a broader pattern: when AI can teach anything on demand, courses that merely transfer information lose value. What survives: community, accountability, certification, and done-with-you formats.",
+      "money_ideas": [
+        "If you build an info product, bundle it with templates, tooling, or live help — things AI can't fully substitute.",
+        "Better: productize the SERVICE version of the knowledge (do it for them) instead of teaching it."
+      ]
+    }
+  ]
+}
