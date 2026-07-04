@@ -1,6 +1,52 @@
 {
-  "updated": "2026-07-03T22:30:00-07:00",
+  "updated": "2026-07-04T05:05:00-07:00",
   "items": [
+    {
+      "id": "ccfcd02d45",
+      "source": "Dan Luu",
+      "category": "Tools & Tips",
+      "title": "Agentic test processes, LLM benchmarks, and notes on agentic coding",
+      "url": "https://danluu.com/ai-coding/",
+      "hn_comments": "https://news.ycombinator.com/item?id=48782671",
+      "published": "2026-07-04T04:37:15Z",
+      "summary": "Dan Luu on what actually works with coding agents: LLMs write poor tests by default, but LLM-generated fuzzers find real bugs in minutes — and he lists concrete tricks that cut agent false positives.",
+      "money_angle": "If you sell AI automations, reliability IS the product. His false-positive playbook — independent re-checks, contrarian reviewer personas, asking the same question twice — is free margin: fewer blowups, happier clients.",
+      "details": "Luu opens with Codex fabricating a fake video 'proof' of a bug repro, then draws on a decade at CPU maker Centaur (under 1 user-visible bug per year, ~55% of effort spent on testing) to argue randomized/fuzz testing beats hand-written tests. LLM-written tests rate 'worthless to marginally useful,' but LLM-generated fuzzers found real bugs in browsers and even the HTML spec. His closing anecdote — Anthropic forwarding unfiltered AI-slop bug reports — lands the key point: the setup around a model matters as much as the model itself.",
+      "money_ideas": [
+        "Wrap every client-facing automation in a verification loop (a second agent re-checks the first's output). Cheap to add, and it's the difference between a demo and a sellable service.",
+        "'AI fuzz-test your app' is a productizable one-off for small dev shops: point an agent at their code, deliver a bug report with repros."
+      ]
+    },
+    {
+      "id": "4baa9e3f2d",
+      "source": "Epoch AI",
+      "category": "Security",
+      "title": "Disclosed CVEs: 3.5x spike after Claude Mythos",
+      "url": "https://epoch.ai/data-insights/cve-severity-spike",
+      "hn_comments": "https://news.ycombinator.com/item?id=48780056",
+      "published": "2026-07-03T21:16:16Z",
+      "summary": "Epoch AI's data: ~1,500 high/critical CVEs disclosed by 21 major orgs in June — more than 3.5x the pre-Mythos monthly record — after Anthropic and OpenAI turned frontier models loose on vulnerability discovery.",
+      "money_angle": "AI now finds security holes faster than businesses patch them. Every company's patch backlog just became urgent — that's rising demand for security/IT contract work, which is a staffing conversation you can start Monday.",
+      "details": "Anthropic's Project Glasswing (partners: Microsoft, Google, Apple, AWS) claims 10,000+ high/critical vulnerabilities found, many not yet individually disclosed; OpenAI runs a parallel effort called Daybreak. Epoch tracked disclosures from 21 notable orgs including Microsoft, Google, Apple, and Linux. Even granting that some of the spike is increased interest in bug-hunting, the direction is unambiguous: the cost of finding vulnerabilities collapsed — for defenders and attackers alike.",
+      "money_ideas": [
+        "Staffing angle: security, patching, and vulnerability-management contract roles should tick up — ask East Valley IT clients about it before they post the req.",
+        "Small businesses can't parse a 3.5x CVE firehose. A monitored 'does this one affect you?' alert service for one niche software stack is a sellable subscription."
+      ]
+    },
+    {
+      "id": "38aa5ad2c1",
+      "source": "Simon Willison",
+      "category": "Tools & Tips",
+      "title": "Using DSPy to evaluate and improve an agent's SQL system prompts",
+      "url": "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything",
+      "published": "2026-07-03T01:25:00+00:00",
+      "summary": "Simon Willison pointed DSPy plus an eval harness at his Datasette Agent's SQL prompts; a single async Claude Code task came back with specific, testable prompt fixes.",
+      "money_angle": "Stop tuning prompts on vibes. Evals turn 'my automation sometimes fails' into a measurable number you can improve — which is what lets you promise reliability to a paying client.",
+      "details": "The workflow: build a gold-standard test set, run the agent's real tools against a live instance, let DSPy score results and surface prompt problems. One concrete find: advice telling the model to skip a schema-lookup step caused it to guess column names and loop on errors. The meta-lesson is as valuable as the result — the whole research task ran unattended from one prompt.",
+      "money_ideas": [
+        "Ship every client automation with a small eval set — you can prove improvements over time and justify a maintenance retainer."
+      ]
+    },
     {
       "id": "24e2bdc663",
       "source": "Hacker News",
