@@ -1,6 +1,37 @@
 {
-  "updated": "2026-07-04T05:05:00-07:00",
+  "updated": "2026-07-05T05:01:00-07:00",
   "items": [
+    {
+      "id": "3a3f83543d",
+      "source": "Simon Willison",
+      "category": "Tools & Tips",
+      "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+      "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything",
+      "published": "2026-07-05T08:00:48+00:00",
+      "summary": "Simon Willison had Claude Fable do the final review and fixes for sqlite-utils 4.0 — 37 prompts, 34 commits, ~1,300 lines changed — and it caught 5 release blockers including a genuine data-loss bug. Unsubsidized cost: $149.25.",
+      "money_angle": "This is the real price sheet for agentic coding: $150 of frontier compute shipped a major release of a widely-used library, prompted from a phone. That's the unit economics behind any 'I'll build your tool for $2K' offer.",
+      "details": "Fable found a bug where delete_where() never committed and silently poisoned the connection — deletes and subsequent inserts vanished on close. Simon then had GPT-5.5 review Fable's work ('I used to think having one model review another was superstitious. The problem is it really does work') and it found two more confirmed P1 bugs. He also notes 'the Fablepocalypse': Fable access on Claude Max subscriptions ends July 7th, after which even Max subscribers pay full API price for the model.",
+      "money_ideas": [
+        "If you're on a Claude Max plan, burn your remaining Fable allowance on your hardest backlog item before July 7 — Simon deliberately did exactly this.",
+        "Steal the cross-model review habit: have GPT review Claude's output (or vice versa) on anything client-facing. It found 2 confirmed P1 bugs here and costs pennies.",
+        "His noted regret — not delegating more to cheaper subagent models — is your margin lesson: frontier model for judgement, cheap models for grunt work."
+      ]
+    },
+    {
+      "id": "63516e892d",
+      "source": "Simon Willison",
+      "category": "Tools & Tips",
+      "title": "Better Models: Worse Tools — newer Claudes fumble third-party tool schemas",
+      "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything",
+      "published": "2026-07-05T05:53:52+00:00",
+      "summary": "Armin Ronacher found that Opus 4.8 and Sonnet 5 invent extra made-up fields when calling his Pi harness's custom edit tool — while older, weaker Claude models don't. Likely cause: newer models are RL-trained on Claude Code's built-in tools, making them worse at everyone else's.",
+      "money_angle": "If you build agent automations, this is a silent failure mode: a model UPGRADE can break your custom tools. Design tool schemas to mimic what the model was trained on, and your stuff survives upgrades your competitors' doesn't.",
+      "details": "The edits themselves are usually correct — the arguments just don't match the schema, so the harness rejects the call and burns tokens on retries. Armin's theory: reinforcement learning on Claude Code's built-in search-and-replace edit tool bleeds into how the model treats similar-looking custom tools. Simon notes OpenAI's models are likewise trained on Codex's apply_patch format, and asks whether third-party harnesses now need per-model edit tools.",
+      "money_ideas": [
+        "In your own agent tools: strip unknown keys and accept the call instead of hard-rejecting on schema mismatch — cheaper than retry loops.",
+        "When a client automation degrades after a model swap, check tool-call schema drift before blaming your prompts."
+      ]
+    },
     {
       "id": "ccfcd02d45",
       "source": "Dan Luu",
