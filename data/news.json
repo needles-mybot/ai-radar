@@ -1,6 +1,53 @@
 {
-  "updated": "2026-07-05T05:01:00-07:00",
+  "updated": "2026-07-06T05:02:49-07:00",
   "items": [
+    {
+      "id": "63ccfa75fe",
+      "source": "The Verge",
+      "category": "AI Education",
+      "title": "Some of the nation’s rich are letting AI teach their kids",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep",
+      "published": "2026-07-06T05:30:54+00:00",
+      "summary": "Wealthy families — many of them Silicon Valley VCs — are paying tens of thousands a year for AI-taught private schools like Alpha School and Forge Prep. Alpha's kindergarten runs $75,000/year, and neither company publishes outcome data.",
+      "money_angle": "Read this next to the Dartmouth item below: rich early adopters pay $75K/yr for something unproven, while a grad student just published data showing the core mechanic (LLM-graded practice) works and costs almost nothing to build. That gap between price and proof is where a small operator lives.",
+      "details": "The Verge's criticisms: no shared performance metrics, sycophantic chatbots as questionable trainers of independent thinking, and Alpha cofounder MacKenzie Price saying she'll keep 'hot-button social issues' out of a curriculum that extends through high school in some locations. But the demand signal is real — parents are paying luxury-car money per kid per year for AI-led schooling. Arizona context: the state's universal ESA voucher program already routes ~$7K+/student toward tutoring, microschools, and alternative education, so this market isn't just a Silicon Valley thing.",
+      "money_ideas": [
+        "AZ's ESA vouchers can pay for tutoring and microschool services — check the eligibility rules; that's funded demand in your backyard, not VC fantasy.",
+        "The whole niche has a proof problem. Anyone selling AI-assisted tutoring who publishes real before/after numbers differentiates instantly."
+      ]
+    },
+    {
+      "id": "c8e3bde25f",
+      "source": "TechCrunch",
+      "category": "Money Signals",
+      "title": "Amazon will stop accepting new customers for Mechanical Turk",
+      "url": "https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/",
+      "published": "2026-07-06T00:43:36+00:00",
+      "summary": "Mechanical Turk closes to new customers July 30. Existing customers can keep using it, but AWS says no new features — the original human-microtask marketplace (launched 2005) is in maintenance mode.",
+      "money_angle": "The floor fell out of commodity microwork: a 2023 analysis found 33–46% of MTurk workers were already using LLMs to do the tasks. If a job can be described in a paragraph and checked by a script, AI does it now — plan side hustles and staffing pitches above that line.",
+      "details": "AWS framed it as 'careful consideration' with continued security investment but zero roadmap. Workers and researchers had already fled over bots and fraud; Amazon had repositioned MTurk as SageMaker annotation infrastructure back in 2018. The historical arc is tidy — the original 18th-century Mechanical Turk was a hidden human pretending to be a machine, and the platform spent its last decade as hidden humans powering products marketed as 'AI.' Now the machine really does the work.",
+      "money_ideas": [
+        "Staffing lens: basic data entry, tagging, and simple-moderation roles are the first ones clients quietly cut. Get ahead of it — bring East Valley clients a 'redeploy to QA/oversight' conversation before the req disappears.",
+        "Human data work didn't die, it moved upmarket: expert annotation and model-eval platforms want domain knowledge, not click-labor. Sourcing candidates for that niche is a real staffing market."
+      ]
+    },
+    {
+      "id": "54e97f4680",
+      "source": "Hacker News",
+      "category": "AI Education",
+      "title": "New AI tutor achieves 0.71-1.30 SD effect size in Dartmouth course [pdf]",
+      "url": "https://intextbooks.science.uu.nl/workshop2026/files/itb26_s1s2.pdf",
+      "hn_comments": "https://news.ycombinator.com/item?id=48796817",
+      "published": "2026-07-05T18:47:43Z",
+      "summary": "A Dartmouth intro-stats deployment (151 students) of Phosphor — a platform that embeds LLM-graded practice questions directly into course readings — was associated with a 0.71–1.30 SD final-exam gain, and hit 90.2% voluntary adoption versus the usual 10–15% reading compliance. 167 points on HN.",
+      "money_angle": "This is a buildable blueprint, not a lab curiosity: course content + constructed-response questions graded by Claude Sonnet against instructor rubrics + unlimited retries. No frontier research required — one person can assemble this for a tutoring niche, a training course, or client onboarding.",
+      "details": "The killer design detail: a mid-course natural experiment showed the MCQ-only module produced negligible benefit — open-ended constructed-response questions with LLM rubric grading are what drove learning. It was entirely optional and ungraded, yet 90% of students used it. Honest caveats: this is an association study adjusted for prior exam scores, not an RCT. And the paper cites the Bastani RCT where unrestricted GPT-4 access HARMED performance by 17% once removed — guardrailed practice works, raw chatbot access backfires.",
+      "money_ideas": [
+        "Corporate training version: wrap a client's safety/compliance/onboarding docs in LLM-graded questions. 'Measured completion' beats 'read the handbook' — and staffing firms placing workers need exactly this.",
+        "Steal the design detail: constructed-response with rubric grading, not multiple choice. MCQ-only showed near-zero benefit here.",
+        "If you ever pitch AI tutoring, 90% voluntary adoption of an optional, ungraded tool is the number that sells."
+      ]
+    },
     {
       "id": "3a3f83543d",
       "source": "Simon Willison",
