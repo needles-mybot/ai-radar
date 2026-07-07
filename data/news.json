@@ -1,6 +1,86 @@
 {
-  "updated": "2026-07-06T05:02:49-07:00",
+  "updated": "2026-07-07T05:03:32-07:00",
   "items": [
+    {
+      "id": "381006001a",
+      "source": "Hacker News",
+      "category": "Money Signals",
+      "title": "GLM 5.2 and the coming AI margin collapse",
+      "url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
+      "hn_comments": "https://news.ycombinator.com/item?id=48809877",
+      "published": "2026-07-06T20:14:55Z",
+      "summary": "Martin Alderson argues Z.ai's open-weights GLM 5.2 is the first model he genuinely can't tell apart from Opus in Claude Code — and because it's a drop-in replacement, it puts the ~90% gross margins the frontier labs earn on inference in the crosshairs. 499 points on HN.",
+      "money_angle": "This is the number behind your whole local-AI thesis: frontier inference is priced at roughly 90% margin, and an open model that matches it just made switching a one-line config change. 'Your margin is my opportunity' — anything you build on paid APIs gets cheaper, and anything you run on your own metal keeps that margin yourself.",
+      "details": "Both Z.ai and Fireworks expose OpenAI- and Anthropic-compatible endpoints, so moving Claude Code or Codex to GLM 5.2 is just setting a base URL and API key — no Salesforce-grade migration. Alderson's honest caveats: GLM is slower (it over-thinks), has no vision support yet, and ships with weak web search, which turns out to matter a lot for agentic tasks. He points to Wafer's benchmark showing GLM 5.2 runs ~2.75x cheaper per token on AMD than on Nvidia Blackwell, and flags that Z.ai's own API terms (training/retention, China ties) make self-hosting or a Western provider the real play for sensitive data. This is part one of two; part two covers who wins and loses when inference margins collapse.",
+      "money_ideas": [
+        "You own an M5 Max 128GB — for non-interactive agent work (PR review, batch enrichment, overnight document runs) a GLM-class open model is near-Opus quality at zero marginal cost.",
+        "Point brittle, non-time-critical automations at an open endpoint and reserve frontier API calls for the interactive, vision, or web-search steps that still need them.",
+        "For clients with PII (staffing, wholesaling, law offices) 'runs on-prem, nothing leaves your building' is now a sellable feature at Opus-ish quality, not a downgrade."
+      ]
+    },
+    {
+      "id": "a087d85e01",
+      "source": "TechCrunch",
+      "category": "Staffing Signals",
+      "title": "Microsoft lays off nearly 5,000 employees across Xbox, commercial sales",
+      "url": "https://techcrunch.com/2026/07/06/microsoft-lays-off-nearly-5000-employees-across-xbox-commercial-sales/",
+      "published": "2026-07-06T22:32:43+00:00",
+      "summary": "Microsoft cut ~4,800 roles (2.1% of its workforce) on Monday, hitting commercial sales and Xbox hardest — its second big round after ~9,100 cuts a year ago. TechCrunch also maintains a running list of every 2026 tech layoff that name-checked AI.",
+      "money_angle": "Commercial-SALES cuts are the tell for a staffing BDM: when a giant thins its own sellers and blames AI-driven efficiency, mid-size firms in your East Valley book start asking whether they can do the same. That's both a threat to placement volume and an opening to pitch AI-augmented (not replaced) teams.",
+      "details": "The layoffs land at the start of Microsoft's new fiscal year and stack onto a broader 2026 pattern of employers explicitly citing AI as a factor in cuts. The nuance worth carrying into client conversations: sales and support roles are getting compressed, not eliminated wholesale, and the survivors are expected to cover more ground with AI tooling. TechCrunch's running layoff tracker (link in the roundup) is a live map of which sectors are shedding people first.",
+      "money_ideas": [
+        "Reframe your pitch from 'more headcount' to 'AI-leveraged headcount' — help clients hit output targets with a leaner, tooled-up team instead of losing the req entirely.",
+        "Displaced commercial-sales and support pros are a candidate pool that just got deeper; build a bench now before competitors do.",
+        "Watch the AI-layoff tracker for East Valley employers — a public cut is a warm reason to call the ones left holding the work."
+      ]
+    },
+    {
+      "id": "acb8688dfa",
+      "source": "TechCrunch",
+      "category": "Privacy & Tips",
+      "title": "If you use Google, you're training its AI — here's how to opt out",
+      "url": "https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/",
+      "published": "2026-07-07T00:04:58+00:00",
+      "summary": "A quiet June settings change opted Google users into letting the company store uploaded media — images, files, audio, video — to train its AI across Search, Lens, Maps, Translate, and more. New 'Search data' retention is on by default and separate from the old Web & App Activity toggle.",
+      "money_angle": "If you handle client PII — resumes, seller docs, property photos — this is a real leak surface, and it's also a plain-English sales hook. Half your prospects don't know their uploads now feed Google's models; you can lead with that and sell the private, on-prem alternative.",
+      "details": "Google confirmed in a customer email that saved media is 'used to develop and improve Google services and technologies, including AI models,' with human reviewers in the loop. To opt out: on the Search Services History page (myactivity.google.com/search-services/settings) uncheck 'Save Media' separately from Search Services History, and set auto-delete to 3 months. Crucially, if you'd previously locked down Web & App Activity thinking you opted out, this new Search data setting is a separate switch that defaults ON — so a lot of privacy-conscious users are still opted in without knowing.",
+      "money_ideas": [
+        "Turn this into a one-page 'lock down your Google privacy' checklist you hand new staffing/wholesaling clients — cheap trust-builder that positions you as the AI-literate one in the room.",
+        "It's the wedge for the local-AI pitch: 'anything you paste into Google can train their model; the tool I built for you never leaves your machine.'"
+      ]
+    },
+    {
+      "id": "f99d93502f",
+      "source": "Hacker News",
+      "category": "Tools & Tips",
+      "title": "OfficeCLI: Office suite for AI agents to read and edit Word, Excel, PowerPoint",
+      "url": "https://github.com/iOfficeAI/OfficeCLI",
+      "hn_comments": "https://news.ycombinator.com/item?id=48807225",
+      "published": "2026-07-06T16:47:44Z",
+      "summary": "A free, open-source single binary (9.1k GitHub stars) that lets AI agents read, edit, and automate Word, Excel, and PowerPoint files with no Microsoft Office installation required. 190 points on HN.",
+      "money_angle": "Most small-business work still lives in .docx and .xlsx, and getting an agent to touch those reliably has been the fiddly part. A single binary that bridges that gap is the missing piece for productizing 'the AI edits your actual files' — the deliverable clients recognize.",
+      "details": "OfficeCLI (from iOfficeAI) is pitched as purpose-built for agents rather than humans: point Claude Code or a local model at it and have the agent open, modify, and generate real Office documents programmatically, cross-platform, without a licensed Office install on the box. Installable via Homebrew and npm. Because it's a plain CLI, it drops straight into the kind of goal-directed agent workflows you already run.",
+      "money_ideas": [
+        "Build fixed-scope automations around it: bulk-fill staffing paperwork, generate candidate submittal packets, or turn a spreadsheet of seller leads into formatted outreach docs — all on files clients already use.",
+        "Pair it with a local model on your M5 Max so client documents never leave your machine — a compliance-friendly 'document robot' you can charge a retainer for.",
+        "Wholesaling angle: auto-populate contracts and comps sheets from a CSV of properties instead of hand-editing each one."
+      ]
+    },
+    {
+      "id": "d8baa3bf51",
+      "source": "TechCrunch",
+      "category": "Security",
+      "title": "The 'first' AI-run ransomware attack still needed a human",
+      "url": "https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/",
+      "published": "2026-07-07T06:56:14+00:00",
+      "summary": "New details on last week's 'first AI-run ransomware' headline: an AI agent did handle the technical execution, but a human still chose the victim, stood up the infrastructure, and supplied stolen credentials — so it wasn't the fully autonomous cybercrime debut it was sold as.",
+      "money_angle": "Same lesson as the Zuckerberg 'agents are behind schedule' note: AI does the grunt execution, humans still do targeting and setup. Fully-autonomous attackers aren't here — which means human-in-the-loop defense and cleanup work stays valuable, and small-business security demand keeps rising.",
+      "details": "The reporting walks back the 'autonomous cybercrime' framing: the agent accelerated the hands-on-keyboard part of the attack, but the strategic decisions and access came from a person. Read alongside Epoch's data on the CVE disclosure spike, the pattern is consistent — AI collapses the cost of the technical labor in security (offense and defense) while judgment stays human. For defenders that means faster, cheaper attacks against the same under-resourced small businesses.",
+      "money_ideas": [
+        "Staffing lens: incident-response, patching, and security-oversight contract roles keep trending up — a warm reason to call East Valley IT clients.",
+        "Productize a plain-language 'are we exposed?' security review for small businesses that can't parse the threat feed themselves — recurring, not one-off."
+      ]
+    },
     {
       "id": "63ccfa75fe",
       "source": "The Verge",
