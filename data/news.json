@@ -1,6 +1,97 @@
 {
-  "updated": "2026-07-07T05:03:32-07:00",
+  "updated": "2026-07-08T05:03:17-07:00",
   "items": [
+    {
+      "id": "85edce73b4",
+      "source": "Hacker News",
+      "category": "Security",
+      "title": "GitLost: tricking GitHub's AI agent into leaking private repos",
+      "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
+      "hn_comments": "https://news.ycombinator.com/item?id=48827858",
+      "published": "2026-07-08T05:25:35Z",
+      "summary": "Noma Labs found a critical prompt-injection hole in GitHub's new Agentic Workflows: an unauthenticated attacker just posts a crafted GitHub Issue in a public repo, and the org's AI agent — running with read access to private repos — quietly hands the attacker private data. 259 points on HN.",
+      "money_angle": "This is the concrete version of the risk in every agent automation you build: an agent that reads untrusted input and holds real permissions can be steered by that input. 'Nothing leaves your building, and the agent can't read anything it doesn't need to' is now a sellable design principle, not paranoia.",
+      "details": "GitHub Agentic Workflows let teams write automation in plain Markdown, with an AI agent (backed by Claude or Copilot) reading issues, calling tools, and responding on its own. The vulnerable setup triggered on issue-assigned events, read the issue title and body, and ran with read access to other org repos — public and private. The attacker needed no code, credentials, or access: they opened an issue disguised as a plausible VP-Sales request with hidden instructions in the body, and the agent followed them, exfiltrating private repo contents. Same root cause as every prompt-injection: the system never enforced a trust boundary between operator instructions and untrusted user data.",
+      "money_ideas": [
+        "Audit any agent you deploy for a client on one rule: does it read untrusted input AND hold write/read permissions it doesn't strictly need? Least-privilege is the fix, and 'I scope agent permissions tightly' is a real differentiator.",
+        "Productize a one-page 'is your AI automation exposed?' review for small shops now wiring up GitHub/Copilot agents — recurring, not one-off."
+      ]
+    },
+    {
+      "id": "3df5e390bf",
+      "source": "Ars Technica",
+      "category": "Security",
+      "title": "HalluSquatting: 9 popular AI coding tools can be turned into botnets",
+      "url": "https://arstechnica.com/security/2026/07/hackers-can-use-9-of-the-most-popular-ai-tools-to-assemble-massive-botnets/",
+      "published": "2026-07-08T14:00:51+00:00",
+      "summary": "Researchers weaponized LLMs' habit of hallucinating package and repo names into a scalable attack: predict the names a coding agent will invent, register them, seed them with reverse-shell installers, and let the agents infect themselves. Cursor, Gemini CLI, Windsurf, GitHub Copilot, Cline, OpenClaw and others are all susceptible.",
+      "money_angle": "You run coding agents daily — this is a direct 'watch your own machine' warning, and a service opening. When you tell an agent to 'clone repo X' or 'install skill Y,' it navigates to the WRONG location up to 85% of the time (100% for trending skills), and an attacker who registered that wrong name gets a shell on your box.",
+      "details": "HalluSquatting (adversarial hallucination squatting) is a pull-based prompt injection: instead of pushing malicious content at each victim, the attacker plants it where agents naturally go. Because coding agents run with high-privilege shells to pull third-party code, one registered fake name can 'infect' many independent agents at once — enabling ransomware, DDoS botnets, or crypto-mining at scale. It's the AI-era version of typosquatting; the researchers note trending resources are the sweet spot because they aren't in training data yet still get heavy downloads. The fix is discipline: verify the exact source before letting an agent install anything.",
+      "money_ideas": [
+        "Harden your own workflow: never let an agent auto-install a package or 'skill' by name alone — pin exact repo URLs and commit hashes (the same habit Simon Willison's github-code component uses).",
+        "Small-shop security offer: a locked-down agent config + an allowlist of trusted registries, sold as 'safe AI coding setup' to dev teams that adopted these tools faster than they secured them."
+      ]
+    },
+    {
+      "id": "57f7251472",
+      "source": "TechCrunch",
+      "category": "Local AI",
+      "title": "French startup ZML releases free tool to speed inference across many AI chips",
+      "url": "https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/",
+      "published": "2026-07-08T15:00:00+00:00",
+      "summary": "ZML — a French AI startup publicly endorsed by Turing Award winner Yann LeCun — released ZML/LLMD, free software aimed at making model inference faster and cheaper across a wide range of AI chips, not just Nvidia.",
+      "money_angle": "This is the same margin-collapse story from the hardware side: free tooling that runs inference across whatever silicon you have keeps pushing the cost of serving models toward zero. Anything you run on your own M5 Max or build on paid APIs gets cheaper to operate.",
+      "details": "Cross-chip inference tooling matters because it breaks the assumption that serious AI serving requires expensive Nvidia hardware — the same theme as the GLM-on-AMD benchmark showing ~2x lower cost than Blackwell. A free, LeCun-endorsed layer that squeezes more tokens-per-second out of mixed hardware widens the field of who can serve open models profitably. (TechCrunch's full piece was behind a bot-check at write time; details here come from the collector summary and the product framing.)",
+      "money_ideas": [
+        "If you ever spin up a small inference service, cross-chip tooling means you can shop for the cheapest available compute instead of paying Nvidia premiums.",
+        "File it under your local-AI thesis: the trend line on inference cost only points down, so price AI services on value delivered, not cost-plus."
+      ]
+    },
+    {
+      "id": "6430cc7f42",
+      "source": "The Verge",
+      "category": "Agents & Productivity",
+      "title": "Anthropic brings Claude Cowork to mobile and web",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web",
+      "published": "2026-07-08T00:46:59+00:00",
+      "summary": "Claude Cowork — Anthropic's agent platform that runs multi-step tasks for you — is leaving the desktop app and going to mobile and web, rolling out first to Max subscribers and reaching other plans in the coming weeks. TechCrunch frames it as the coding-agent wars spilling into the rest of the office.",
+      "money_angle": "The pitch is 'start a task at your desk, check status on your phone, pick up the finished output later — laptop closed.' That's async agent work fitting into a BDM's actual day: kick off candidate research or lead enrichment between meetings and collect it later.",
+      "details": "Cowork was previously locked to the Claude desktop app for macOS and Windows; going mobile/web means the agent keeps working while you're away from the machine. The bigger signal is that coding-agent capability is being repackaged for general office work — the same long-horizon task execution, aimed at non-developers. Max subscribers get it first; other plans follow.",
+      "money_ideas": [
+        "Use it for the un-fun parts of your pipeline: overnight candidate sourcing, submittal-packet prep, or motivated-seller list research you review the next morning.",
+        "If you're already paying for Claude Max, mobile Cowork means your agent work isn't tethered to your desk — more billable output per day for the same subscription."
+      ]
+    },
+    {
+      "id": "16589613c6",
+      "source": "TechCrunch",
+      "category": "Use Cases",
+      "title": "Savi raises $7M for an app that shields people from realistic AI scams",
+      "url": "https://techcrunch.com/2026/07/07/savis-app-aims-to-protect-consumers-from-realistic-ai-scams-like-kidnappers-demanding-ransom/",
+      "published": "2026-07-07T19:00:00+00:00",
+      "summary": "Savi raised $7M in seed funding and launched an iPhone/Android app aimed at protecting consumers from hyper-realistic AI scams — including voice-cloned 'kidnapper' calls demanding ransom.",
+      "money_angle": "AI-scam protection is a brand-new consumer market with real venture money behind it, and it maps onto a fear your East Valley clients and their families genuinely have. There's room below the app for a local, human-delivered version: teaching families and small businesses how to verify a caller before they wire money.",
+      "details": "Voice-cloning has made 'grandparent' and fake-ransom scams far more convincing — a few seconds of audio is enough to impersonate someone. Savi's launch (app on both iOS and Android, funded seed round) is a signal that investors see a durable market in defending ordinary people from AI-generated deception, not just enterprises. The underlying playbook — verify identity out-of-band, agree on family code words, slow the transaction down — is simple enough to package as a workshop or checklist.",
+      "money_ideas": [
+        "Run a paid 'AI scam defense' lunch-and-learn for local businesses and their staff — code words, verification steps, what a cloned voice sounds like. Low cost, high trust, positions you as the AI-literate one.",
+        "Wholesaling/staffing lens: any business that moves money on a phone call (title, escrow, payroll) is a warm prospect for a 30-minute 'don't get voice-cloned' briefing."
+      ]
+    },
+    {
+      "id": "b8ee25d2f9",
+      "source": "The Verge",
+      "category": "Privacy & Tips",
+      "title": "Meta's Muse Image model can pull other Instagram users into AI photos",
+      "url": "https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram",
+      "published": "2026-07-08T03:31:58+00:00",
+      "summary": "Meta launched Muse Image, the first AI image model from its Superintelligence Labs, now powering image tools across the Meta AI app, Instagram, and WhatsApp (Facebook and Messenger soon). Users are already pushing back because it can pull other Instagram users into generated photos.",
+      "money_angle": "Two angles in one story. The privacy backlash is another local-AI sales wedge — 'your face and your photos can end up in someone else's AI image; a private tool on your machine can't do that.' The capability itself is a cheap content engine for ads and listings if you use it deliberately.",
+      "details": "Muse Image is Meta's in-house image generator, pitched for advertising, decorating, and creator use, and wired directly into apps most of your clients already use daily. The pushback is about consent: the model can incorporate other real Instagram users into AI-generated images. For a privacy-conscious operator, that's a concrete talking point that lands harder than abstract 'AI is scary' — it's their own photos, in their own feed.",
+      "money_ideas": [
+        "Creative side: use built-in image gen to spin ad creative, listing visuals, or social posts for local clients fast and cheap — the deliverable they can see.",
+        "Privacy wedge: pair with the Google opt-out item as a two-minute 'lock down what Meta and Google can do with your photos' checklist you hand new clients."
+      ]
+    },
     {
       "id": "381006001a",
       "source": "Hacker News",
