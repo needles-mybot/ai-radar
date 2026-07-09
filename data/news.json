@@ -1,6 +1,74 @@
 {
-  "updated": "2026-07-08T05:03:17-07:00",
+  "updated": "2026-07-09T12:15:00+00:00",
   "items": [
+    {
+      "id": "d9be8582f0",
+      "source": "Simon Willison",
+      "category": "Agentic Coding",
+      "title": "Rewriting Bun in Rust — a $165K agentic engineering case study",
+      "url": "https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything",
+      "published": "2026-07-09T06:57:21+00:00",
+      "summary": "Jarred Sumner rewrote Bun's entire Zig codebase into Rust using AI agents over 11 days — 1M+ lines of changes, with Bun's existing TypeScript test suite acting as the conformance layer. Total API cost at retail pricing: ~$165K.",
+      "money_angle": "The unlock was the test suite: existing tests let agents rewrite code autonomously and know immediately whether it passed. If you have specs, docs, or any checkable output for a task, you have the same lever. This is the blueprint for large-scope AI work.",
+      "details": "Jarred ran dynamic agent workflows with adversarial review — one agent wrote code, another reviewed it, he manually monitored outputs and fixed the process rather than fixing individual lines of code. The rewrite consumed 5.9 billion uncached input tokens, 690M output tokens, and 72 billion cached token reads. It shipped as Claude Code v2.1.181 on June 17th and barely anyone noticed — startup got 10% faster on Linux, nothing else changed. Anthropic doesn't pay retail for tokens; at public API pricing, the estimate is $165K. Simon flags this as a case study in 'taking on wildly ambitious projects with coordinated parallel agents' — and notes until very recently, picking a programming language was a one-way decision. It isn't anymore.",
+      "money_ideas": [
+        "If you're building an automation with testable outputs (even simple ones), wire in a conformance check so agents can iterate autonomously and you just review failures.",
+        "Cross-model adversarial review (let Model B check Model A's work) is free to add and caught real blockers here — steal that habit."
+      ]
+    },
+    {
+      "id": "963a6870c5",
+      "source": "The Verge",
+      "category": "Model Releases",
+      "title": "ChatGPT upgrades voice mode with GPT-Live-1 — delegates hard tasks, shuts up when you pause",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/962856/chatgpt-upgraded-voice-mode-gpt-live",
+      "published": "2026-07-09T00:00:00+00:00",
+      "summary": "OpenAI replaced ChatGPT's voice model with GPT-Live-1 — a model that interrupts less, waits when you pause mid-sentence, and silently hands off hard tasks (web search, reasoning) to GPT-5.5 in the background while continuing to talk to you.",
+      "money_angle": "A voice AI that sounds like a conversation and handles complex delegation in the background is a real tool for a BDM driving between client calls — brief it on a prospect, dictate follow-up notes, work through a deal, hands-free.",
+      "details": "GPT-Live-1 is the new model powering ChatGPT Advanced Voice. Key behaviors per OpenAI research lead Kundan Kumar: doesn't talk over you, waits for natural pauses before responding, doesn't fill silence when you're mid-thought. For questions requiring web search, deeper reasoning, or complex tasks, it delegates to GPT-5.5 in the background and brings the result back mid-conversation — so the flow doesn't stop. It can also speak and listen simultaneously, enabling live translation. Simon Willison had preview access for weeks and calls it 'very impressive.' Rolling out to ChatGPT users now.",
+      "money_ideas": [
+        "Use it for the commute/car version of your work: brief it on a prospect before a call, dictate deal notes after, let it pull up context while you talk.",
+        "Live translation use case opens a door — if you serve Spanish-speaking sellers in AZ, a voice AI that can translate in real-time costs nothing extra."
+      ]
+    },
+    {
+      "id": "f1d60122f0",
+      "source": "Hacker News",
+      "category": "Tools & Tips",
+      "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
+      "url": "https://microsoft.github.io/flint-chart/#/",
+      "hn_comments": "https://news.ycombinator.com/item?id=48834924",
+      "published": "2026-07-08T17:46:12Z",
+      "summary": "Microsoft Research released Flint — a free visualization intermediate language where you write a simple high-level chart spec and the compiler derives axes, scales, spacing, and layout from the data automatically. 46 chart types, renders to Vega-Lite/ECharts/Chart.js, MCP server included. 306 HN points.",
+      "money_angle": "If you're building any AI tool that shows data to clients, this removes the hardest part: getting an agent to reliably generate a clean, correct chart without hallucinating pixel values. Drop the MCP server into your agent stack and get presentable charts from raw data in one step.",
+      "details": "Flint is explicitly designed for AI agents, not humans — the model gives it data, semantic types, chart type, and encodings; the compiler handles everything else. Install via npm (TypeScript/JavaScript), use the MCP server for agent workflows. Gallery has 83 examples across 46 chart types. Free and open source from Microsoft Research. The 306 HN points and 113 comments suggest this is landing with practitioners, not just researchers.",
+      "money_ideas": [
+        "Add client-ready charts to any automation you sell — turn a spreadsheet of placements or leads into a polished visual without wrestling with charting libraries.",
+        "Wholesaling angle: auto-generate comps charts from property data and send them directly in seller follow-up — the kind of polish that looks like a big team."
+      ]
+    },
+    {
+      "id": "ffce1f7e1a",
+      "source": "Simon Willison",
+      "category": "Agentic Coding",
+      "title": "Kenton Varda bans AI-written PR descriptions — they list code, omit reasoning",
+      "url": "https://simonwillison.net/2026/Jul/8/kenton-varda/#atom-everything",
+      "published": "2026-07-09T03:03:34+00:00",
+      "summary": "Cloudflare's Kenton Varda declared a team-wide moratorium on AI-written commit messages, PR descriptions, and issues — AI descriptions outlined visible code details but skipped the higher-level 'why' that makes reviewing a PR actually possible.",
+      "money_angle": "Concrete habit for Claude Code users: let the model write the code, write your own commit messages. The framing and reasoning is the durable knowledge; the code is just output. If you're reviewing AI-written PRs for clients, same rule applies.",
+      "details": "Varda found AI change descriptions were 'worse than useless' for code review — they described what the diff contained (things you can see by reading the code) but omitted the architectural framing needed to understand what the code is doing at a level above the syntax. The fix is a moratorium, not a better prompt. This is a specific, repeatable failure mode in AI-assisted dev that shows up as soon as you have someone other than the AI author reviewing the work."
+    },
+    {
+      "id": "18842840ea",
+      "source": "TechCrunch",
+      "category": "Money Signals",
+      "title": "Lovable reportedly in talks to double its valuation to $13.2B",
+      "url": "https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/",
+      "published": "2026-07-09T05:41:33+00:00",
+      "summary": "Lovable — the natural-language app builder — is reportedly raising $300M led by Menlo Ventures, which would push its valuation to $13.2B, double its last round.",
+      "money_angle": "Vibe-coding is no longer a curiosity. The platform where you describe an app in English and it builds it is now a $13B business. The tools keep getting cheaper and better; the market for people who can turn those tools into working products for paying clients keeps getting bigger.",
+      "details": "The $300M round would double Lovable's previous valuation, per Sifted. Lovable competes in the natural-language-to-app space with Bolt.new and Replit's AI features. The valuation jump signals that investors see this category — AI-generated software for non-developers — as genuinely large. TechCrunch article was behind a bot check at write time; figures come from the collector snippet sourced from Sifted's reporting."
+    },
     {
       "id": "85edce73b4",
       "source": "Hacker News",
@@ -54,9 +122,9 @@
       "title": "Anthropic brings Claude Cowork to mobile and web",
       "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web",
       "published": "2026-07-08T00:46:59+00:00",
-      "summary": "Claude Cowork — Anthropic's agent platform that runs multi-step tasks for you — is leaving the desktop app and going to mobile and web, rolling out first to Max subscribers and reaching other plans in the coming weeks. TechCrunch frames it as the coding-agent wars spilling into the rest of the office.",
+      "summary": "Claude Cowork — Anthropic's agent platform that runs multi-step tasks for you — is leaving the desktop app and going to mobile and web, rolling out first to Max subscribers and reaching other plans in the coming weeks. Sessions now run in the cloud so you can close your laptop and tasks keep running.",
       "money_angle": "The pitch is 'start a task at your desk, check status on your phone, pick up the finished output later — laptop closed.' That's async agent work fitting into a BDM's actual day: kick off candidate research or lead enrichment between meetings and collect it later.",
-      "details": "Cowork was previously locked to the Claude desktop app for macOS and Windows; going mobile/web means the agent keeps working while you're away from the machine. The bigger signal is that coding-agent capability is being repackaged for general office work — the same long-horizon task execution, aimed at non-developers. Max subscribers get it first; other plans follow.",
+      "details": "Cowork was previously locked to the Claude desktop app for macOS and Windows; going mobile/web means the agent keeps working while you're away from the machine. Sessions now run cloud-side by default — close the laptop and the task continues. Claude will also push notifications to your phone when something needs approval. The bigger signal is that coding-agent capability is being repackaged for general office work — the same long-horizon task execution, aimed at non-developers. Max subscribers get it first; other plans follow. Doubled usage limits extended through August 5th.",
       "money_ideas": [
         "Use it for the un-fun parts of your pipeline: overnight candidate sourcing, submittal-packet prep, or motivated-seller list research you review the next morning.",
         "If you're already paying for Claude Max, mobile Cowork means your agent work isn't tethered to your desk — more billable output per day for the same subscription."
@@ -176,7 +244,7 @@
       "id": "63ccfa75fe",
       "source": "The Verge",
       "category": "AI Education",
-      "title": "Some of the nation’s rich are letting AI teach their kids",
+      "title": "Some of the nation's rich are letting AI teach their kids",
       "url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep",
       "published": "2026-07-06T05:30:54+00:00",
       "summary": "Wealthy families — many of them Silicon Valley VCs — are paying tens of thousands a year for AI-taught private schools like Alpha School and Forge Prep. Alpha's kindergarten runs $75,000/year, and neither company publishes outcome data.",
