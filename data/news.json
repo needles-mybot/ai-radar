@@ -1,6 +1,95 @@
 {
-  "updated": "2026-07-09T12:15:00+00:00",
+  "updated": "2026-07-10T12:11:10+00:00",
   "items": [
+    {
+      "id": "e11b299a33",
+      "source": "Simon Willison",
+      "category": "Model Releases",
+      "title": "OpenAI launches GPT-5.6: Luna, Terra, Sol — Sol beats Fable 5 on coding, cuts token use 54%, costs 1/3 as much",
+      "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/",
+      "published": "2026-07-10T05:24:24+00:00",
+      "summary": "OpenAI released GPT-5.6 in three sizes: Luna ($1/$6 per 1M tokens), Terra ($2.50/$15), Sol ($5/$30). Sol claims 54% better coding token efficiency than prior models, outscores Fable 5 on the Coding Agent Index while using less than half the output tokens and costing about one-third as much. Luna beats Opus 4.8.",
+      "money_angle": "If you've been pricing AI services on OpenAI's old rates, the unit economics just got better. Sol's 54% coding efficiency means your 'build me a tool' offers eat less into your margin now — or you can charge less and still profit.",
+      "details": "All three models have a Feb 16 2026 knowledge cutoff, 1M token context, and 128K max output. OpenAI's big benchmark: on Agents' Last Exam (long-running workflows across 55 fields), Sol scored 53.6, 13.1 points above Fable 5 at roughly 1/4 the estimated cost. Sol is also OpenAI's 'strongest cybersecurity model yet.' New API features: programmatic tool calling (JavaScript-orchestrated tool chains), multi-agent subagent spawning, and prompt cache breakpoints. OpenAI also called out SWE-Bench Pro as having ~30% broken tasks — a useful caveat when comparing coding benchmarks.",
+      "money_ideas": [
+        "Reprice any existing 'AI build' offers using the new Sol rates — 54% token efficiency means your margin went up without changing scope.",
+        "Use the multi-agent subagent feature for batched tasks: one model orchestrates, subagents run in parallel. Good for lead enrichment, list processing, or document batch jobs."
+      ]
+    },
+    {
+      "id": "fd6c695aa2",
+      "source": "Ars Technica",
+      "category": "Agents & Productivity",
+      "title": "OpenAI launches ChatGPT Work — codex merged into a continuous workspace with scheduled tasks",
+      "url": "https://arstechnica.com/ai/2026/07/openai-wants-its-new-tool-to-do-your-work-for-you-and-with-you/",
+      "published": "2026-07-10T04:25:55+00:00",
+      "summary": "ChatGPT Work is OpenAI's new agent product: long-running tasks ('can stay with a project for hours'), scheduled/cron-like tasks, plugins for Slack/Teams/Google Drive/SharePoint, and access to desktop files. Codex merges into ChatGPT Work; the old ChatGPT desktop app becomes 'ChatGPT Classic.'",
+      "money_angle": "This is the product category you want to build in: 'do my work for me' agents. OpenAI just told you the market. The Chrome extension (replacing Atlas) means agentic browsing is a feature, not a destination — build on top of Chrome, not against it.",
+      "details": "ChatGPT Work uses the same credit-based billing as Codex (up to $100/month plans). Enterprise customers can set spend limits. The desktop version accesses local files and has a built-in browser for agents to complete tasks on the user's behalf. Scheduled Tasks can trigger on cron schedules or event monitoring and run while you're away. OpenAI is also launching a ChatGPT Chrome extension that gives page-level context, summarization, and task initiation — a direct Google Gemini Side Panel competitor. Atlas browser is being sunset to make room for this.",
+      "money_ideas": [
+        "The Chrome extension is the platform to build on: agentic browsing as a Chrome extension is the winning pattern for 2026.",
+        "Schedule-based agent tasks (cron-for-work) is a real workflow gap — build automations that run on triggers and report back, like nightly lead list refreshes or weekly reporting."
+      ]
+    },
+    {
+      "id": "3f57361220",
+      "source": "TechCrunch",
+      "category": "Macro Signals",
+      "title": "The $3 trillion question: AI infrastructure spending needs $3T revenue to justify itself",
+      "url": "https://techcrunch.com/2026/07/09/can-ai-answer-the-3-trillion-question/",
+      "published": "2026-07-10T04:47:50+00:00",
+      "summary": "Sequoia's David Cahn calculates $1.5T in AI infrastructure spending in 2026, requiring $3T in revenue to pay back. Apollo's Torsten Slok warns hyperscalers predict massive free-cash-flow acceleration in 2028 — if they miss, the S&P 500 could correct and the economy could tip into recession.",
+      "money_angle": "The macro risk is real but the micro opportunity is clear: token costs are falling (Sol is 54% more efficient, open models are ~2x cheaper on AMD), so the businesses building AI services with good unit economics win. If the market corrects, AI tooling demand will keep rising as cost-cutting pressure intensifies.",
+      "details": "Anthropic is thought to have hit ~$60B ARR, OpenAI reportedly earned $13B in 2025 and said it was at $20B ARR. The gap between $3T required revenue and ~$80B in current AI company revenue is enormous. OpenAI's latest model is 54% more token efficient on coding — good for users, bad for token factories if usage doesn't scale proportionally. Chinese open-weight models are eating share as organizations chase cheaper inference.",
+      "money_ideas": [
+        "Build AI services on unit economics that work at current prices, not on the assumption that token costs will keep collapsing — you'll survive a correction either way.",
+        "Open models are closing the quality gap at lower cost — if you're building on paid APIs, factor in that clients will want to move to cheaper alternatives."
+      ]
+    },
+    {
+      "id": "132c70a2f0",
+      "source": "The Verge",
+      "category": "Agents & Productivity",
+      "title": "The ChatGPT browser is already dead — OpenAI sunsets Atlas, folds features into Chrome extension and desktop app",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963654/openai-chatgpt-atlas-ai-browser-shut-down-sunset",
+      "published": "2026-07-10T03:34:05+00:00",
+      "summary": "OpenAI is sunsetting its AI-powered Atlas browser less than a year after launch. Agentic browsing features are being redistributed to the ChatGPT desktop app and a new Chrome extension. The lesson: browser is a feature, not the destination.",
+      "money_angle": "Build Chrome extensions, not standalone AI browsers. The industry just converged on this pattern — Perplexity Comet, The Browser Company Dia, and now OpenAI all landed on the same conclusion. The Chrome extension is the distribution channel for agentic AI in 2026.",
+      "details": "The new ChatGPT Chrome extension gives page-level context, lets users ask questions about web pages, summarize content, or start longer tasks from the browser — competing directly with Google's Gemini Side Panel. The desktop app gets a more robust built-in browser for agents to browse, log in, download files, and interact with web pages. A separate cloud browser runs on OpenAI servers for agents to complete tasks remotely. Fidji Simo previously told the team to cut 'side quests,' which led to Atlas and Sora being killed.",
+      "money_ideas": [
+        "If you're building an AI tool, ship it as a Chrome extension first — that's where users' attention and browser context live.",
+        "The 'agentic browsing' capability (agents that can navigate, click, fill forms) is the killer feature here. Wrap it in a workflow your target audience needs."
+      ]
+    },
+    {
+      "id": "b0c29af09a",
+      "source": "TechCrunch",
+      "category": "Hardware Signals",
+      "title": "Meta's custom AI chips begin production in September — MTIA modular design for training and inference",
+      "url": "https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/",
+      "published": "2026-07-10T00:17:37+00:00",
+      "summary": "Meta is producing its fourth-generation MTIA AI chips in September, designed with Broadcom and manufactured by TSMC. Meta plans 7GW of compute this year, doubling next year, with $125-145B in capex. The chips serve ranking, recommendation, and broader AI inference workloads.",
+      "money_angle": "Big tech is building custom silicon to escape Nvidia pricing. That pressure trickles down: inference costs keep falling, and open models run better on diverse hardware. For your M5 Max: the local-inference thesis gets stronger as the ecosystem widens beyond Nvidia.",
+      "details": "The MTIA chips are modular, using chiplets that build on each generation. At least one chip passed testing in six weeks. Meta is also buying RAM from Samsung, storage from SanDisk, and fiber-optic equipment from Sumitomo Electric. Meta still buys GPUs from Nvidia and AMD but expects MTIA to offset a portion. The company is striking data center and power deals globally to support its AI ambitions.",
+      "money_ideas": [
+        "Custom silicon from big players accelerates the open-model ecosystem — expect better local model performance as hardware diversifies.",
+        "If you're building inference services, the falling hardware cost curve means your margin expands over time regardless of what you charge."
+      ]
+    },
+    {
+      "id": "e9b3a73064",
+      "source": "The Verge",
+      "category": "Big Moves",
+      "title": "Fidji Simo steps down from OpenAI's AGI chief role — leadership vacuum ahead of IPO",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963738/openai-fidji-simo-steps-down-ceo-advisor",
+      "published": "2026-07-10T06:24:04+00:00",
+      "summary": "OpenAI's No. 2, Fidji Simo, is stepping down from her full-time role as AGI chief after medical leave for a neuroimmune condition proved longer than expected. She'll transition to part-time advisor. COO Brad Lightcap, CMO Kate Rouch, and CPO Kevin Weil have all also left or shifted roles.",
+      "money_angle": "OpenAI's executive bench is thin for an $852B company. Simo was widely seen as a likely successor to Altman at IPO. Denise Dresser (CRO, ex-Salesforce CEO of Slack) may absorb her responsibilities. Leadership churn at the top is a risk signal for enterprise customers choosing OpenAI vs. Anthropic.",
+      "details": "Simo joined OpenAI's board in 2024, became CEO of Applications in May 2025, then took AGI chief title. Her medical leave began in April. Greg Brockman is now leading product strategy and scaling, overseeing four pillars. The reorganization was meant to consolidate ChatGPT and Codex into one agentic platform. Altman called the news 'really sad' on X.",
+      "money_ideas": [
+        "Watch for which OpenAI exec absorbs Simo's responsibilities — Dresser (ex-Slack CEO) stepping up would signal enterprise focus, which is where Anthropic has been gaining share."
+      ]
+    },
     {
       "id": "d9be8582f0",
       "source": "Simon Willison",
@@ -106,7 +195,7 @@
       "category": "Local AI",
       "title": "French startup ZML releases free tool to speed inference across many AI chips",
       "url": "https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/",
-      "published": "2026-07-08T15:00:00+00:00",
+      "published": "2026/07/08T15:00:00+00:00",
       "summary": "ZML — a French AI startup publicly endorsed by Turing Award winner Yann LeCun — released ZML/LLMD, free software aimed at making model inference faster and cheaper across a wide range of AI chips, not just Nvidia.",
       "money_angle": "This is the same margin-collapse story from the hardware side: free tooling that runs inference across whatever silicon you have keeps pushing the cost of serving models toward zero. Anything you run on your own M5 Max or build on paid APIs gets cheaper to operate.",
       "details": "Cross-chip inference tooling matters because it breaks the assumption that serious AI serving requires expensive Nvidia hardware — the same theme as the GLM-on-AMD benchmark showing ~2x lower cost than Blackwell. A free, LeCun-endorsed layer that squeezes more tokens-per-second out of mixed hardware widens the field of who can serve open models profitably. (TechCrunch's full piece was behind a bot-check at write time; details here come from the collector summary and the product framing.)",
@@ -119,7 +208,7 @@
       "id": "6430cc7f42",
       "source": "The Verge",
       "category": "Agents & Productivity",
-      "title": "Anthropic brings Claude Cowork to mobile and web",
+      "title": "Anthropic brings Claude Cowork to mobile and web — agent work untethered from desktop",
       "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web",
       "published": "2026-07-08T00:46:59+00:00",
       "summary": "Claude Cowork — Anthropic's agent platform that runs multi-step tasks for you — is leaving the desktop app and going to mobile and web, rolling out first to Max subscribers and reaching other plans in the coming weeks. Sessions now run in the cloud so you can close your laptop and tasks keep running.",
