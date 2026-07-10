@@ -590,35 +590,6 @@
       ]
     },
     {
-      "id": "fe70f72516",
-      "source": "TechCrunch",
-      "category": "Money Signals",
-      "title": "Jersey Mike's IPO illustrates how bad the AI hype has become",
-      "url": "https://techcrunch.com/2026/07/02/jersey-mikes-ipo-illustrates-how-bad-the-ai-hype-has-become/",
-      "published": "2026-07-03T03:11:59+00:00",
-      "summary": "Even a sandwich chain's IPO documents now name-drop AI — a marker of how deep the hype has spread into non-tech businesses.",
-      "money_angle": "When sandwich chains cite AI in SEC filings, every mid-size business feels pressure to 'have an AI story.' That pressure is a door-opener for anyone selling practical AI implementation.",
-      "details": "The piece is a hype critique, but read it from the sales side: AI-washing means decision-makers at ordinary companies are actively looking for something real to point to. Walking in with a concrete, small, working automation beats a deck full of buzzwords.",
-      "money_ideas": [
-        "Use 'everyone claims AI, few can demo it' as a differentiator — lead every pitch with a live working demo, not slides."
-      ]
-    },
-    {
-      "id": "b4fd6ded17",
-      "source": "The Verge",
-      "category": "Big Moves",
-      "title": "Anthropic announces Claude Science — and wants to develop its own drugs",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/961311/anthropic-claude-science-ai-drug-development",
-      "published": "2026-07-03T20:56:52+00:00",
-      "summary": "Anthropic announced Claude Science, an 'AI workbench for scientists' unifying fragmented tools and datasets, and signaled ambitions in drug development.",
-      "money_angle": "Vertical AI workbenches are the pattern to copy: take a messy multi-tool workflow in ONE industry and unify it. Science is Anthropic's target; yours can be staffing, wholesaling, or any trade you know.",
-      "details": "Claude Science pulls scattered scientific tools and datasets into one environment and generates figures and visuals. The strategic lesson for small builders: domain-specific workbenches beat generic chatbots, and you don't need frontier research to build one for an unglamorous industry.",
-      "money_ideas": [
-        "Sketch a 'workbench' for a domain you know cold — e.g., a BDM cockpit (leads + reviews + outreach in one screen) or an acquisitions cockpit for wholesaling.",
-        "Niche workbenches can charge SaaS pricing because they replace 4-5 subscriptions."
-      ]
-    },
-    {
       "id": "35ed231cc0",
       "source": "Simon Willison",
       "category": "Money Signals",
