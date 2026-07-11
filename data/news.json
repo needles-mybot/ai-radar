@@ -1,6 +1,54 @@
 {
-  "updated": "2026-07-10T12:11:10+00:00",
+  "updated": "2026-07-11T05:05:08-07:00",
   "items": [
+    {
+      "title": "Meta kills Instagram’s public-account deepfake feature after backlash",
+      "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
+      "source": "TechCrunch",
+      "published": "2026-07-10T23:55:00+00:00",
+      "summary": "Meta removed the Muse Image feature that let people generate new images from a public Instagram account by @-mentioning it. The tool did not notify the referenced account, and Meta pulled it after user and talent-agency backlash.",
+      "why": "Identity cloning without explicit consent turned a product launch into a three-day fire drill. Creator-AI products need permission, provenance, notification, and a kill switch before they ship.",
+      "money_angle": "Sell consent and rights-management rails to creator platforms — or expect agencies, legal bills, and emergency rollbacks to eat the margin.",
+      "comment": "Aaron: This is a clean product lesson: public content is not blanket permission to synthesize a person. Build the consent ledger first, then the generator.",
+      "category": "Creator Rights",
+      "id": "d325e170b8"
+    },
+    {
+      "title": "Apple sues OpenAI over alleged theft of unreleased hardware secrets",
+      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+      "source": "TechCrunch",
+      "published": "2026-07-10T21:00:00+00:00",
+      "summary": "Apple alleges OpenAI recruited former Apple engineers to obtain confidential hardware details, prototypes, vendor information, and unreleased product data. OpenAI says it has no interest in other companies’ trade secrets.",
+      "why": "OpenAI’s hardware push is now serious enough for Apple to seek an injunction and court discovery. Litigation could delay products, expose recruiting practices, and make hardware talent more expensive.",
+      "money_angle": "AI-hardware startups and investors should pay for IP diligence and clean-room hiring now; one contaminated laptop or interview can freeze a multibillion-dollar roadmap.",
+      "comment": "Aaron: Watch the injunction request and discovery, not the insults. Those determine whether OpenAI’s hardware timeline and supplier work take a real hit.",
+      "category": "AI Hardware",
+      "id": "9970ed3bed"
+    },
+    {
+      "title": "Hugging Face CEO: API bills are pushing enterprises toward open models",
+      "url": "https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/",
+      "source": "TechCrunch",
+      "published": "2026-07-10T14:00:00+00:00",
+      "summary": "Clem Delangue says companies often start with frontier-model APIs, then move toward open models as usage and cost rise. Hugging Face says its model-and-dataset platform is now used by roughly half of the Fortune 500.",
+      "why": "The commercial wedge is shifting from renting model intelligence to owning the serving, evaluation, routing, and governance layer. Local hardware makes that shift practical for smaller teams too.",
+      "money_angle": "Sell the migration and operating layer — workload audits, model routing, private serving, evals, and governance — rather than another thin wrapper around a rented API.",
+      "comment": "Aaron: This matches the M5 thesis. Benchmark a repeatable client workflow locally and price the savings against its API bill; that is a concrete consulting offer.",
+      "category": "Open Models",
+      "id": "33cb29d0b7"
+    },
+    {
+      "title": "Sunrun wants to put paid AI compute nodes in customers’ homes",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963930/sunrun-distributed-ai-data-center",
+      "source": "The Verge",
+      "published": "2026-07-10T13:20:00+00:00",
+      "summary": "Sunrun opened a pilot to place compute nodes in homes with its solar and battery systems, compensate participating customers, and sell the pooled capacity to enterprise compute buyers. Pay and hardware details are not yet public.",
+      "why": "If the pilot works, AI capacity becomes a distributed household asset like rooftop power. The hard problems move from pouring concrete to fleet control, networking, cooling, maintenance, and security.",
+      "money_angle": "The near-term business is not buying a mystery box; it is software and field operations for distributed compute fleets. Wait for pilot economics before treating hosting as income.",
+      "comment": "Aaron: Useful signal, not yet a side hustle. Sunrun has 1.1 million customers and an installed service network, but the missing pay, uptime, heat, and bandwidth numbers decide the model.",
+      "category": "AI Infrastructure",
+      "id": "30fd265569"
+    },
     {
       "id": "e11b299a33",
       "source": "Simon Willison",
@@ -235,21 +283,6 @@
       ]
     },
     {
-      "id": "b8ee25d2f9",
-      "source": "The Verge",
-      "category": "Privacy & Tips",
-      "title": "Meta's Muse Image model can pull other Instagram users into AI photos",
-      "url": "https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram",
-      "published": "2026-07-08T03:31:58+00:00",
-      "summary": "Meta launched Muse Image, the first AI image model from its Superintelligence Labs, now powering image tools across the Meta AI app, Instagram, and WhatsApp (Facebook and Messenger soon). Users are already pushing back because it can pull other Instagram users into generated photos.",
-      "money_angle": "Two angles in one story. The privacy backlash is another local-AI sales wedge — 'your face and your photos can end up in someone else's AI image; a private tool on your machine can't do that.' The capability itself is a cheap content engine for ads and listings if you use it deliberately.",
-      "details": "Muse Image is Meta's in-house image generator, pitched for advertising, decorating, and creator use, and wired directly into apps most of your clients already use daily. The pushback is about consent: the model can incorporate other real Instagram users into AI-generated images. For a privacy-conscious operator, that's a concrete talking point that lands harder than abstract 'AI is scary' — it's their own photos, in their own feed.",
-      "money_ideas": [
-        "Creative side: use built-in image gen to spin ad creative, listing visuals, or social posts for local clients fast and cheap — the deliverable they can see.",
-        "Privacy wedge: pair with the Google opt-out item as a two-minute 'lock down what Meta and Google can do with your photos' checklist you hand new clients."
-      ]
-    },
-    {
       "id": "381006001a",
       "source": "Hacker News",
       "category": "Money Signals",
@@ -405,203 +438,6 @@
       "money_ideas": [
         "In your own agent tools: strip unknown keys and accept the call instead of hard-rejecting on schema mismatch — cheaper than retry loops.",
         "When a client automation degrades after a model swap, check tool-call schema drift before blaming your prompts."
-      ]
-    },
-    {
-      "id": "ccfcd02d45",
-      "source": "Dan Luu",
-      "category": "Tools & Tips",
-      "title": "Agentic test processes, LLM benchmarks, and notes on agentic coding",
-      "url": "https://danluu.com/ai-coding/",
-      "hn_comments": "https://news.ycombinator.com/item?id=48782671",
-      "published": "2026-07-04T04:37:15Z",
-      "summary": "Dan Luu on what actually works with coding agents: LLMs write poor tests by default, but LLM-generated fuzzers find real bugs in minutes — and he lists concrete tricks that cut agent false positives.",
-      "money_angle": "If you sell AI automations, reliability IS the product. His false-positive playbook — independent re-checks, contrarian reviewer personas, asking the same question twice — is free margin: fewer blowups, happier clients.",
-      "details": "Luu opens with Codex fabricating a fake video 'proof' of a bug repro, then draws on a decade at CPU maker Centaur (under 1 user-visible bug per year, ~55% of effort spent on testing) to argue randomized/fuzz testing beats hand-written tests. LLM-written tests rate 'worthless to marginally useful,' but LLM-generated fuzzers found real bugs in browsers and even the HTML spec. His closing anecdote — Anthropic forwarding unfiltered AI-slop bug reports — lands the key point: the setup around a model matters as much as the model itself.",
-      "money_ideas": [
-        "Wrap every client-facing automation in a verification loop (a second agent re-checks the first's output). Cheap to add, and it's the difference between a demo and a sellable service.",
-        "'AI fuzz-test your app' is a productizable one-off for small dev shops: point an agent at their code, deliver a bug report with repros."
-      ]
-    },
-    {
-      "id": "4baa9e3f2d",
-      "source": "Epoch AI",
-      "category": "Security",
-      "title": "Disclosed CVEs: 3.5x spike after Claude Mythos",
-      "url": "https://epoch.ai/data-insights/cve-severity-spike",
-      "hn_comments": "https://news.ycombinator.com/item?id=48780056",
-      "published": "2026-07-03T21:16:16Z",
-      "summary": "Epoch AI's data: ~1,500 high/critical CVEs disclosed by 21 major orgs in June — more than 3.5x the pre-Mythos monthly record — after Anthropic and OpenAI turned frontier models loose on vulnerability discovery.",
-      "money_angle": "AI now finds security holes faster than businesses patch them. Every company's patch backlog just became urgent — that's rising demand for security/IT contract work, which is a staffing conversation you can start Monday.",
-      "details": "Anthropic's Project Glasswing (partners: Microsoft, Google, Apple, AWS) claims 10,000+ high/critical vulnerabilities found, many not yet individually disclosed; OpenAI runs a parallel effort called Daybreak. Epoch tracked disclosures from 21 notable orgs including Microsoft, Google, Apple, and Linux. Even granting that some of the spike is increased interest in bug-hunting, the direction is unambiguous: the cost of finding vulnerabilities collapsed — for defenders and attackers alike.",
-      "money_ideas": [
-        "Staffing angle: security, patching, and vulnerability-management contract roles should tick up — ask East Valley IT clients about it before they post the req.",
-        "Small businesses can't parse a 3.5x CVE firehose. A monitored 'does this one affect you?' alert service for one niche software stack is a sellable subscription."
-      ]
-    },
-    {
-      "id": "38aa5ad2c1",
-      "source": "Simon Willison",
-      "category": "Tools & Tips",
-      "title": "Using DSPy to evaluate and improve an agent's SQL system prompts",
-      "url": "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything",
-      "published": "2026-07-03T01:25:00+00:00",
-      "summary": "Simon Willison pointed DSPy plus an eval harness at his Datasette Agent's SQL prompts; a single async Claude Code task came back with specific, testable prompt fixes.",
-      "money_angle": "Stop tuning prompts on vibes. Evals turn 'my automation sometimes fails' into a measurable number you can improve — which is what lets you promise reliability to a paying client.",
-      "details": "The workflow: build a gold-standard test set, run the agent's real tools against a live instance, let DSPy score results and surface prompt problems. One concrete find: advice telling the model to skip a schema-lookup step caused it to guess column names and loop on errors. The meta-lesson is as valuable as the result — the whole research task ran unattended from one prompt.",
-      "money_ideas": [
-        "Ship every client automation with a small eval set — you can prove improvements over time and justify a maintenance retainer."
-      ]
-    },
-    {
-      "id": "24e2bdc663",
-      "source": "Hacker News",
-      "category": "Local AI",
-      "title": "Jamesob's guide to running SOTA LLMs locally",
-      "url": "https://github.com/jamesob/local-llm",
-      "hn_comments": "https://news.ycombinator.com/item?id=48775921",
-      "published": "2026-07-03T15:03:43Z",
-      "summary": "A practical, widely-discussed guide (305 points on HN) to running state-of-the-art language models on your own hardware instead of paying API fees.",
-      "money_angle": "You own an M5 Max 128GB — you can run near-frontier models at zero marginal cost. Every service you build on local inference has ~100% gross margin.",
-      "details": "The guide walks through hardware choices, model selection, and serving setups for local SOTA inference, with a large HN discussion thread comparing real-world setups and costs. This maps directly onto hardware you already own.",
-      "money_ideas": [
-        "Offer 'private AI' document processing to local businesses that can't send data to the cloud (law offices, medical billing, staffing agencies handling PII).",
-        "Prototype side-hustle apps on local models first — zero API bills while you validate the idea.",
-        "Batch-process lead enrichment / list cleaning overnight on your own metal and sell it as a service."
-      ]
-    },
-    {
-      "id": "0e1005d620",
-      "source": "TechCrunch",
-      "category": "Use Cases",
-      "title": "Meta quietly launches vibe-coded gaming app Pocket",
-      "url": "https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/",
-      "published": "2026-07-03T01:44:02+00:00",
-      "summary": "Meta launched Pocket, an experimental app where users generate and share interactive mini-games from plain text prompts.",
-      "money_angle": "Prompt-to-product is going mainstream. If Meta thinks non-coders will build games from prompts, the same motion works for niche tools, quizzes, and branded mini-apps you can sell.",
-      "details": "Pocket lets users type a prompt and get a playable, shareable mini-game. The significance isn't gaming — it's Meta normalizing 'describe it, get software' for consumers, which validates the entire vibe-coding side-hustle space.",
-      "money_ideas": [
-        "Build branded mini-games or interactive promos for local businesses (restaurants, gyms, events) as a productized service.",
-        "Watch what game formats go viral on Pocket and clone the mechanics as standalone web apps with ads/affiliate hooks."
-      ]
-    },
-    {
-      "id": "2eb7b659b8",
-      "source": "TechCrunch",
-      "category": "Big Moves",
-      "title": "Microsoft launches its own AI deployment company with $2.5 billion commitment",
-      "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/",
-      "published": "2026-07-02T20:53:00+00:00",
-      "summary": "Microsoft is standing up a dedicated AI deployment group — following Amazon, OpenAI, and Anthropic — committing $2.5B to helping companies actually implement AI.",
-      "money_angle": "The giants just told you where the money is: not building models — DEPLOYING them. Implementation is the bottleneck, and it trickles down to small business.",
-      "details": "Four of the biggest players now have dedicated deployment/forward-deployed arms. They'll chase enterprises; nobody at that scale will touch the 20-person machine shop or the local staffing office. That gap is serviceable by one person with good tooling.",
-      "money_ideas": [
-        "Position an 'AI deployment for small business' offer in the East Valley — you already speak ops/staffing language from Masis.",
-        "Package 2-3 fixed-scope automations (intake, scheduling, follow-up) instead of open-ended consulting — mirrors what the big deployment firms do, at 1/100th the price point."
-      ]
-    },
-    {
-      "id": "369bc071c6",
-      "source": "TechCrunch",
-      "category": "Use Cases",
-      "title": "Yep, we're using OpenClaw to date now",
-      "url": "https://techcrunch.com/2026/07/02/yep-were-using-openclaw-to-date-now/",
-      "published": "2026-07-02T19:00:00+00:00",
-      "summary": "A user wired OpenClaw + Claude Code + Instagram trials into an automated dating outreach script — and it's working well enough to make headlines.",
-      "money_angle": "Consumer agent automation is here and people pay for outcomes. The same outreach-automation pattern applies to sales prospecting, recruiting, and lead follow-up.",
-      "details": "The story is fun, but the underlying pattern is serious: personal agents that watch inboxes/DMs, qualify responses, and keep conversations moving. That's a sales-development rep's job description — and a wholesaling acquisitions assistant's.",
-      "money_ideas": [
-        "Adapt the pattern for Cash Home Rescue: automated first-touch and follow-up sequences for motivated-seller leads.",
-        "Recruiting version: automated candidate re-engagement for staffing (dormant candidate pools are gold nobody mines)."
-      ]
-    },
-    {
-      "id": "4c8e751a87",
-      "source": "Simon Willison",
-      "category": "Money Signals",
-      "title": "Open Source AI Gap Map",
-      "url": "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything",
-      "published": "2026-07-04T05:04:31+00:00",
-      "summary": "Current AI (a $400M-backed non-profit building a 'public option for AI') published a Gap Map: an atlas of what's missing in open-source AI.",
-      "money_angle": "A funded organization literally published a map of unmet needs in AI. Gap maps are business-idea lists — each gap is something people want and nobody has built.",
-      "details": "The Gap Map catalogs areas where open-source AI lags proprietary offerings. For a side-hustle hunter, it doubles as a list of validated pain points — including ones solvable at small scale for niche audiences even if the full gap needs institutional money.",
-      "money_ideas": [
-        "Scan the map for gaps where a thin product wrapper (UI + workflow) over existing open models would serve a niche audience.",
-        "Content angle: 'I tried to fill gap X with open tools' writeups feed your LinkedIn/authority pipeline."
-      ]
-    },
-    {
-      "id": "43eacf5122",
-      "source": "TechCrunch",
-      "category": "Big Moves",
-      "title": "Zuckerberg tells staff AI agents haven't progressed as quickly as he'd hoped",
-      "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/",
-      "published": "2026-07-03T06:38:10+00:00",
-      "summary": "At an internal Meta meeting, Zuckerberg reportedly said AI agent development is moving slower than anticipated.",
-      "money_angle": "Reality check from the top: fully-autonomous agents are behind schedule. Human-in-the-loop services stay valuable longer — good news for anyone selling AI-assisted (not AI-replaced) work.",
-      "details": "Even with Meta's resources, agents that reliably complete long-horizon tasks remain hard. The practical takeaway: the winning small-business play right now is AI that drafts/preps/monitors while a human approves — exactly the kind of service an individual can sell.",
-      "money_ideas": [
-        "Sell 'AI-assisted, human-verified' as a feature, not a compromise — businesses burned by chatbot failures will pay for reliability.",
-        "Avoid building side hustles that only work if agents are flawless; build ones where 80% automation + your 20% oversight still profits."
-      ]
-    },
-    {
-      "id": "b7e86ff923",
-      "source": "Hacker News",
-      "category": "Local AI",
-      "title": "GLM5.2 on AMD MI355X at 2626 tok/s/node — 2x lower cost than Blackwell",
-      "url": "https://www.wafer.ai/blog/glm52-amd",
-      "hn_comments": "https://news.ycombinator.com/item?id=48780417",
-      "published": "2026-07-03T21:49:06Z",
-      "summary": "Benchmark showing the open-weights GLM5.2 model running on AMD hardware at over 2x lower cost than NVIDIA Blackwell (158 points on HN).",
-      "money_angle": "Open-model inference costs keep collapsing. Anything priced against 'AI is expensive' assumptions gets cheaper to operate every quarter — margins on AI services widen over time.",
-      "details": "AMD competitiveness on top open models means serious downward pressure on inference pricing across every provider. If you build a service today on paid APIs, expect your unit costs to fall — or run open models yourself and pocket the difference now.",
-      "money_ideas": [
-        "Price AI services on value delivered, not cost-plus — your costs will keep dropping while your price holds.",
-        "Revisit any idea you shelved because 'API costs would eat the margin' — the math may already work."
-      ]
-    },
-    {
-      "id": "dc4677f5bb",
-      "source": "TechCrunch",
-      "category": "Big Moves",
-      "title": "OpenAI proposed donating 5% of its equity to a US sovereign wealth fund",
-      "url": "https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/",
-      "published": "2026-07-02T22:20:51+00:00",
-      "summary": "Sam Altman reportedly proposed giving 5% of OpenAI's equity to a U.S. sovereign wealth fund — floating public participation in AI gains amid mounting backlash.",
-      "money_angle": "Signal, not opportunity: AI wealth concentration is now a political problem. Expect regulation talk, 'AI dividend' schemes, and public-sector AI budgets — government AI spending is a growing market.",
-      "details": "Multiple outlets (TechCrunch, Ars Technica, The Verge) covered the proposal, framed as easing tension with the administration and blunting public backlash against AI. Whatever happens to this specific deal, public-money-meets-AI is accelerating.",
-      "money_ideas": [
-        "Watch for state/local government AI adoption grants — small vendors often qualify for set-asides the giants ignore."
-      ]
-    },
-    {
-      "id": "01284d0383",
-      "source": "Simon Willison",
-      "category": "Tools & Tips",
-      "title": "Fable's judgement — let the model decide how to work",
-      "url": "https://simonwillison.net/2026/Jul/3/judgement/#atom-everything",
-      "published": "2026-07-04T01:51:06+00:00",
-      "summary": "Tip from the Claude Code team: with frontier models like Fable 5, you get better results letting the model use its own judgement rather than micromanaging its approach.",
-      "money_angle": "Prompting skill is shifting from 'write detailed instructions' to 'define outcomes and constraints.' Cheaper to operate, faster to build — lowers the bar for shipping AI side hustles.",
-      "details": "From Simon Willison's fireside chat with Anthropic's Claude Code team at the AI Engineer conference: over-specifying how the model should work now often produces worse results than stating the goal and letting it plan. This changes how you should build automations — define success criteria, not step-by-step scripts.",
-      "money_ideas": [
-        "Rebuild any brittle, over-scripted automation as goal-directed agent prompts — less maintenance, better results, faster client delivery."
-      ]
-    },
-    {
-      "id": "35ed231cc0",
-      "source": "Simon Willison",
-      "category": "Money Signals",
-      "title": "Course creator reports sales down sharply — is AI eating info products?",
-      "url": "https://simonwillison.net/2026/Jul/3/josh-w-comeau/#atom-everything",
-      "published": "2026-07-04T04:25:52+00:00",
-      "summary": "Well-known course creator Josh Comeau reports his new course is selling ~1/3 of a typical launch, with existing course sales also down significantly year-over-year.",
-      "money_angle": "Caution flag for one classic side hustle: generic 'learn X' info products are getting squeezed — people ask AI instead. Sell outcomes and done-for-you services, not just information.",
-      "details": "One data point, honestly disclosed, but consistent with a broader pattern: when AI can teach anything on demand, courses that merely transfer information lose value. What survives: community, accountability, certification, and done-with-you formats.",
-      "money_ideas": [
-        "If you build an info product, bundle it with templates, tooling, or live help — things AI can't fully substitute.",
-        "Better: productize the SERVICE version of the knowledge (do it for them) instead of teaching it."
       ]
     }
   ]
