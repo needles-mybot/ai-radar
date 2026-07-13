@@ -1,6 +1,66 @@
 {
-  "updated": "2026-07-11T05:05:08-07:00",
+  "updated": "2026-07-12T18:28:55-07:00",
   "items": [
+    {
+      "id": "4f4c2bd39a",
+      "source": "Ploy",
+      "category": "Agent Economics",
+      "title": "Migrating a production AI agent to GPT-5.6",
+      "url": "https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6",
+      "published": "2026-07-12T23:00:02+00:00",
+      "summary": "Ploy moved its production website-building agent from Claude Opus 4.8 to GPT-5.6 Sol after a small head-to-head test found completed builds were 2.2× faster, 27% cheaper, and slightly better on its visual score.",
+      "money_angle": "Rerun one paid website or browser-agent workflow on Sol before repricing it: Ploy cut mean build cost from $3.06 to $2.22 and wall time from eight minutes to 3:42, but only after fixing its harness, tool schemas, cache keys, and reasoning replay.",
+      "details": "The comparison covered 11 completed Opus builds and 10 Sol builds, so treat the result as a production case study, not a universal benchmark. Ploy found that roughly one-third of initial failures came from an Opus-shaped eval harness. GPT-5.6 also filled all 25 tool properties with invented defaults; converting optional fields to required-but-nullable cut empty file reads from 52–64% to zero and reduced tool calls about 30%. Workspace-scoped cache keys lifted first-call cache hits from roughly zero to 83.7% and cut uncached input tokens 28%.",
+      "comment": "HN readers flagged the same trap Aaron should watch: portability layers do not erase provider behavior. One commenter summarized the migration as moving 'from one vendor's moat to another'; another said the fixes belong in SDKs rather than every application stack."
+    },
+    {
+      "id": "5bbc3a5ef6",
+      "source": "The Verge",
+      "category": "Local AI Hardware",
+      "title": "How Apple’s self-driving car work led to an AI-focused M7 Ultra chip",
+      "url": "https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra",
+      "published": "2026-07-12T20:00:00+00:00",
+      "summary": "Apple reportedly repurposed silicon work from its canceled car project into Baltra AI chips, including an M7 Ultra-class server chip expected to support as much as 1.5TB of memory.",
+      "money_angle": "Do not replace the M5 Max on this rumor. Keep selling work on the 128GB machine now, and watch whether Apple exposes the M7 Ultra server stack to outside buyers; 1.5TB unified memory would change the economics of running very large models privately.",
+      "details": "Bloomberg reporting cited by The Verge says the autonomous-car team had built a central processor using four M3 Ultra chips, and that work fed Apple's Baltra server-chip effort with Broadcom. The M7 Ultra is described as the expected basis of an AI server product arriving next year, not as an announced Mac. The same report says Apple pulled forward some M5 Ultra plans while shifting some M6 products back, so the roadmap remains fluid.",
+      "comment": "An HN reader noted that the reported M5 Ultra timing changed within days. That is the right warning: treat this as capacity direction, not a purchase calendar."
+    },
+    {
+      "id": "36d5f814be",
+      "source": "The Verge",
+      "category": "Arizona Real Estate",
+      "title": "The data center fight is coming to a community near you",
+      "url": "https://www.theverge.com/column/963346/ai-data-centers-fight",
+      "published": "2026-07-12T08:00:00-07:00",
+      "summary": "AI data-center plans are running into organized community opposition over electricity, water, pollution, and weak local benefits, forcing developers to rethink where projects can survive politically.",
+      "money_angle": "For East Valley deals, stop treating a nearby data-center proposal as automatic land upside. Price zoning failure, utility fights, noise, water use, and years of delay into any parcel or wholesale thesis before tying up cash.",
+      "details": "The Verge argues that data-center construction has become a community-level political and economic fight rather than a remote infrastructure story. The article points to projects facing backlash over power and water demand and to developers seeking friendlier jurisdictions. The real-estate lesson is simple: an announced project is not a closed project, and public approval can erase speculative appreciation.",
+      "comment": "HN discussion pushed back on simple boom narratives: one commenter argued that this is not true 'community infrastructure' because local residents may carry external costs without sharing the upside."
+    },
+    {
+      "id": "aea0ac16cf",
+      "source": "Simon Willison",
+      "category": "Agent Operations",
+      "title": "Directly Responsible Individuals (DRI)",
+      "url": "https://simonwillison.net/2026/Jul/12/directly-responsible-individuals/",
+      "published": "2026-07-12T23:57:00+01:00",
+      "summary": "Simon Willison applies Apple's DRI rule to AI agents: a machine can do the work, but it should never be the party ultimately accountable for a project's success or failure.",
+      "money_angle": "Put a named human DRI, approval gates, and an escalation path into every agent service you sell. That makes the offer easier to trust and keeps a cheap automation error from becoming an expensive client dispute.",
+      "details": "GitLab defines a DRI as the one person ultimately accountable for a project or decision. Willison's point is that an agent cannot accept blame, exercise legal judgment, or repair trust after a failure. The practical workflow is to let agents execute and report while a human owns scope, approvals, exceptions, and the final result.",
+      "comment": "HN readers agreed with the accountability boundary while noting that organizations can still assign humans nominally and punish them without real control. The DRI therefore needs both responsibility and authority."
+    },
+    {
+      "id": "e7fba57de1",
+      "source": "TechCrunch",
+      "category": "Household AI",
+      "title": "OpenAI bets on families as ChatGPT goes deeper into households",
+      "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
+      "published": "2026-07-11T07:13:00-07:00",
+      "summary": "OpenAI is hiring a product manager for families, caregivers, and older adults as ChatGPT use shifts toward older demographics and trust-sensitive household use cases.",
+      "money_angle": "Test a paid, 90-minute AI setup and safety session for East Valley caregivers or older homeowners: account setup, scams, privacy, trusted contacts, and three useful daily workflows. OpenAI's hiring says the segment is real; service revenue can arrive before its family product does.",
+      "details": "Sensor Tower estimates cited by TechCrunch say ChatGPT users aged 35 and older rose from 26% to 31% globally year over year, while nearly one in four U.S. smartphone users who are parents used ChatGPT in the second quarter, up from 16%. OpenAI's role covers family strategy across products and specifically names caregivers and older adults. The job post sits in the Youth Well-Being team and emphasizes age prediction, parental controls, crisis resources, accessibility, and trust.",
+      "comment": "The clean opportunity is onboarding, not pretending to be a therapist. HN commenters also noted the missing household account model and the privacy problems that shared family context would create."
+    },
     {
       "title": "Meta kills Instagram’s public-account deepfake feature after backlash",
       "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
@@ -11,7 +71,8 @@
       "money_angle": "Sell consent and rights-management rails to creator platforms — or expect agencies, legal bills, and emergency rollbacks to eat the margin.",
       "comment": "Aaron: This is a clean product lesson: public content is not blanket permission to synthesize a person. Build the consent ledger first, then the generator.",
       "category": "Creator Rights",
-      "id": "d325e170b8"
+      "id": "d325e170b8",
+      "details": "Meta removed the Muse Image feature that let people generate new images from a public Instagram account by @-mentioning it. The tool did not notify the referenced account, and Meta pulled it after user and talent-agency backlash. Identity cloning without explicit consent turned a product launch into a three-day fire drill. Creator-AI products need permission, provenance, notification, and a kill switch before they ship."
     },
     {
       "title": "Apple sues OpenAI over alleged theft of unreleased hardware secrets",
@@ -23,7 +84,8 @@
       "money_angle": "AI-hardware startups and investors should pay for IP diligence and clean-room hiring now; one contaminated laptop or interview can freeze a multibillion-dollar roadmap.",
       "comment": "Aaron: Watch the injunction request and discovery, not the insults. Those determine whether OpenAI’s hardware timeline and supplier work take a real hit.",
       "category": "AI Hardware",
-      "id": "9970ed3bed"
+      "id": "9970ed3bed",
+      "details": "Apple alleges OpenAI recruited former Apple engineers to obtain confidential hardware details, prototypes, vendor information, and unreleased product data. OpenAI says it has no interest in other companies’ trade secrets. OpenAI’s hardware push is now serious enough for Apple to seek an injunction and court discovery. Litigation could delay products, expose recruiting practices, and make hardware talent more expensive."
     },
     {
       "title": "Hugging Face CEO: API bills are pushing enterprises toward open models",
@@ -35,7 +97,8 @@
       "money_angle": "Sell the migration and operating layer — workload audits, model routing, private serving, evals, and governance — rather than another thin wrapper around a rented API.",
       "comment": "Aaron: This matches the M5 thesis. Benchmark a repeatable client workflow locally and price the savings against its API bill; that is a concrete consulting offer.",
       "category": "Open Models",
-      "id": "33cb29d0b7"
+      "id": "33cb29d0b7",
+      "details": "Clem Delangue says companies often start with frontier-model APIs, then move toward open models as usage and cost rise. Hugging Face says its model-and-dataset platform is now used by roughly half of the Fortune 500. The commercial wedge is shifting from renting model intelligence to owning the serving, evaluation, routing, and governance layer. Local hardware makes that shift practical for smaller teams too."
     },
     {
       "title": "Sunrun wants to put paid AI compute nodes in customers’ homes",
@@ -47,7 +110,8 @@
       "money_angle": "The near-term business is not buying a mystery box; it is software and field operations for distributed compute fleets. Wait for pilot economics before treating hosting as income.",
       "comment": "Aaron: Useful signal, not yet a side hustle. Sunrun has 1.1 million customers and an installed service network, but the missing pay, uptime, heat, and bandwidth numbers decide the model.",
       "category": "AI Infrastructure",
-      "id": "30fd265569"
+      "id": "30fd265569",
+      "details": "Sunrun opened a pilot to place compute nodes in homes with its solar and battery systems, compensate participating customers, and sell the pooled capacity to enterprise compute buyers. Pay and hardware details are not yet public. If the pilot works, AI capacity becomes a distributed household asset like rooftop power. The hard problems move from pouring concrete to fleet control, networking, cooling, maintenance, and security."
     },
     {
       "id": "e11b299a33",
@@ -62,7 +126,8 @@
       "money_ideas": [
         "Reprice any existing 'AI build' offers using the new Sol rates — 54% token efficiency means your margin went up without changing scope.",
         "Use the multi-agent subagent feature for batched tasks: one model orchestrates, subagents run in parallel. Good for lead enrichment, list processing, or document batch jobs."
-      ]
+      ],
+      "comment": "Aaron: Reprice any existing 'AI build' offers using the new Sol rates — 54% token efficiency means your margin went up without changing scope."
     },
     {
       "id": "fd6c695aa2",
@@ -77,7 +142,8 @@
       "money_ideas": [
         "The Chrome extension is the platform to build on: agentic browsing as a Chrome extension is the winning pattern for 2026.",
         "Schedule-based agent tasks (cron-for-work) is a real workflow gap — build automations that run on triggers and report back, like nightly lead list refreshes or weekly reporting."
-      ]
+      ],
+      "comment": "Aaron: The Chrome extension is the platform to build on: agentic browsing as a Chrome extension is the winning pattern for 2026."
     },
     {
       "id": "3f57361220",
@@ -92,7 +158,8 @@
       "money_ideas": [
         "Build AI services on unit economics that work at current prices, not on the assumption that token costs will keep collapsing — you'll survive a correction either way.",
         "Open models are closing the quality gap at lower cost — if you're building on paid APIs, factor in that clients will want to move to cheaper alternatives."
-      ]
+      ],
+      "comment": "Aaron: Build AI services on unit economics that work at current prices, not on the assumption that token costs will keep collapsing — you'll survive a correction either way."
     },
     {
       "id": "132c70a2f0",
@@ -107,7 +174,8 @@
       "money_ideas": [
         "If you're building an AI tool, ship it as a Chrome extension first — that's where users' attention and browser context live.",
         "The 'agentic browsing' capability (agents that can navigate, click, fill forms) is the killer feature here. Wrap it in a workflow your target audience needs."
-      ]
+      ],
+      "comment": "Aaron: If you're building an AI tool, ship it as a Chrome extension first — that's where users' attention and browser context live."
     },
     {
       "id": "b0c29af09a",
@@ -122,7 +190,8 @@
       "money_ideas": [
         "Custom silicon from big players accelerates the open-model ecosystem — expect better local model performance as hardware diversifies.",
         "If you're building inference services, the falling hardware cost curve means your margin expands over time regardless of what you charge."
-      ]
+      ],
+      "comment": "Aaron: Custom silicon from big players accelerates the open-model ecosystem — expect better local model performance as hardware diversifies."
     },
     {
       "id": "e9b3a73064",
@@ -136,7 +205,8 @@
       "details": "Simo joined OpenAI's board in 2024, became CEO of Applications in May 2025, then took AGI chief title. Her medical leave began in April. Greg Brockman is now leading product strategy and scaling, overseeing four pillars. The reorganization was meant to consolidate ChatGPT and Codex into one agentic platform. Altman called the news 'really sad' on X.",
       "money_ideas": [
         "Watch for which OpenAI exec absorbs Simo's responsibilities — Dresser (ex-Slack CEO) stepping up would signal enterprise focus, which is where Anthropic has been gaining share."
-      ]
+      ],
+      "comment": "Aaron: Watch for which OpenAI exec absorbs Simo's responsibilities — Dresser (ex-Slack CEO) stepping up would signal enterprise focus, which is where Anthropic has been gaining share."
     },
     {
       "id": "d9be8582f0",
@@ -151,7 +221,8 @@
       "money_ideas": [
         "If you're building an automation with testable outputs (even simple ones), wire in a conformance check so agents can iterate autonomously and you just review failures.",
         "Cross-model adversarial review (let Model B check Model A's work) is free to add and caught real blockers here — steal that habit."
-      ]
+      ],
+      "comment": "Aaron: If you're building an automation with testable outputs (even simple ones), wire in a conformance check so agents can iterate autonomously and you just review failures."
     },
     {
       "id": "963a6870c5",
@@ -166,7 +237,8 @@
       "money_ideas": [
         "Use it for the commute/car version of your work: brief it on a prospect before a call, dictate deal notes after, let it pull up context while you talk.",
         "Live translation use case opens a door — if you serve Spanish-speaking sellers in AZ, a voice AI that can translate in real-time costs nothing extra."
-      ]
+      ],
+      "comment": "Aaron: Use it for the commute/car version of your work: brief it on a prospect before a call, dictate deal notes after, let it pull up context while you talk."
     },
     {
       "id": "f1d60122f0",
@@ -175,14 +247,15 @@
       "title": "Show HN: Microsoft releases Flint, a visualization language for AI agents",
       "url": "https://microsoft.github.io/flint-chart/#/",
       "hn_comments": "https://news.ycombinator.com/item?id=48834924",
-      "published": "2026-07-08T17:46:12Z",
+      "published": "2026-07-08T17:46:12+00:00",
       "summary": "Microsoft Research released Flint — a free visualization intermediate language where you write a simple high-level chart spec and the compiler derives axes, scales, spacing, and layout from the data automatically. 46 chart types, renders to Vega-Lite/ECharts/Chart.js, MCP server included. 306 HN points.",
       "money_angle": "If you're building any AI tool that shows data to clients, this removes the hardest part: getting an agent to reliably generate a clean, correct chart without hallucinating pixel values. Drop the MCP server into your agent stack and get presentable charts from raw data in one step.",
       "details": "Flint is explicitly designed for AI agents, not humans — the model gives it data, semantic types, chart type, and encodings; the compiler handles everything else. Install via npm (TypeScript/JavaScript), use the MCP server for agent workflows. Gallery has 83 examples across 46 chart types. Free and open source from Microsoft Research. The 306 HN points and 113 comments suggest this is landing with practitioners, not just researchers.",
       "money_ideas": [
         "Add client-ready charts to any automation you sell — turn a spreadsheet of placements or leads into a polished visual without wrestling with charting libraries.",
         "Wholesaling angle: auto-generate comps charts from property data and send them directly in seller follow-up — the kind of polish that looks like a big team."
-      ]
+      ],
+      "comment": "Aaron: Add client-ready charts to any automation you sell — turn a spreadsheet of placements or leads into a polished visual without wrestling with charting libraries."
     },
     {
       "id": "ffce1f7e1a",
@@ -193,7 +266,8 @@
       "published": "2026-07-09T03:03:34+00:00",
       "summary": "Cloudflare's Kenton Varda declared a team-wide moratorium on AI-written commit messages, PR descriptions, and issues — AI descriptions outlined visible code details but skipped the higher-level 'why' that makes reviewing a PR actually possible.",
       "money_angle": "Concrete habit for Claude Code users: let the model write the code, write your own commit messages. The framing and reasoning is the durable knowledge; the code is just output. If you're reviewing AI-written PRs for clients, same rule applies.",
-      "details": "Varda found AI change descriptions were 'worse than useless' for code review — they described what the diff contained (things you can see by reading the code) but omitted the architectural framing needed to understand what the code is doing at a level above the syntax. The fix is a moratorium, not a better prompt. This is a specific, repeatable failure mode in AI-assisted dev that shows up as soon as you have someone other than the AI author reviewing the work."
+      "details": "Varda found AI change descriptions were 'worse than useless' for code review — they described what the diff contained (things you can see by reading the code) but omitted the architectural framing needed to understand what the code is doing at a level above the syntax. The fix is a moratorium, not a better prompt. This is a specific, repeatable failure mode in AI-assisted dev that shows up as soon as you have someone other than the AI author reviewing the work.",
+      "comment": "Aaron: Concrete habit for Claude Code users: let the model write the code, write your own commit messages. The framing and reasoning is the durable knowledge; the code is just output. If you're reviewing AI-written PRs for clients, same rule applies."
     },
     {
       "id": "18842840ea",
@@ -204,7 +278,8 @@
       "published": "2026-07-09T05:41:33+00:00",
       "summary": "Lovable — the natural-language app builder — is reportedly raising $300M led by Menlo Ventures, which would push its valuation to $13.2B, double its last round.",
       "money_angle": "Vibe-coding is no longer a curiosity. The platform where you describe an app in English and it builds it is now a $13B business. The tools keep getting cheaper and better; the market for people who can turn those tools into working products for paying clients keeps getting bigger.",
-      "details": "The $300M round would double Lovable's previous valuation, per Sifted. Lovable competes in the natural-language-to-app space with Bolt.new and Replit's AI features. The valuation jump signals that investors see this category — AI-generated software for non-developers — as genuinely large. TechCrunch article was behind a bot check at write time; figures come from the collector snippet sourced from Sifted's reporting."
+      "details": "The $300M round would double Lovable's previous valuation, per Sifted. Lovable competes in the natural-language-to-app space with Bolt.new and Replit's AI features. The valuation jump signals that investors see this category — AI-generated software for non-developers — as genuinely large. TechCrunch article was behind a bot check at write time; figures come from the collector snippet sourced from Sifted's reporting.",
+      "comment": "Aaron: Vibe-coding is no longer a curiosity. The platform where you describe an app in English and it builds it is now a $13B business. The tools keep getting cheaper and better; the market for people who can turn those tools into working products for paying clients keeps getting bigger."
     },
     {
       "id": "85edce73b4",
@@ -213,14 +288,15 @@
       "title": "GitLost: tricking GitHub's AI agent into leaking private repos",
       "url": "https://noma.security/blog/gitlost-how-we-tricked-githubs-ai-agent-into-leaking-private-repos/",
       "hn_comments": "https://news.ycombinator.com/item?id=48827858",
-      "published": "2026-07-08T05:25:35Z",
+      "published": "2026-07-08T05:25:35+00:00",
       "summary": "Noma Labs found a critical prompt-injection hole in GitHub's new Agentic Workflows: an unauthenticated attacker just posts a crafted GitHub Issue in a public repo, and the org's AI agent — running with read access to private repos — quietly hands the attacker private data. 259 points on HN.",
       "money_angle": "This is the concrete version of the risk in every agent automation you build: an agent that reads untrusted input and holds real permissions can be steered by that input. 'Nothing leaves your building, and the agent can't read anything it doesn't need to' is now a sellable design principle, not paranoia.",
       "details": "GitHub Agentic Workflows let teams write automation in plain Markdown, with an AI agent (backed by Claude or Copilot) reading issues, calling tools, and responding on its own. The vulnerable setup triggered on issue-assigned events, read the issue title and body, and ran with read access to other org repos — public and private. The attacker needed no code, credentials, or access: they opened an issue disguised as a plausible VP-Sales request with hidden instructions in the body, and the agent followed them, exfiltrating private repo contents. Same root cause as every prompt-injection: the system never enforced a trust boundary between operator instructions and untrusted user data.",
       "money_ideas": [
         "Audit any agent you deploy for a client on one rule: does it read untrusted input AND hold write/read permissions it doesn't strictly need? Least-privilege is the fix, and 'I scope agent permissions tightly' is a real differentiator.",
         "Productize a one-page 'is your AI automation exposed?' review for small shops now wiring up GitHub/Copilot agents — recurring, not one-off."
-      ]
+      ],
+      "comment": "Aaron: Audit any agent you deploy for a client on one rule: does it read untrusted input AND hold write/read permissions it doesn't strictly need? Least-privilege is the fix, and 'I scope agent permissions tightly' is a real differentiator."
     },
     {
       "id": "3df5e390bf",
@@ -235,7 +311,8 @@
       "money_ideas": [
         "Harden your own workflow: never let an agent auto-install a package or 'skill' by name alone — pin exact repo URLs and commit hashes (the same habit Simon Willison's github-code component uses).",
         "Small-shop security offer: a locked-down agent config + an allowlist of trusted registries, sold as 'safe AI coding setup' to dev teams that adopted these tools faster than they secured them."
-      ]
+      ],
+      "comment": "Aaron: Harden your own workflow: never let an agent auto-install a package or 'skill' by name alone — pin exact repo URLs and commit hashes (the same habit Simon Willison's github-code component uses)."
     },
     {
       "id": "57f7251472",
@@ -243,14 +320,15 @@
       "category": "Local AI",
       "title": "French startup ZML releases free tool to speed inference across many AI chips",
       "url": "https://techcrunch.com/2026/07/08/hot-french-startup-zml-releases-free-product-to-speed-inference-across-lots-of-ai-chips/",
-      "published": "2026/07/08T15:00:00+00:00",
+      "published": "2026-07-08T15:00:00+00:00",
       "summary": "ZML — a French AI startup publicly endorsed by Turing Award winner Yann LeCun — released ZML/LLMD, free software aimed at making model inference faster and cheaper across a wide range of AI chips, not just Nvidia.",
       "money_angle": "This is the same margin-collapse story from the hardware side: free tooling that runs inference across whatever silicon you have keeps pushing the cost of serving models toward zero. Anything you run on your own M5 Max or build on paid APIs gets cheaper to operate.",
       "details": "Cross-chip inference tooling matters because it breaks the assumption that serious AI serving requires expensive Nvidia hardware — the same theme as the GLM-on-AMD benchmark showing ~2x lower cost than Blackwell. A free, LeCun-endorsed layer that squeezes more tokens-per-second out of mixed hardware widens the field of who can serve open models profitably. (TechCrunch's full piece was behind a bot-check at write time; details here come from the collector summary and the product framing.)",
       "money_ideas": [
         "If you ever spin up a small inference service, cross-chip tooling means you can shop for the cheapest available compute instead of paying Nvidia premiums.",
         "File it under your local-AI thesis: the trend line on inference cost only points down, so price AI services on value delivered, not cost-plus."
-      ]
+      ],
+      "comment": "Aaron: If you ever spin up a small inference service, cross-chip tooling means you can shop for the cheapest available compute instead of paying Nvidia premiums."
     },
     {
       "id": "6430cc7f42",
@@ -265,7 +343,8 @@
       "money_ideas": [
         "Use it for the un-fun parts of your pipeline: overnight candidate sourcing, submittal-packet prep, or motivated-seller list research you review the next morning.",
         "If you're already paying for Claude Max, mobile Cowork means your agent work isn't tethered to your desk — more billable output per day for the same subscription."
-      ]
+      ],
+      "comment": "Aaron: Use it for the un-fun parts of your pipeline: overnight candidate sourcing, submittal-packet prep, or motivated-seller list research you review the next morning."
     },
     {
       "id": "16589613c6",
@@ -280,7 +359,8 @@
       "money_ideas": [
         "Run a paid 'AI scam defense' lunch-and-learn for local businesses and their staff — code words, verification steps, what a cloned voice sounds like. Low cost, high trust, positions you as the AI-literate one.",
         "Wholesaling/staffing lens: any business that moves money on a phone call (title, escrow, payroll) is a warm prospect for a 30-minute 'don't get voice-cloned' briefing."
-      ]
+      ],
+      "comment": "Aaron: Run a paid 'AI scam defense' lunch-and-learn for local businesses and their staff — code words, verification steps, what a cloned voice sounds like. Low cost, high trust, positions you as the AI-literate one."
     },
     {
       "id": "381006001a",
@@ -289,7 +369,7 @@
       "title": "GLM 5.2 and the coming AI margin collapse",
       "url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
       "hn_comments": "https://news.ycombinator.com/item?id=48809877",
-      "published": "2026-07-06T20:14:55Z",
+      "published": "2026-07-06T20:14:55+00:00",
       "summary": "Martin Alderson argues Z.ai's open-weights GLM 5.2 is the first model he genuinely can't tell apart from Opus in Claude Code — and because it's a drop-in replacement, it puts the ~90% gross margins the frontier labs earn on inference in the crosshairs. 499 points on HN.",
       "money_angle": "This is the number behind your whole local-AI thesis: frontier inference is priced at roughly 90% margin, and an open model that matches it just made switching a one-line config change. 'Your margin is my opportunity' — anything you build on paid APIs gets cheaper, and anything you run on your own metal keeps that margin yourself.",
       "details": "Both Z.ai and Fireworks expose OpenAI- and Anthropic-compatible endpoints, so moving Claude Code or Codex to GLM 5.2 is just setting a base URL and API key — no Salesforce-grade migration. Alderson's honest caveats: GLM is slower (it over-thinks), has no vision support yet, and ships with weak web search, which turns out to matter a lot for agentic tasks. He points to Wafer's benchmark showing GLM 5.2 runs ~2.75x cheaper per token on AMD than on Nvidia Blackwell, and flags that Z.ai's own API terms (training/retention, China ties) make self-hosting or a Western provider the real play for sensitive data. This is part one of two; part two covers who wins and loses when inference margins collapse.",
@@ -297,7 +377,8 @@
         "You own an M5 Max 128GB — for non-interactive agent work (PR review, batch enrichment, overnight document runs) a GLM-class open model is near-Opus quality at zero marginal cost.",
         "Point brittle, non-time-critical automations at an open endpoint and reserve frontier API calls for the interactive, vision, or web-search steps that still need them.",
         "For clients with PII (staffing, wholesaling, law offices) 'runs on-prem, nothing leaves your building' is now a sellable feature at Opus-ish quality, not a downgrade."
-      ]
+      ],
+      "comment": "Aaron: You own an M5 Max 128GB — for non-interactive agent work (PR review, batch enrichment, overnight document runs) a GLM-class open model is near-Opus quality at zero marginal cost."
     },
     {
       "id": "a087d85e01",
@@ -313,7 +394,8 @@
         "Reframe your pitch from 'more headcount' to 'AI-leveraged headcount' — help clients hit output targets with a leaner, tooled-up team instead of losing the req entirely.",
         "Displaced commercial-sales and support pros are a candidate pool that just got deeper; build a bench now before competitors do.",
         "Watch the AI-layoff tracker for East Valley employers — a public cut is a warm reason to call the ones left holding the work."
-      ]
+      ],
+      "comment": "Aaron: Reframe your pitch from 'more headcount' to 'AI-leveraged headcount' — help clients hit output targets with a leaner, tooled-up team instead of losing the req entirely."
     },
     {
       "id": "acb8688dfa",
@@ -328,7 +410,8 @@
       "money_ideas": [
         "Turn this into a one-page 'lock down your Google privacy' checklist you hand new staffing/wholesaling clients — cheap trust-builder that positions you as the AI-literate one in the room.",
         "It's the wedge for the local-AI pitch: 'anything you paste into Google can train their model; the tool I built for you never leaves your machine.'"
-      ]
+      ],
+      "comment": "Aaron: Turn this into a one-page 'lock down your Google privacy' checklist you hand new staffing/wholesaling clients — cheap trust-builder that positions you as the AI-literate one in the room."
     },
     {
       "id": "f99d93502f",
@@ -337,7 +420,7 @@
       "title": "OfficeCLI: Office suite for AI agents to read and edit Word, Excel, PowerPoint",
       "url": "https://github.com/iOfficeAI/OfficeCLI",
       "hn_comments": "https://news.ycombinator.com/item?id=48807225",
-      "published": "2026-07-06T16:47:44Z",
+      "published": "2026-07-06T16:47:44+00:00",
       "summary": "A free, open-source single binary (9.1k GitHub stars) that lets AI agents read, edit, and automate Word, Excel, and PowerPoint files with no Microsoft Office installation required. 190 points on HN.",
       "money_angle": "Most small-business work still lives in .docx and .xlsx, and getting an agent to touch those reliably has been the fiddly part. A single binary that bridges that gap is the missing piece for productizing 'the AI edits your actual files' — the deliverable clients recognize.",
       "details": "OfficeCLI (from iOfficeAI) is pitched as purpose-built for agents rather than humans: point Claude Code or a local model at it and have the agent open, modify, and generate real Office documents programmatically, cross-platform, without a licensed Office install on the box. Installable via Homebrew and npm. Because it's a plain CLI, it drops straight into the kind of goal-directed agent workflows you already run.",
@@ -345,7 +428,8 @@
         "Build fixed-scope automations around it: bulk-fill staffing paperwork, generate candidate submittal packets, or turn a spreadsheet of seller leads into formatted outreach docs — all on files clients already use.",
         "Pair it with a local model on your M5 Max so client documents never leave your machine — a compliance-friendly 'document robot' you can charge a retainer for.",
         "Wholesaling angle: auto-populate contracts and comps sheets from a CSV of properties instead of hand-editing each one."
-      ]
+      ],
+      "comment": "Aaron: Build fixed-scope automations around it: bulk-fill staffing paperwork, generate candidate submittal packets, or turn a spreadsheet of seller leads into formatted outreach docs — all on files clients already use."
     },
     {
       "id": "d8baa3bf51",
@@ -360,7 +444,8 @@
       "money_ideas": [
         "Staffing lens: incident-response, patching, and security-oversight contract roles keep trending up — a warm reason to call East Valley IT clients.",
         "Productize a plain-language 'are we exposed?' security review for small businesses that can't parse the threat feed themselves — recurring, not one-off."
-      ]
+      ],
+      "comment": "Aaron: Staffing lens: incident-response, patching, and security-oversight contract roles keep trending up — a warm reason to call East Valley IT clients."
     },
     {
       "id": "63ccfa75fe",
@@ -375,70 +460,8 @@
       "money_ideas": [
         "AZ's ESA vouchers can pay for tutoring and microschool services — check the eligibility rules; that's funded demand in your backyard, not VC fantasy.",
         "The whole niche has a proof problem. Anyone selling AI-assisted tutoring who publishes real before/after numbers differentiates instantly."
-      ]
-    },
-    {
-      "id": "c8e3bde25f",
-      "source": "TechCrunch",
-      "category": "Money Signals",
-      "title": "Amazon will stop accepting new customers for Mechanical Turk",
-      "url": "https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/",
-      "published": "2026-07-06T00:43:36+00:00",
-      "summary": "Mechanical Turk closes to new customers July 30. Existing customers can keep using it, but AWS says no new features — the original human-microtask marketplace (launched 2005) is in maintenance mode.",
-      "money_angle": "The floor fell out of commodity microwork: a 2023 analysis found 33–46% of MTurk workers were already using LLMs to do the tasks. If a job can be described in a paragraph and checked by a script, AI does it now — plan side hustles and staffing pitches above that line.",
-      "details": "AWS framed it as 'careful consideration' with continued security investment but zero roadmap. Workers and researchers had already fled over bots and fraud; Amazon had repositioned MTurk as SageMaker annotation infrastructure back in 2018. The historical arc is tidy — the original 18th-century Mechanical Turk was a hidden human pretending to be a machine, and the platform spent its last decade as hidden humans powering products marketed as 'AI.' Now the machine really does the work.",
-      "money_ideas": [
-        "Staffing lens: basic data entry, tagging, and simple-moderation roles are the first ones clients quietly cut. Get ahead of it — bring East Valley clients a 'redeploy to QA/oversight' conversation before the req disappears.",
-        "Human data work didn't die, it moved upmarket: expert annotation and model-eval platforms want domain knowledge, not click-labor. Sourcing candidates for that niche is a real staffing market."
-      ]
-    },
-    {
-      "id": "54e97f4680",
-      "source": "Hacker News",
-      "category": "AI Education",
-      "title": "New AI tutor achieves 0.71-1.30 SD effect size in Dartmouth course [pdf]",
-      "url": "https://intextbooks.science.uu.nl/workshop2026/files/itb26_s1s2.pdf",
-      "hn_comments": "https://news.ycombinator.com/item?id=48796817",
-      "published": "2026-07-05T18:47:43Z",
-      "summary": "A Dartmouth intro-stats deployment (151 students) of Phosphor — a platform that embeds LLM-graded practice questions directly into course readings — was associated with a 0.71–1.30 SD final-exam gain, and hit 90.2% voluntary adoption versus the usual 10–15% reading compliance. 167 points on HN.",
-      "money_angle": "This is a buildable blueprint, not a lab curiosity: course content + constructed-response questions graded by Claude Sonnet against instructor rubrics + unlimited retries. No frontier research required — one person can assemble this for a tutoring niche, a training course, or client onboarding.",
-      "details": "The killer design detail: a mid-course natural experiment showed the MCQ-only module produced negligible benefit — open-ended constructed-response questions with LLM rubric grading are what drove learning. It was entirely optional and ungraded, yet 90% of students used it. Honest caveats: this is an association study adjusted for prior exam scores, not an RCT. And the paper cites the Bastani RCT where unrestricted GPT-4 access HARMED performance by 17% once removed — guardrailed practice works, raw chatbot access backfires.",
-      "money_ideas": [
-        "Corporate training version: wrap a client's safety/compliance/onboarding docs in LLM-graded questions. 'Measured completion' beats 'read the handbook' — and staffing firms placing workers need exactly this.",
-        "Steal the design detail: constructed-response with rubric grading, not multiple choice. MCQ-only showed near-zero benefit here.",
-        "If you ever pitch AI tutoring, 90% voluntary adoption of an optional, ungraded tool is the number that sells."
-      ]
-    },
-    {
-      "id": "3a3f83543d",
-      "source": "Simon Willison",
-      "category": "Tools & Tips",
-      "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
-      "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything",
-      "published": "2026-07-05T08:00:48+00:00",
-      "summary": "Simon Willison had Claude Fable do the final review and fixes for sqlite-utils 4.0 — 37 prompts, 34 commits, ~1,300 lines changed — and it caught 5 release blockers including a genuine data-loss bug. Unsubsidized cost: $149.25.",
-      "money_angle": "This is the real price sheet for agentic coding: $150 of frontier compute shipped a major release of a widely-used library, prompted from a phone. That's the unit economics behind any 'I'll build your tool for $2K' offer.",
-      "details": "Fable found a bug where delete_where() never committed and silently poisoned the connection — deletes and subsequent inserts vanished on close. Simon then had GPT-5.5 review Fable's work ('I used to think having one model review another was superstitious. The problem is it really does work') and it found two more confirmed P1 bugs. He also notes 'the Fablepocalypse': Fable access on Claude Max subscriptions ends July 7th, after which even Max subscribers pay full API price for the model.",
-      "money_ideas": [
-        "If you're on a Claude Max plan, burn your remaining Fable allowance on your hardest backlog item before July 7 — Simon deliberately did exactly this.",
-        "Steal the cross-model review habit: have GPT review Claude's output (or vice versa) on anything client-facing. It found 2 confirmed P1 bugs here and costs pennies.",
-        "His noted regret — not delegating more to cheaper subagent models — is your margin lesson: frontier model for judgement, cheap models for grunt work."
-      ]
-    },
-    {
-      "id": "63516e892d",
-      "source": "Simon Willison",
-      "category": "Tools & Tips",
-      "title": "Better Models: Worse Tools — newer Claudes fumble third-party tool schemas",
-      "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything",
-      "published": "2026-07-05T05:53:52+00:00",
-      "summary": "Armin Ronacher found that Opus 4.8 and Sonnet 5 invent extra made-up fields when calling his Pi harness's custom edit tool — while older, weaker Claude models don't. Likely cause: newer models are RL-trained on Claude Code's built-in tools, making them worse at everyone else's.",
-      "money_angle": "If you build agent automations, this is a silent failure mode: a model UPGRADE can break your custom tools. Design tool schemas to mimic what the model was trained on, and your stuff survives upgrades your competitors' doesn't.",
-      "details": "The edits themselves are usually correct — the arguments just don't match the schema, so the harness rejects the call and burns tokens on retries. Armin's theory: reinforcement learning on Claude Code's built-in search-and-replace edit tool bleeds into how the model treats similar-looking custom tools. Simon notes OpenAI's models are likewise trained on Codex's apply_patch format, and asks whether third-party harnesses now need per-model edit tools.",
-      "money_ideas": [
-        "In your own agent tools: strip unknown keys and accept the call instead of hard-rejecting on schema mismatch — cheaper than retry loops.",
-        "When a client automation degrades after a model swap, check tool-call schema drift before blaming your prompts."
-      ]
+      ],
+      "comment": "Aaron: AZ's ESA vouchers can pay for tutoring and microschool services — check the eligibility rules; that's funded demand in your backyard, not VC fantasy."
     }
   ]
 }
