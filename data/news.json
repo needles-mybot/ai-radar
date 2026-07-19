@@ -1,6 +1,52 @@
 {
-  "updated": "2026-07-18T05:03:11-07:00",
+  "updated": "2026-07-19T05:03:12.625914-07:00",
   "items": [
+    {
+      "id": "a20309c6ae",
+      "source": "Hacker News",
+      "title": "NYC may require landlords and realtors to disclose the use of AI in listings",
+      "url": "https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/",
+      "published": "2026-07-18T22:13:39Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=48962983",
+      "category": "Real Estate AI",
+      "summary": "New York City's Rental Ripoff Report calls for landlords to disclose rental-listing images altered with AI or other digital tools. The city says its 23 proposed housing actions will move through executive action, rulemaking, legislation, or litigation; this is not an Arizona rule.",
+      "money_angle": "For Cash Home Rescue, make the no-deception policy now: use actual property photos for material conditions, keep originals, and label any AI staging or alteration. That protects the deal when buyer skepticism and rules arrive together.",
+      "details": "Mayor Mamdani's office released the report on July 16 after hearings and online testimony from more than 2,400 New Yorkers. It specifically lists disclosure of rental listings altered with artificial intelligence or other digital tools. The report also covers tenant organizing, inspections, hazardous conditions, fees, and utility charges. It is a city policy package, so do not describe it as a nationwide or Arizona disclosure requirement.",
+      "money_ideas": [
+        "Add a photo ledger to every marketed property: original file, date, every edit, and a plain disclosure line when AI staging or alteration appears.",
+        "Sell a truthful-listing cleanup to small landlords: real photos, an accurate condition sheet, and clearly marked virtual staging—not fabricated repairs or features."
+      ]
+    },
+    {
+      "id": "b51b6c1073",
+      "source": "The Verge",
+      "title": "TikTok is testing an AI likeness detection tool",
+      "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool",
+      "published": "2026-07-18T02:34:30+00:00",
+      "category": "Likeness Safety",
+      "summary": "TikTok is testing an opt-in tool with some US creators that scans for AI-generated content potentially using their likeness, then lets them review and report posts or accounts. Participants verify identity through Jumio with a real-time selfie scan and ID check.",
+      "money_angle": "If you sell owner-approved avatar videos, likeness protection is part of the product, not cleanup after a fake spreads. Keep written consent, a source-video archive, and a takedown path for every client whose face or voice you use.",
+      "details": "TikTok spokesperson Zachary Kizer told The Verge that the test is limited to some US creators. TikTok says it does not retain ID documents and uses facial information only for likeness matching and identification of potential unauthorized uses. A creator can review matches and report unauthorized posts and accounts. The tool is a pilot, not a promise that every deepfake will be found or removed.",
+      "money_ideas": [
+        "Put an avatar-rights page in every video package: permitted channels, approved scripts, retention period, who owns the source assets, and the reporting contact.",
+        "If the test becomes available to your account, run one scan before and after a public avatar campaign and keep the results with the client's deliverables."
+      ]
+    },
+    {
+      "id": "ccfb0a1294",
+      "source": "Simon Willison",
+      "title": "SQLite Query Explainer",
+      "url": "https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything",
+      "published": "2026-07-19T00:19:10+00:00",
+      "category": "Builder Tools",
+      "summary": "SQLite Query Explainer runs a query in the browser and annotates both EXPLAIN QUERY PLAN and low-level EXPLAIN bytecode in plain English. It runs SQLite through Python in Pyodide/WebAssembly rather than sending the work to a server.",
+      "money_angle": "Small lead trackers and client dashboards often become slow from a bad SQLite query, not a missing AI model. Use this to find the query-plan problem, then verify it with a measured before-and-after time before billing for a fix.",
+      "details": "Simon Willison built the tool after reading Julia Evans on learning to read SQLite query plans. It exposes SQLite's planner output and virtual-machine bytecode beside generated explanations. Willison explicitly says he does not know enough about query plans to verify every explanation, so treat its prose as a teaching aid—not proof. Check conclusions against SQLite documentation and actual timings on the client database.",
+      "money_ideas": [
+        "Offer a fixed SQLite health check for a small business tool: find the slowest three queries, capture plans and timings, then quote only the verified fixes.",
+        "Use a sanitized copy of client data in the browser and never paste production secrets into a convenience tool."
+      ]
+    },
     {
       "id": "3c690c812d",
       "source": "Simon Willison",
@@ -290,18 +336,6 @@
       "money_angle": "Put a named human DRI, approval gates, and an escalation path into every agent service you sell. That makes the offer easier to trust and keeps a cheap automation error from becoming an expensive client dispute.",
       "details": "GitLab defines a DRI as the one person ultimately accountable for a project or decision. Willison's point is that an agent cannot accept blame, exercise legal judgment, or repair trust after a failure. The practical workflow is to let agents execute and report while a human owns scope, approvals, exceptions, and the final result.",
       "comment": "HN readers agreed with the accountability boundary while noting that organizations can still assign humans nominally and punish them without real control."
-    },
-    {
-      "id": "e7fba57de1",
-      "source": "TechCrunch",
-      "category": "Household AI",
-      "title": "OpenAI bets on families as ChatGPT goes deeper into households",
-      "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/",
-      "published": "2026-07-11T07:13:00-07:00",
-      "summary": "OpenAI is hiring a product manager for families, caregivers, and older adults as ChatGPT use shifts toward older demographics and trust-sensitive household use cases.",
-      "money_angle": "Test a paid, 90-minute AI setup and safety session for East Valley caregivers or older homeowners: account setup, scams, privacy, trusted contacts, and three useful daily workflows. OpenAI's hiring says the segment is real; service revenue can arrive before its family product does.",
-      "details": "Sensor Tower estimates say ChatGPT users aged 35 and older rose from 26% to 31% globally year over year, while nearly one in four U.S. smartphone users who are parents used ChatGPT in the second quarter, up from 16%. OpenAI's role covers family strategy across products and specifically names caregivers and older adults. The job post sits in the Youth Well-Being team and emphasizes age prediction, parental controls, crisis resources, accessibility, and trust.",
-      "comment": "The clean opportunity is onboarding, not pretending to be a therapist."
     }
   ]
 }
