@@ -1,6 +1,52 @@
 {
-  "updated": "2026-07-22T05:02:24-07:00",
+  "updated": "2026-07-23T05:02:55-07:00",
   "items": [
+    {
+      "id": "bc4da3fea4",
+      "source": "Hacker News",
+      "title": "Show HN: Cactus Hybrid: We taught Gemma 4 to know when it's wrong",
+      "url": "https://github.com/cactus-compute/cactus-hybrid",
+      "published": "2026-07-22T17:56:29Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49010782",
+      "category": "Local AI",
+      "summary": "Cactus Hybrid adds a confidence probe to a Gemma 4 E2B checkpoint, returning a 0–1 score with each answer so a local app can hand uncertain requests to a larger model. The project includes an MLX example, making it directly testable on Apple Silicon.",
+      "money_angle": "This is a real private-first workflow to test on the M5 Max: answer routine document or lead questions locally, then pay for cloud only when the confidence rule sends a case upstairs. The product is not the confidence number; it is a measured handoff rate and error rate on a client's real, reviewed work.",
+      "details": "Cactus says its probe returns structured confidence data rather than trying to infer certainty from the generated text. Its README shows an MLX loading path and exposes the score as `model.last_confidence`; it also documents Cactus and llama.cpp paths. The authors report that the small model can match Gemini 3.1 Flash-Lite on many listed benchmarks while handing off 15–35% of requests, but that is their own evaluation. Quantization changes the claimed handoff rate, so a 4-bit local build needs its own test before it touches client work.",
+      "money_ideas": [
+        "Run 100 sanitized lead-packet or document questions through the MLX build. Log confidence, the human-reviewed answer, cloud handoffs, and every miss before setting a threshold.",
+        "If the numbers hold, sell a private document-triage proof: local first pass, cloud escalation for low-confidence cases, and mandatory human approval for every final output."
+      ]
+    },
+    {
+      "id": "d64f4f789a",
+      "source": "Simon Willison",
+      "title": "Quoting Seth Larson",
+      "url": "https://simonwillison.net/2026/Jul/23/seth-larson/#atom-everything",
+      "published": "2026-07-23T11:50:36+00:00",
+      "category": "Supply Chain",
+      "summary": "PyPI now rejects new files added to a release more than 14 days old. The rule closes a path where a stolen publishing token or compromised release workflow could add a poisoned file to an old, trusted version.",
+      "money_angle": "Every Python tool you sell or run needs locked dependencies and a release path that makes a fresh version instead of patching an old one. That is dull work until a client installs a compromised package; then it is the floor under the whole AI build.",
+      "details": "PyPI says it made the change to protect old, long-stable releases, while noting it is not aware of the attack having been used. The project considers it acceptable for maintainers to bump to the next version when they need to support a late build target instead of adding a file to an old release. PyPI says release-state semantics and an API to check them are planned under PEP 694, not available yet. The related Warehouse change was merged July 8, 2026.",
+      "money_ideas": [
+        "For each Python project on the desk, freeze a tested requirements file with hashes and review anything that installs from an unpinned dependency range.",
+        "Offer a fixed package-trust check for a small team: inventory dependencies, pin versions and hashes, remove dead publishing keys, and document how a clean release is cut."
+      ]
+    },
+    {
+      "id": "ad3e75f937",
+      "source": "The Verge",
+      "title": "AMD commits up to $5 billion to Anthropic",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal",
+      "published": "2026-07-22T21:44:27+00:00",
+      "category": "AI Infrastructure",
+      "summary": "AMD says it will make a future equity investment of up to $5 billion in Anthropic, while Anthropic plans to deploy up to 2 gigawatts of AMD MI450-series GPUs in Helios systems. The first gigawatt is targeted for the first half of 2027.",
+      "money_angle": "The cloud-model bill is tied to a hardware arms race with no quiet ending in sight. Keep paid workflows portable: record quality, latency, token cost, and human rework across at least two cloud models, and keep local work on the M5 Max where privacy or volume makes it cheaper.",
+      "details": "AMD's announcement says the Helios deployment will use MI455X GPUs, EPYC Venice CPUs, Pensando networking, and ROCm software; it builds on Anthropic's existing use of MI355X. The companies also announced a multi-year engineering collaboration in which AMD will use Claude in software, engineering, and product work. The $5 billion is a commitment for a future equity investment, not a disclosed cash transfer today. The 2-gigawatt deployment is an announced plan, so dates and scale remain execution risk rather than delivered capacity.",
+      "money_ideas": [
+        "Build a 20-case model scorecard for one paid workflow now—output quality, seconds, tokens, API cost, and edits—then rerun it whenever a provider price or capability change lands.",
+        "Quote clients for a measured result and a model-agnostic delivery path, not a promise that one vendor's API price will stay still."
+      ]
+    },
     {
       "id": "3e18d6f571",
       "source": "The Verge",
@@ -263,62 +309,6 @@
       "details": "1Password says its secure channel inserts required credentials while keeping them from Claude's view, and scans the page after each autofill. When Claude takes the browser, 1Password says it locks to the credentials explicitly granted for that task. It is available now on Mac for 1Password individual, family, and business users; it requires the 1Password desktop app and browser extension, plus Claude desktop and browser extensions. Payment card and identity detail support is promised later.",
       "money_ideas": [
         "Write the credential policy before turning on agent browsing: which accounts, which tasks, who approves, and what agents are forbidden to submit. That policy is a repeatable deliverable for small businesses."
-      ]
-    },
-    {
-      "id": "2751415229",
-      "source": "TechCrunch",
-      "title": "Thinking Machines amps up its bet against one-size-fits-all AI with its first open model, Inkling",
-      "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/",
-      "published": "2026-07-16T01:04:06+00:00",
-      "category": "Open Models",
-      "summary": "Mira Murati's Thinking Machines Lab released Inkling, an open-weights 975B-parameter mixture-of-experts model with 41B active parameters and a 1M-token context window. The company also previewed a smaller Inkling-Small model with 12B active parameters and offers fine-tuning through Tinker.",
-      "money_angle": "This is not a drop-in local model for the 128GB Mac; Inkling's full checkpoint is aimed at server-class deployment. The business angle is narrower and real: take a client's repeatable judgment—lead qualification, document triage, or deal review—build an eval set first, then test whether a customized open model beats a rented generalist on that task.",
-      "details": "Thinking Machines says Inkling was pretrained on 45 trillion tokens across text, images, audio, and video; its current outputs are text. It explicitly says Inkling is not the strongest overall model and positions it as a broad base for customization rather than a finished chatbot. Full weights are on Hugging Face; the company lists API and deployment partners, while Tinker currently offers Inkling fine-tuning at a limited-time 50% discount. The company says its testing places Inkling near the top open-weight models on agentic work, but those results are its own evaluation.",
-      "money_ideas": [
-        "Pick one business judgment with 100 past cases and known outcomes. Measure a generic model against a tailored model before promising a client that fine-tuning helps."
-      ]
-    },
-    {
-      "id": "38e6035f3a",
-      "source": "Simon Willison",
-      "title": "How I tricked Claude into leaking your deepest, darkest secrets",
-      "url": "https://simonwillison.net/2026/Jul/15/claude-web-fetch-exfiltration/#atom-everything",
-      "published": "2026-07-15T21:21:54+00:00",
-      "category": "AI Security",
-      "summary": "A researcher showed that a hostile site could make Claude's web_fetch tool spell private memory into a chain of links, leaking a user's name, employer, and inferred hometown without showing the user what happened. Anthropic has since removed web_fetch's ability to follow links contained in fetched pages.",
-      "money_angle": "Treat browser-capable agents as if hostile pages can steer them, especially when they can read CRM notes, inboxes, Drive files, or long-term memory. A paid agent service needs a written boundary: untrusted browsing gets no private-data tools and cannot choose the next URL from page content.",
-      "details": "The attack used a normal-looking coffee-shop site that served a fake Cloudflare-like challenge only to Claude's user agent. Claude's prior rule allowed web_fetch to visit links in a page it had fetched, so the site could encode data one character at a time in requested URLs. The researcher responsibly disclosed it; Anthropic said it had already identified the hole and then limited navigation to user-provided URLs and web-search results. The author notes that the same pattern could reach connected email, Drive, or MCP data, not only chat memory.",
-      "money_ideas": [
-        "Add a browser-agent threat-model review to every client build: list private data the agent can read, every outbound channel, and whether fetched content can steer requests or tool calls."
-      ]
-    },
-    {
-      "id": "c90a394799",
-      "source": "TechCrunch",
-      "title": "Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not just models",
-      "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
-      "published": "2026-07-15T20:10:47+00:00",
-      "category": "AI Services",
-      "summary": "Anthropic's $1.5B joint venture with Blackstone and other investors, Ode, is building AI systems inside enterprises rather than merely selling model access. It acquired AI services startup Fractional AI, has about 100 engineers, and will use Claude first but says it can use rival tools when needed.",
-      "money_angle": "This is a bright sign for the service lane, not the prompt-wrapper lane. Sell a fixed-scope implementation around one expensive workflow, measure its before-and-after result, and own the handoff; clients pay for a working process, not for a list of model names.",
-      "details": "Ode says it works alongside Anthropic's applied-AI team to identify high-impact business problems and build systems tailored to the customer's operations. Its leaders say the work typically targets one of a CEO's top priorities, such as a core process or major product feature. The firm will receive potential customers from its private-equity backers' portfolios, but is not restricted to them. Its claim that applied-AI engineering talent is scarce is the opening for smaller specialists who can prove a clear, narrow business result.",
-      "money_ideas": [
-        "Package a two-week workflow proof: map one manual process, build a guarded prototype, and report a measured time, error, or conversion change. Price the proof separately from a longer build."
-      ]
-    },
-    {
-      "id": "b83655916b",
-      "source": "Simon Willison",
-      "title": "xai-org/grok-build, now open source",
-      "url": "https://simonwillison.net/2026/Jul/15/grok-build/#atom-everything",
-      "published": "2026-07-16T06:59:30+00:00",
-      "category": "Agent Tools",
-      "summary": "xAI published the Rust source for its Grok Build coding-agent harness under Apache 2.0 after its CLI was found uploading whole directories to cloud storage. The company says retention now defaults off and that previously retained coding data is being deleted; the published source still contains disabled Google Cloud upload code.",
-      "money_angle": "Open source creates an audit path, not a free pass to aim this tool at client code. A local, disposable sandbox can reveal useful agent-harness patterns, but sensitive repositories stay out until the released binary, configuration, and network traffic pass independent review.",
-      "details": "The GitHub project describes a terminal coding agent that can edit files, run shell commands, search the web, and manage long tasks interactively, in scripts or CI, and through the Agent Client Protocol. The repository is a periodic sync from xAI's monorepo, carries an Apache 2.0 license for first-party code, and does not accept external contributions. Simon Willison counted roughly 844,530 Rust lines and found a single import commit; he also found GCS upload remnants whose session-upload function currently returns an unavailable error. Treat the privacy claims as vendor statements pending outside review.",
-      "money_ideas": [
-        "Run any new coding CLI first in a dummy repository with no credentials and capture its outbound traffic. Turn that same check into a small fixed-price safety audit for teams adopting agentic coding tools."
       ]
     }
   ]
