@@ -1,6 +1,84 @@
 {
-  "updated": "2026-07-23T05:02:55-07:00",
+  "updated": "2026-07-24T05:04:15-07:00",
   "items": [
+    {
+      "id": "202b977a01",
+      "source": "Hacker News",
+      "title": "Hetzner is working on LLM Inference",
+      "url": "https://sliplane.io/blog/hetzner-inference",
+      "published": "2026-07-24T09:24:44Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49033087",
+      "category": "Cloud Inference",
+      "summary": "Hetzner is testing a free, OpenAI-compatible inference API with one Qwen Qwen3.6-35B-A3B-FP8 model. It has no billing, SLA, or production guarantee, so it is a test bench—not a client delivery backend.",
+      "money_angle": "Run a fixed 20-prompt scorecard against your paid model: answer quality, seconds to first token, total time, and cost. If a cheap provider wins on a narrow workflow, sell the measured workflow while keeping a paid fallback behind it.",
+      "details": "The trial model accepts text and images, has a 262K-token context window, and has 3 billion active parameters in its mixture-of-experts design. Sliplane's informal July 23 test measured 153 ms median time to first token and 224 output tokens per second, but that was one client at one moment, not an SLA. The same tester says it missed two simple arithmetic questions. Do not send client packets or make production promises until Hetzner publishes stable terms and the model clears your own real-work test.",
+      "money_ideas": [
+        "Build 20 sanitized BDM, lead-packet, or research prompts with a human-approved answer key; compare this endpoint with the model you pay for now.",
+        "If it holds up, offer a low-cost first-draft service with a named fallback model and human approval before anything reaches a client."
+      ]
+    },
+    {
+      "id": "8eec2cc6fc",
+      "source": "Hacker News",
+      "title": "Show HN: Echo – Fable-level results at 1/3 the cost using open-weight models",
+      "url": "https://news.ycombinator.com/item?id=49026810",
+      "published": "2026-07-23T19:26:01Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49026810",
+      "category": "Model Routing",
+      "summary": "Echo is an OpenAI-compatible API that decides which open-weight models should work on a prompt and how their outputs are combined. Its own evaluation page shows a 249-question math subset where Echo scored 247 versus Claude Fable's 246 at an estimated 66% lower cost; that is vendor evidence, not a general win.",
+      "money_angle": "Routing can raise margin only when it survives your actual work, not a benchmark card. Test it on a small, judged batch of research or document tasks before changing a client workflow, then charge from the verified cost and edit rate.",
+      "details": "Echo says it allocates different amounts of inference and combinations of open models by request. On its published MATH-500 subset, it estimates $1.977 for Echo versus $5.803 for Fable, while noting that one extra correct answer cannot establish overall superiority. Its 276-task LiveCodeBench result reports 251 solved tasks, but no matching Fable run exists, so there is no direct comparison. The authors disclose losses to Fable on MMLU-Pro, Belebele, and Global-MMLU; the newest result cards do not yet publish question-level examples.",
+      "money_ideas": [
+        "Run 20 sanitized, human-graded cases through Echo and the current model; log cost, latency, pass rate, and every required correction.",
+        "Keep a simple escape hatch: send low-confidence or high-stakes work to the stronger model and review every final client-facing output."
+      ]
+    },
+    {
+      "id": "9bbc5216b2",
+      "source": "Hacker News",
+      "title": "Show HN: Palmier Pro – Open-source macOS video editor built for AI",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "published": "2026-07-23T15:11:37Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49022911",
+      "category": "Local AI Video",
+      "summary": "Palmier Pro is a free GPLv3 Mac video editor for Apple Silicon on macOS 26, with an MCP server that lets Claude, Codex, or Cursor work on the open timeline. The editor and MCP layer are open source; its generative-media processing is closed and requires login and a subscription.",
+      "money_angle": "This is a clean test for turning one approved shoot into repeatable seller, staffing, or local-business clips without dragging files between five apps. Sell a finished, reviewed five-video package—not access to the editor or an agent that edits unsupervised.",
+      "details": "When Palmier is open, it exposes an HTTP MCP server on localhost at port 19789. Its README documents connections for Claude Code, Codex, Cursor, and Claude Desktop, so an agent can work in the same timeline instead of merely writing a shot list. The free editor works without login; its built-in generation features require a login and subscription. It is Apple-Silicon-only and requires macOS 26, so confirm a client's hardware before basing a delivery on it.",
+      "money_ideas": [
+        "Cut one 30-second owner or recruiter clip, recording the raw footage, agent prompt, manual corrections, edit time, and final approval before quoting the service.",
+        "Offer a five-clip starter pack only with written permission for every face, voice, property image, and claim in the video."
+      ]
+    },
+    {
+      "id": "9954135b21",
+      "source": "TechCrunch",
+      "title": "Runway launches AI model router as generative media gets crowded",
+      "url": "https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/",
+      "published": "2026-07-24T00:07:35+00:00",
+      "category": "Media Routing",
+      "summary": "Runway's Media Router selects image, video, or audio models through Runway Dev based on the priority a developer sets: quality, speed, or cost. It moves media generation toward a single bill and API instead of a pile of one-model subscriptions.",
+      "money_angle": "For a small content offer, the opportunity is controlled variants: make a property or staffing clip in three tested versions, then retain only the model path that clears a quality bar at a known cost. Do not promise 'best model' results when the router, prices, and vendors can move under your feet.",
+      "details": "Runway Dev gives API access to Runway models and third-party image, video, and audio models, and it includes recipes for work such as ad localization, product ads, product swaps, and multi-shot video. TechCrunch reports that the new router chooses a model around the developer's stated quality, speed, or cost preference. Runway says its platform shows spending across models from one billing dashboard, but actual output quality still depends on the prompt and task. Runway recently replaced unlimited plans with token-based pricing, so test the invoices as hard as the renders.",
+      "money_ideas": [
+        "Create three approved 15-second ad variants from the same script and assets; record render cost, turnaround, and client approval rate before choosing a default route.",
+        "Price media work by deliverable and revision count, then state that generation costs beyond the agreed budget need approval."
+      ]
+    },
+    {
+      "id": "77885ca812",
+      "source": "The Verge",
+      "title": "Claude’s voice mode is now available for Opus and Sonnet",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai",
+      "published": "2026-07-24T02:00:00+00:00",
+      "category": "Voice AI",
+      "summary": "Claude voice mode now works with Anthropic's deeper Opus and Sonnet models, not just Haiku, and users can switch between voice and text in one conversation. Anthropic is also extending the mode to Gmail, Slack, Canva, and nine additional languages.",
+      "money_angle": "After a call or site visit, a 90-second spoken debrief can become a tight next-step draft before the facts decay on the drive home. The paid result is disciplined follow-up: a human checks names, rates, promises, and dates before anything hits the CRM or email.",
+      "details": "Anthropic says people were already using voice mode to work through real business problems, where Haiku's speed did not always deliver enough depth. The company gives examples of turning a conversation into a one-page pitch and shifting calendar appointments, but those actions still need review. Voice conversations can move into text and switch models without starting over. The language expansion includes French, German, Spanish, Hindi, Indonesian, Italian, Japanese, Korean, and Portuguese.",
+      "money_ideas": [
+        "Use a fixed spoken template after five prospect calls: pain, budget signal, decision maker, promised next step, and follow-up date; compare completion rates against your present notes.",
+        "Make the CRM-entry and email-send steps human-only until a sample of drafts proves it preserves every critical fact."
+      ]
+    },
     {
       "id": "bc4da3fea4",
       "source": "Hacker News",
@@ -238,78 +316,6 @@
       "summary": "Anthropic says Fable 5 will be included in Claude Max and Team Premium from July 20 at 50% of plan limits. Pro and Team Standard users keep credit-based access and will receive a one-time $100 credit.",
       "money_angle": "Claude-based work now has a firmer subscription floor instead of a looming cutoff. Before promising a client delivery date, run one real workload at the 50% cap and keep a model fallback ready.",
       "details": "Anthropic had planned to remove Fable 5 from subscription plans in favor of API pricing, then reversed course. Simon Willison attributes the reversal to competition from GPT-5.6 Sol and Kimi K3; that is his analysis, not Anthropic's stated reason. The new Max and Team Premium access begins July 20."
-    },
-    {
-      "id": "c590dbac4b",
-      "source": "TechCrunch",
-      "title": "Google Vids now lets you star in your own AI videos",
-      "url": "https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/",
-      "published": "2026-07-17T01:32:54+00:00",
-      "category": "AI Video",
-      "summary": "Google Vids can now make an account-bound digital avatar from a selfie and voice recording. Gemini Omni also creates or edits video from prompts and reference images, including step-by-step changes, background swaps, and lighting fixes.",
-      "money_angle": "This cuts the floor for repeatable sales and training clips. The paid work is still the human layer: a clean script, brand rules, consent, and approval before a customer's face goes on the screen.",
-      "details": "Google says the personal avatar is tied to the account holder's likeness and Google account, and is invisibly watermarked with SynthID. Access is limited to people 18 or older in certain regions. Vids began as an AI-assisted workplace presentation tool; this update moves it closer to a video-production tool, but it does not remove the need to review every claim and every likeness used.",
-      "money_ideas": [
-        "Use your own likeness to make a 30-second seller or staffing follow-up video, then compare replies or booked calls against the same text-only outreach.",
-        "Offer an owner-approved five-video starter pack: script, avatar setup, render review, and delivery. Never use a client's likeness without their explicit written approval."
-      ]
-    },
-    {
-      "id": "09e86f1db1",
-      "source": "VentureBeat",
-      "title": "The agent security gap: 54% of enterprises have already had an AI agent incident, and most still let agents share credentials",
-      "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
-      "published": "2026-07-17T02:02:38+00:00",
-      "category": "Agent Safety",
-      "summary": "In VentureBeat's June survey of 107 organizations with more than 100 employees, 18% reported a confirmed agent-security incident and 36% a near-miss. Only 32% said every agent has its own scoped, managed identity; just 30% sandbox their highest-risk agents.",
-      "money_angle": "A client agent that reaches a CRM, inbox, or file share needs its own narrow identity, not a shared human login or a loose API key. This is service work with teeth: map access, cut permissions, sandbox risky tasks, and leave a trail of logs.",
-      "details": "The survey reports credential sharing somewhere in 74 of 107 organizations, though respondents could select overlapping patterns across their fleets. Organizations with credential sharing reported an incident or near-miss at 63.5%, versus 40.9% among the smaller group where every agent had its own scoped identity; the survey shows association, not causation. It is a self-selected, one-wave survey, so treat its figures as directional rather than a population estimate.",
-      "money_ideas": [
-        "Sell a fixed-scope agent-access check: inventory each agent, give it a distinct least-privilege identity, start it read-only in a sandbox, and verify that its actions land in logs."
-      ]
-    },
-    {
-      "id": "546beebc58",
-      "source": "Simon Willison",
-      "title": "Kimi K3, and what we can still learn from the pelican benchmark",
-      "url": "https://simonwillison.net/2026/Jul/16/kimi-k3/#atom-everything",
-      "published": "2026-07-17T03:19:30+00:00",
-      "category": "Open Models",
-      "summary": "Moonshot's Kimi K3 is a 2.8T-parameter model now on its API and web app, with open weights promised by July 27, 2026. List price is $3 input / $15 output per million tokens.",
-      "money_angle": "This isn't a local-Mac model: 2.8T parameters means server-class hardware. It is a worthwhile API challenger for one measured workflow, but its heavy max-reasoning behavior makes token budgets non-negotiable.",
-      "details": "Moonshot calls K3 the first open 3T-class model. Simon Willison cites Artificial Analysis as reporting a $0.94 cost per task, about half Opus 4.8's reported cost, but that is a third-party evaluation, not a guarantee. In his small test, K3 used 13,241 reasoning tokens to generate an SVG and cost 25 cents. The lesson: keep output-token caps and run your own evals.",
-      "money_ideas": [
-        "Run the same 10 real prospect- or document-workflow cases on K3 and your current model. Record cost, time, and human edits. Drop the loser."
-      ]
-    },
-    {
-      "id": "9be1570d40",
-      "source": "Hacker News",
-      "title": "LM Studio Bionic: the AI agent for open models",
-      "url": "https://lmstudio.ai/blog/introducing-lm-studio-bionic",
-      "published": "2026-07-16T20:18:15Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=48939662",
-      "category": "Local AI Workflows",
-      "summary": "LM Studio Bionic is a new separate agent app for local or cloud open models; the vendor says local voice transcription, code-diff review, sandboxed document work, and rollback checkpoints are built in. Cloud models require an account and billing.",
-      "money_angle": "This fits the 128GB machine: a local agent can sort a discreet client packet without putting it inside a general cloud chat. Test the flow first on a non-sensitive property lead packet and sell the reviewed result, not the agent itself.",
-      "details": "Bionic can point a Code project at a local folder, search and edit it, then show inline diffs. Work projects claim a sandboxed environment for documents, spreadsheets, PDFs, and directories, with checkpoints to review or roll back changes. The vendor commits to zero data retention and no training on user data; treat that as the vendor commitment, not an audit. It ships Voxtral for on-device dictation.",
-      "money_ideas": [
-        "Build one repeatable lead-packet-to-first-offer test: feed a non-sensitive packet, review every file change, and measure whether it cuts time but not quality."
-      ]
-    },
-    {
-      "id": "e9a82b74f6",
-      "source": "The Verge",
-      "title": "Claude can now use your 1Password credentials for you",
-      "url": "https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration",
-      "published": "2026-07-16T20:00:00+00:00",
-      "category": "Agent Safety",
-      "summary": "1Password now lets Claude authorize and complete browser tasks that need logins without exposing passwords or MFA codes to the agent, according to 1Password. Each task requires a per-task biometric approval.",
-      "money_angle": "Browser agents fighting login friction are more useful than demo chatbots, but they need a digital deadbolt. For client work, the safe pattern is per-task credential access, hands-on approval, scoped vaults, and a log of what ran.",
-      "details": "1Password says its secure channel inserts required credentials while keeping them from Claude's view, and scans the page after each autofill. When Claude takes the browser, 1Password says it locks to the credentials explicitly granted for that task. It is available now on Mac for 1Password individual, family, and business users; it requires the 1Password desktop app and browser extension, plus Claude desktop and browser extensions. Payment card and identity detail support is promised later.",
-      "money_ideas": [
-        "Write the credential policy before turning on agent browsing: which accounts, which tasks, who approves, and what agents are forbidden to submit. That policy is a repeatable deliverable for small businesses."
-      ]
     }
   ]
 }
