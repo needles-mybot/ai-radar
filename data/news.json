@@ -1,6 +1,52 @@
 {
-  "updated": "2026-07-24T05:04:15-07:00",
+  "updated": "2026-07-25T05:03:00-07:00",
   "items": [
+    {
+      "id": "204fa3eb1b",
+      "source": "TechCrunch",
+      "title": "Anthropic launches Opus 5",
+      "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+      "published": "2026-07-25T00:00:00+00:00",
+      "category": "Model Economics",
+      "summary": "Anthropic released Claude Opus 5 at $5 per million input tokens and $25 per million output tokens. Ars reports that it is pitched as near-Fable 5 coding performance at about half Fable’s price, not a giant capability jump.",
+      "money_angle": "Put it through 20 sanitized BDM research, document, or coding tasks beside the model you pay for now. Switch a client workflow only if the scorecard shows lower cost or rework after human review—not because a benchmark card looks good.",
+      "details": "Anthropic says Opus 5 is stronger at verifying its work and iterating until it succeeds. TechCrunch reports that it is not subject to the 30-day data-retention policy that covers Fable and Mythos, and that API users can opt into beta Automatic Fallbacks when a safety classifier triggers. Ars says its listed price matches Opus 4.8: $5 per million input tokens and $25 per million output tokens. The cited coding results come from Anthropic’s benchmarks, so they are a test lead, not proof that it beats your current stack.",
+      "money_ideas": [
+        "Build a 20-case scorecard from sanitized prospect research, lead packets, or code fixes: pass rate, wall time, tokens, API cost, and every correction.",
+        "Offer a fixed model-cost audit only after the scorecard proves a better result on the client’s own work."
+      ]
+    },
+    {
+      "id": "75e11e424e",
+      "source": "TechCrunch",
+      "title": "OpenAI’s new voice mode makes it to the ChatGPT desktop app",
+      "url": "https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/",
+      "published": "2026-07-24T20:36:42+00:00",
+      "category": "Voice Agents",
+      "summary": "OpenAI added ChatGPT Voice to its desktop app, where it can direct ChatGPT Work and Codex agents and use computer-use skills to look up websites and apps. On macOS, Appshots can let the app access what is on the screen, including alt text.",
+      "money_angle": "Run a five-call pilot: dictate a fixed BDM debrief, have the agent prepare a research brief and follow-up draft, then check facts and send manually. The paid result is faster, accurate follow-up—not an agent loose in a CRM.",
+      "details": "TechCrunch reports that the feature uses OpenAI’s ChatGPT-Live voice-model family. The desktop version accepts multi-step spoken commands and can ask for input while the work runs; OpenAI’s demo showed a developer creating a pull request and investigating a bug from one voice command. It works with ChatGPT Work and Codex, and can use computer-use skills to inspect websites and apps. Screen and app access widen the blast radius, so keep sensitive client records out of a first test and do not give it unattended write access.",
+      "money_ideas": [
+        "After five prospect calls, compare voice-built drafts against your present follow-up: missing facts, edit time, and same-day send rate.",
+        "Give a pilot only read access to the small set of pages it needs; keep CRM edits, email sends, pricing, and commitments human-approved."
+      ]
+    },
+    {
+      "id": "174358ddfc",
+      "source": "Hacker News",
+      "title": "UK AISI / Caisi Preliminary Assessment of Kimi K3's Cyber Capabilities",
+      "url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
+      "published": "2026-07-25T04:20:21Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49044492",
+      "category": "Open Model Safety",
+      "summary": "A joint UK AISI and U.S. CAISI preliminary evaluation found Kimi K3 reached step 17 on average in a 32-step simulated network attack, against 28.5 for the most cyber-capable U.S. models. It completed the range in one of 10 attempts, and its safeguards did not stop agentic exploit-development attempts in the evaluation.",
+      "money_angle": "Cheap or open-weight agents belong in a clean sandbox before they touch a client’s files, tools, or network. A sellable safety review is concrete: scoped credentials, an egress allowlist, action logs, and a human gate before any write or send.",
+      "details": "NIST says the evaluation used a selective set of cyber tests and was preliminary, with results from a small mix of public and private benchmarks. On ExploitBench’s 41 post-2023 V8 vulnerabilities, Kimi K3 scored 32% versus GLM-5.2’s 24%, but achieved arbitrary code execution on none of 41 samples. In the 32-step simulated range, it reached step 17 on average and completed the range once within a 100-million-token limit. The range has an intentional attack path and lacks active defenders, so it is not a real-client-network prediction—but it is enough evidence to keep agent permissions narrow.",
+      "money_ideas": [
+        "Build an agent test cage with dummy data, disposable credentials, blocked outbound traffic by default, and logs for every tool call.",
+        "Sell a fixed agent-access check: list each tool, cut its permissions to the minimum, test denied actions, and document a kill switch."
+      ]
+    },
     {
       "id": "202b977a01",
       "source": "Hacker News",
@@ -274,21 +320,6 @@
       "money_ideas": [
         "Add a photo ledger to every marketed property: original file, date, every edit, and a plain disclosure line when AI staging or alteration appears.",
         "Sell a truthful-listing cleanup to small landlords: real photos, an accurate condition sheet, and clearly marked virtual staging—not fabricated repairs or features."
-      ]
-    },
-    {
-      "id": "b51b6c1073",
-      "source": "The Verge",
-      "title": "TikTok is testing an AI likeness detection tool",
-      "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool",
-      "published": "2026-07-18T02:34:30+00:00",
-      "category": "Likeness Safety",
-      "summary": "TikTok is testing an opt-in tool with some US creators that scans for AI-generated content potentially using their likeness, then lets them review and report posts or accounts. Participants verify identity through Jumio with a real-time selfie scan and ID check.",
-      "money_angle": "If you sell owner-approved avatar videos, likeness protection is part of the product, not cleanup after a fake spreads. Keep written consent, a source-video archive, and a takedown path for every client whose face or voice you use.",
-      "details": "TikTok spokesperson Zachary Kizer told The Verge that the test is limited to some US creators. TikTok says it does not retain ID documents and uses facial information only for likeness matching and identification of potential unauthorized uses. A creator can review matches and report unauthorized posts and accounts. The tool is a pilot, not a promise that every deepfake will be found or removed.",
-      "money_ideas": [
-        "Put an avatar-rights page in every video package: permitted channels, approved scripts, retention period, who owns the source assets, and the reporting contact.",
-        "If the test becomes available to your account, run one scan before and after a public avatar campaign and keep the results with the client's deliverables."
       ]
     },
     {
