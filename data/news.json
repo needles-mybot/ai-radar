@@ -1,6 +1,53 @@
 {
-  "updated": "2026-07-25T05:03:00-07:00",
+  "updated": "2026-07-26T05:06:02.853021-07:00",
   "items": [
+    {
+      "source": "TechCrunch",
+      "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+      "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+      "published": "2026-07-26T08:30:00+00:00",
+      "category": "Workforce Shifts",
+      "summary": "Monday.com said it will cut about 20% of its workforce—just over 600 roles—in a restructuring tied to its AI-driven strategy. TechCrunch's running list says U.S. tech companies have cut nearly 140,000 jobs this year, but the stated AI link ranges from direct automation to data-center spending and post-pandemic over-hiring.",
+      "money_angle": "Use layoff chatter as a sourcing and account-mapping signal, not your pitch. Track the job families being cut and the hybrid roles being opened, then bring a named candidate slate to the bottleneck the employer still has.",
+      "details": "Monday.com expects $45 million to $55 million in restructuring charges and still projects up to 20% year-over-year revenue growth in 2026. Its co-founder told employees the cuts were not made to reduce costs or replace people with AI, even as the SEC filing tied the plan to an AI-driven strategy. The article cites Financial Times analysis that companies citing AI in cuts have trailed the Nasdaq by almost 10% in the 30 trading days after their announcements. It is a running account of companies' statements, not proof that AI directly caused each layoff.",
+      "money_ideas": [
+        "Keep a weekly sheet with employer, roles cut, roles opened, stated reason, Arizona footprint, and one warm contact; call only where a real hiring gap remains.",
+        "Lead with the stated operational gap and a candidate for an adjacent hard-to-fill role—not an unprovable claim that AI caused the cuts."
+      ],
+      "id": "a43cd096a1"
+    },
+    {
+      "source": "Hacker News",
+      "title": "What is happening to jobs? Separating AI hype from reality",
+      "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
+      "published": "2026-07-25T22:51:10Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49052570",
+      "category": "Labor Market",
+      "summary": "Stanford SIEPR's July policy brief finds little evidence of broad AI-driven job loss so far: unemployment in the most AI-exposed occupations has not risen faster than in the least-exposed group. Its sharper warning is at the entry level, where recent-graduate unemployment reached 5.6% in early 2026 and research points to weaker demand in AI-exposed work, though causes remain tangled.",
+      "money_angle": "For staffing discovery, drop blanket replacement talk. Ask where tasks have been consolidated, which junior hires are being deferred, and which experienced people now carry the work; sell a measured candidate plan against that named gap.",
+      "details": "Since 2022, unemployment rose 0.77 percentage points in the most AI-exposed occupational quintile and 0.85 points in the least-exposed quintile, which SIEPR reads as a broadly softer market rather than broad AI displacement. The brief says enterprise-AI adopters grew employment 10% in the two years after adoption, driven by the highest per-capita AI spenders. It finds more credible pressure on early-career workers in software development and customer service, but notes interest rates, pandemic over-hiring, and remote work muddy simple claims. The authors call the evidence early and adoption uneven.",
+      "money_ideas": [
+        "Put five discovery questions in every account call: tasks removed, output volume, roles consolidated, junior hiring changes, and the next role the manager cannot leave open.",
+        "Build an East Valley candidate brief for one AI-adjacent role with verified skills and a 30-day ramp plan; use it as proof that staffing can absorb the work shift instead of merely narrating it."
+      ],
+      "id": "6876b03407"
+    },
+    {
+      "source": "Hacker News",
+      "title": "Cloudflare's new AI traffic options for customers",
+      "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
+      "published": "2026-07-25T22:50:49Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49052564",
+      "category": "Web Traffic",
+      "summary": "Cloudflare now lets customers manage AI traffic by three stated uses: Search, Agent, and Training; the controls are available on its Free tier. Starting September 15, Cloudflare says new domains will block Training and Agent bots by default on ad pages, while Search stays allowed by default.",
+      "money_angle": "If a Cash Home Rescue or client site sits behind Cloudflare, make an explicit crawler policy before defaults make the choice for you. A small paid review can map pages, bot purposes, lead risk, and the one setting each business owner actually wants.",
+      "details": "Cloudflare says its older managed preset focused on single-purpose training crawlers, while the new controls separate search indexing, real-time agent visits, and model training. It says multi-purpose Search-plus-Training crawlers will follow the most restrictive selected rule, which can block Googlebot, Applebot, or Bingbot for customers that block Training. Owners can opt out of the planned default changes in Cloudflare's Security settings before September 15. Enterprise customers also get BotBase, a directory of tracked bots and agents.",
+      "money_ideas": [
+        "For each Cloudflare-backed site, record the current rule, pages with ads or lead forms, referral baseline, and form volume before changing anything; inspect the numbers two weeks later.",
+        "Sell a fixed crawler-policy pass: inventory the site, choose Search/Agent/Training rules with the owner, take before-and-after screenshots, and document a rollback path."
+      ],
+      "id": "53c12c6d64"
+    },
     {
       "id": "204fa3eb1b",
       "source": "TechCrunch",
@@ -305,48 +352,6 @@
         "Build a ten-case scorecard from sanitized real work: answer quality, wall time, input/output tokens, cost, and every human correction.",
         "Keep K3 in a disposable, explicit-scope harness; never switch to it mid-session or let it take irreversible action without review."
       ]
-    },
-    {
-      "id": "a20309c6ae",
-      "source": "Hacker News",
-      "title": "NYC may require landlords and realtors to disclose the use of AI in listings",
-      "url": "https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/",
-      "published": "2026-07-18T22:13:39Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=48962983",
-      "category": "Real Estate AI",
-      "summary": "New York City's Rental Ripoff Report calls for landlords to disclose rental-listing images altered with AI or other digital tools. The city says its 23 proposed housing actions will move through executive action, rulemaking, legislation, or litigation; this is not an Arizona rule.",
-      "money_angle": "For Cash Home Rescue, make the no-deception policy now: use actual property photos for material conditions, keep originals, and label any AI staging or alteration. That protects the deal when buyer skepticism and rules arrive together.",
-      "details": "Mayor Mamdani's office released the report on July 16 after hearings and online testimony from more than 2,400 New Yorkers. It specifically lists disclosure of rental listings altered with artificial intelligence or other digital tools. The report also covers tenant organizing, inspections, hazardous conditions, fees, and utility charges. It is a city policy package, so do not describe it as a nationwide or Arizona disclosure requirement.",
-      "money_ideas": [
-        "Add a photo ledger to every marketed property: original file, date, every edit, and a plain disclosure line when AI staging or alteration appears.",
-        "Sell a truthful-listing cleanup to small landlords: real photos, an accurate condition sheet, and clearly marked virtual staging—not fabricated repairs or features."
-      ]
-    },
-    {
-      "id": "ccfb0a1294",
-      "source": "Simon Willison",
-      "title": "SQLite Query Explainer",
-      "url": "https://simonwillison.net/2026/Jul/18/sqlite-query-explainer/#atom-everything",
-      "published": "2026-07-19T00:19:10+00:00",
-      "category": "Builder Tools",
-      "summary": "SQLite Query Explainer runs a query in the browser and annotates both EXPLAIN QUERY PLAN and low-level EXPLAIN bytecode in plain English. It runs SQLite through Python in Pyodide/WebAssembly rather than sending the work to a server.",
-      "money_angle": "Small lead trackers and client dashboards often become slow from a bad SQLite query, not a missing AI model. Use this to find the query-plan problem, then verify it with a measured before-and-after time before billing for a fix.",
-      "details": "Simon Willison built the tool after reading Julia Evans on learning to read SQLite query plans. It exposes SQLite's planner output and virtual-machine bytecode beside generated explanations. Willison explicitly says he does not know enough about query plans to verify every explanation, so treat its prose as a teaching aid—not proof. Check conclusions against SQLite documentation and actual timings on the client database.",
-      "money_ideas": [
-        "Offer a fixed SQLite health check for a small business tool: find the slowest three queries, capture plans and timings, then quote only the verified fixes.",
-        "Use a sanitized copy of client data in the browser and never paste production secrets into a convenience tool."
-      ]
-    },
-    {
-      "id": "3c690c812d",
-      "source": "Simon Willison",
-      "title": "Claude make Fable 5 permanent",
-      "url": "https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/#atom-everything",
-      "published": "2026-07-18T13:00:13+00:00",
-      "category": "Model Access",
-      "summary": "Anthropic says Fable 5 will be included in Claude Max and Team Premium from July 20 at 50% of plan limits. Pro and Team Standard users keep credit-based access and will receive a one-time $100 credit.",
-      "money_angle": "Claude-based work now has a firmer subscription floor instead of a looming cutoff. Before promising a client delivery date, run one real workload at the 50% cap and keep a model fallback ready.",
-      "details": "Anthropic had planned to remove Fable 5 from subscription plans in favor of API pricing, then reversed course. Simon Willison attributes the reversal to competition from GPT-5.6 Sol and Kimi K3; that is his analysis, not Anthropic's stated reason. The new Max and Team Premium access begins July 20."
     }
   ]
 }
