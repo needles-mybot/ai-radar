@@ -1,6 +1,36 @@
 {
-  "updated": "2026-07-26T05:06:02.853021-07:00",
+  "updated": "2026-07-27T05:01:35-07:00",
   "items": [
+    {
+      "id": "05c09dc2d7",
+      "source": "Ars Technica",
+      "title": "Artist sues AI meme generator for selling deeply personal comic as ad template",
+      "url": "https://arstechnica.com/tech-policy/2026/07/artist-sues-ai-meme-generator-for-selling-deeply-personal-comic-as-ad-template/",
+      "published": "2026-07-27T10:50:37+00:00",
+      "category": "AI Copyright",
+      "summary": "Artist Elmer Saflor sued Memes Apps LLC, alleging its paid AI ad generator returns copies of his 2017 \"Running Away Balloon\" comic as a template. The case begins with allegations: Ars could not confirm any generated ad used the work, and Saflor says he has not seen one.",
+      "money_angle": "For Cash Home Rescue or client ad work, treat a viral meme as license-required stock, not free prompt material. Keep a source-and-permission line for every image template; original or licensed assets make a service you can defend and resell.",
+      "details": "Saflor filed the suit earlier this month against the operator of Memes.ai and Memes AI Studio, seeking discovery and an order to stop use of the comic. Ars reports the service sells subscriptions at $40 or $199 a month, which makes the alleged copying commercial rather than ordinary personal meme sharing. Internet-law expert Eric Goldman told Ars that a 2024 ruling over the Success Kid meme supports a distinction between noncommercial sharing and ad use, but said the case could still face hard questions because it targets the generator rather than individual advertisers.",
+      "money_ideas": [
+        "Add an asset ledger to every paid content job: file, source, creator or license, allowed use, date acquired, and client approval.",
+        "Build property and staffing ad packs from client shoots, licensed stock, and original graphics; do not base the offer on copied meme templates."
+      ]
+    },
+    {
+      "id": "e7bd166c2d",
+      "source": "Simon Willison",
+      "title": "An Inside Look at the Relay Market Powering Token Resellers and Fraud",
+      "url": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything",
+      "published": "2026-07-26T19:30:54+00:00",
+      "category": "API Security",
+      "summary": "An investigation traced a market of LLM relay services that resell heavily discounted model access through pooled accounts; reported abuse paths include free-trial farming, chargebacks, stolen cards, and exposed support bots. The open-source gateways behind many relays are legitimate software—the fraud is in keys and accounts that operators do not own or are not allowed to resell.",
+      "money_angle": "Do not put client work through a mystery discount relay. For any public AI tool you build, the sellable safety layer is a gateway with per-customer caps, concurrency limits, alerts, and a shutoff switch before a token thief turns the billing page into a landfill.",
+      "details": "Vectoral's investigation, highlighted by Simon Willison, found relay prices as low as an effective $0.13 of official usage for each $1 of list-price access, based on a cited forum package. It describes account pools that rotate credentials behind a single OpenAI-compatible endpoint and notes that one-api and new-api can be used lawfully as internal gateways. The report recommends reserving budget for in-flight requests, capping new accounts, watching anomalous usage, and quietly throttling suspicious traffic instead of advertising the detection rule.",
+      "money_ideas": [
+        "Before releasing a public demo, fire concurrent test requests against a disposable account and prove that its cap, alert, and kill switch stop spend where you set them.",
+        "Offer a fixed API-spend check: inventory keys and public endpoints, set per-user budgets and concurrency limits, then document the incident shutoff path."
+      ]
+    },
     {
       "source": "TechCrunch",
       "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
