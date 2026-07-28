@@ -1,6 +1,52 @@
 {
-  "updated": "2026-07-27T05:01:35-07:00",
+  "updated": "2026-07-28T05:03:46-07:00",
   "items": [
+    {
+      "id": "64db355e6a",
+      "source": "Simon Willison",
+      "title": "moonshotai/Kimi-K3",
+      "url": "https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything",
+      "published": "2026-07-27T23:39:04+00:00",
+      "category": "Open Models",
+      "summary": "Moonshot released Kimi K3's full 2.8-trillion-parameter weights: an open-weight, multimodal agent model with a 1-million-token context window. The 1.56TB download and 104B active parameters make it a hosted-model test for the M5 Max, not a sensible local install.",
+      "money_angle": "Run K3 as a capped API bake-off against your present cloud model on a narrow research or coding job; do not mistake released weights for a free local workstation. Its license requires a separate Moonshot agreement for Model-as-a-Service businesses above $20 million in aggregate revenue over 12 months.",
+      "details": "Moonshot's model card lists 2.8T total parameters, 104B activated parameters, text-and-image input, and a 1,048,576-token context window. Simon Willison reports that the full weights are 1.56TB; he also found K3 available through seven OpenRouter providers, commonly at $3 per million input tokens and $15 per million output tokens. Moonshot calls it open weight, not open source, and its Kimi K3 License carries the large-service condition. The published capability tables are Moonshot's own results and mix model harnesses, so they are a reason to test rather than a buying decision.",
+      "money_ideas": [
+        "Run ten sanitized tasks from real work with a fixed token cap; log pass rate, seconds, API cost, and every human correction beside the model you use now.",
+        "Keep the first K3 trial read-only and free of client PII; use the measured scorecard, not the benchmark sheet, before quoting a cheaper delivery price."
+      ]
+    },
+    {
+      "id": "ec9dddb29c",
+      "source": "TechCrunch",
+      "title": "Google’s AI search is rapidly becoming the default, new data shows",
+      "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/",
+      "published": "2026-07-27T15:57:12+00:00",
+      "category": "Search Visibility",
+      "summary": "Similarweb says Google's AI Overviews appeared in 43% of searches, up from 15% a year earlier. Its data also puts AI Mode visits at 279 million in May 2026, up from 126 million in June 2025.",
+      "money_angle": "For Cash Home Rescue and local clients, pages alone no longer prove discovery. A clean paid offer is an AI-search baseline: inspect 20 real seller or customer queries, record the overview, cited pages, and competitors, then compare Search Console and lead data after publishing verified answers.",
+      "details": "TechCrunch's account of Similarweb's report says Google is moving people from short keywords toward longer, conversational queries and keeping more research inside Google. The report says AI responses carrying citations rose more than fivefold over the year, while only 6.8% of U.S. ChatGPT desktop queries included citations in May. It also reports that after a May 7 ChatGPT search update, the share of U.S. desktop referrals landing on webpages rose from 25% in March to nearly 60% by May 30. These are platform-wide traffic measures, not a promise that a specific page will be cited or bring a lead.",
+      "money_ideas": [
+        "Search 20 East Valley seller-intent queries from a clean browser and save the result page, cited domains, local-pack result, and your page's position in one sheet.",
+        "Publish only fact-checked pages that answer the questions the audit exposes, then revisit in 30 days with Search Console impressions, calls, forms, and any AI-referred sessions."
+      ]
+    },
+    {
+      "id": "449fc3ec34",
+      "source": "Hacker News",
+      "title": "Don't ask an LLM for a confidence score",
+      "url": "https://justinflick.com/2026/07/27/llm-confidence-scores.html",
+      "published": "2026-07-28T00:06:53Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49077443",
+      "category": "AI Reliability",
+      "summary": "A self-reported 0–100 confidence field from an LLM is not a calibrated measure of whether its answer is right, argues Justin Flick. He points to research where more than 78% of six models' scores landed on only three values, and to the missing work: held-out ground truth, calibration, and reliability testing.",
+      "money_angle": "Never tell a staffing, seller, or client that a draft is '90% accurate' because the model printed 90. The sellable control is an evidence ledger—current sources, task checks, human approval where needed, and an error rate measured on a labeled sample.",
+      "details": "The post separates a raw model self-report from a score that has actually been trained and checked against outcomes. It notes that even conventional classifier probabilities need post-hoc calibration and cites semantic-entropy work that samples multiple answers and compares their meanings instead of trusting one generated float. If a workflow needs uncertainty labels, the author argues for defined categories and a test against ground truth rather than an untested 0–100 scale. This is an opinion piece backed by linked research, not a proof that every purpose-built confidence system fails.",
+      "money_ideas": [
+        "Take 100 sanitized past tasks with known answers; measure the model's actual pass rate by any confidence band before allowing that band to skip review.",
+        "Replace a decorative confidence number with statuses such as 'source checked,' 'source missing,' and 'human approval required,' each tied to an auditable rule."
+      ]
+    },
     {
       "id": "05c09dc2d7",
       "source": "Ars Technica",
@@ -321,66 +367,6 @@
       "money_ideas": [
         "Build a short list of Arizona solar EPCs, then ask one operational question: which role or task is delaying the next project?",
         "Offer a 30-day recruiting sprint around a named project bottleneck, with a weekly count of qualified candidates, interviews, and starts—not a vague AI pitch."
-      ]
-    },
-    {
-      "id": "758b6cd171",
-      "source": "TechCrunch",
-      "title": "Anthropic’s landmark $1.5B copyright settlement is approved",
-      "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/",
-      "published": "2026-07-21T07:12:24+00:00",
-      "category": "AI Copyright",
-      "summary": "A federal judge gave final approval to Anthropic's $1.5 billion settlement with authors and publishers over pirated books. The settlement is expected to pay $3,000 per work across about 500,000 works, while the earlier district-court fair-use ruling on model training remains nonbinding outside that case.",
-      "money_angle": "For any paid AI workflow built on client material, keep a source ledger on the desk: what entered, who owned it, and what permission or license covers it. 'It was online' is not a defensible acquisition record.",
-      "details": "The case turned on how Anthropic acquired books: a judge had found training on copyrighted text to be fair use, but found downloading and storing books from pirate sites illegal. Anthropic settled before a trial over the piracy claims. Because the case settled, the district court's fair-use holding will not become appellate precedent. Copyright cases against Google, Meta, Midjourney, and OpenAI remain unresolved.",
-      "money_ideas": [
-        "Add a data-provenance page to every client AI build: source, owner, permission or license, retention period, and deletion contact.",
-        "Use client-owned documents or explicitly licensed material for a retrieval system; do not bulk-load books, paid reports, or scraped competitor material."
-      ]
-    },
-    {
-      "id": "72b5d5f105",
-      "source": "TechCrunch",
-      "title": "AI’s most important protocol is getting a little bit easier to use",
-      "url": "https://techcrunch.com/2026/07/20/ais-most-important-protocol-is-getting-a-little-bit-easier-to-use/",
-      "published": "2026-07-21T03:50:40+00:00",
-      "category": "Agent Infrastructure",
-      "summary": "TechCrunch reports that the next Model Context Protocol update moves server-side session handling toward a stateless design. That removes a scaling headache for MCP servers behind load balancers, where every machine otherwise must recognize a session created by another machine.",
-      "money_angle": "MCP is the pipe from an agent to Gmail, a CRM, or internal tools; the billable work is safe connection design, not installing a plugin. Sell narrow tool access, per-user authorization, and an audit trail before giving an agent the keys to a client's inbox or records.",
-      "details": "MCP gives models a standard way to access external data sources and services rather than forcing a custom integration for each connection. Under the prior session approach, a client receives a session ID at connection time and sends it with later requests, which complicates distributed deployments. The reported update is intended to let servers handle sessions more like ordinary stateless web services. It does not remove the need to restrict tool permissions or review actions with real-world consequences.",
-      "money_ideas": [
-        "Package one read-only connector first—for example, lead lookup from a CRM—with a named user, minimal scopes, action logs, and a human approval boundary for writes.",
-        "Charge for a one-week proof that records time saved and every bad retrieval or blocked action before expanding the agent's reach."
-      ]
-    },
-    {
-      "id": "942f283953",
-      "source": "Ars Technica",
-      "title": "Beyond grep: The case for a context-rich AI coding harness",
-      "url": "https://arstechnica.com/ai/2026/07/beyond-grep-the-case-for-a-context-rich-ai-coding-harness/",
-      "published": "2026-07-20T18:20:10+00:00",
-      "category": "Agent Building",
-      "summary": "Ars contrasts Claude Code’s lean, search-as-needed approach with Augment Code’s pre-indexed semantic retrieval for repositories. Augment says its own Terminal-Bench test reached similar accuracy with 33% fewer tokens, while Anthropic says it has not measured a performance gain from some semantic code-navigation tools.",
-      "money_angle": "For a client’s large private codebase, sell a measured context test—not a vector-database fairy tale. Run the same ten real tickets with and without an index, then price only the version that cuts search time, token cost, or rework.",
-      "details": "A coding harness decides what a model sees and which actions it can take around a repository. Augment’s Vinay Perneti says pre-indexing with embeddings, retrieval, and a vector database helps most on large private repositories the model has never seen; its 33% figure is the company’s own evaluation. Ars notes that Anthropic and Augment were not necessarily testing the same intervention. Both sides agree that human judgment remains necessary, particularly for specifications and checking technical debt.",
-      "money_ideas": [
-        "Take ten closed tickets from a private repository and record time-to-context, tokens, accepted diff rate, and review rework for grep-only versus indexed retrieval.",
-        "Keep frontier models for ambiguous work; use cheaper or local models only for well-specified tasks after the scorecard proves they hold up."
-      ]
-    },
-    {
-      "id": "90cef26b7e",
-      "source": "The Verge",
-      "title": "China delivers a one-two punch to America’s AI dominance",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
-      "published": "2026-07-20T17:16:33+00:00",
-      "category": "Open Models",
-      "summary": "Moonshot has put Kimi K3 on its web products and API and says full weights will follow by July 27; Alibaba has previewed its 2.4T-parameter Qwen3.8 and says open weights are coming. Their claims against US frontier models are mostly vendor benchmarks, so capability and operating cost still need independent tests.",
-      "money_angle": "Neither giant model belongs on a 128GB Mac. The money move is a narrow API bake-off—one research, document, or coding job with a fixed token cap and a human correction log—before switching a client workflow or quoting cheaper delivery.",
-      "details": "Moonshot describes K3 as a 2.8T-parameter model with a 1M-token context window; its tech post says it runs at maximum thinking effort by default and warns that harnesses must preserve thinking history. The same post warns that K3 can make unexpected decisions when instructions are ambiguous, so tight task boundaries are mandatory. The Verge reports that Qwen3.8 is a 2.4T-parameter preview and that both companies intend to make their models open-weight. Full weights or a preview are not proof that either is the best choice for a paid workflow.",
-      "money_ideas": [
-        "Build a ten-case scorecard from sanitized real work: answer quality, wall time, input/output tokens, cost, and every human correction.",
-        "Keep K3 in a disposable, explicit-scope harness; never switch to it mid-session or let it take irreversible action without review."
       ]
     }
   ]
