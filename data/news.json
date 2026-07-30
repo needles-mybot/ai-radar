@@ -1,6 +1,67 @@
 {
-  "updated": "2026-07-29T05:04:55-07:00",
+  "updated": "2026-07-30T05:04:03-07:00",
   "items": [
+    {
+      "id": "df34ed2151",
+      "source": "TechCrunch",
+      "title": "Microsoft is openly competing with OpenAI, Anthropic more than ever",
+      "url": "https://techcrunch.com/2026/07/29/microsoft-is-openly-competing-with-openai-anthropic-more-than-ever/",
+      "published": "2026-07-30T00:21:06+00:00",
+      "category": "Model Portability",
+      "summary": "Microsoft used its earnings call to pitch its MAI models, Copilot agent harnesses, AI security, and Maya chips as a lower-cost enterprise stack alongside outside models. Nadella's core message was architectural: keep the harness separate from the model so the model can be swapped.",
+      "money_angle": "For any client automation, sell the measured workflow and its audit trail—not permanent allegiance to one model vendor. Keep prompts, inputs, outputs, and approval steps portable, then rerun a scorecard when price, quality, or access changes instead of rebuilding the whole thing.",
+      "details": "Nadella said Azure offers more than 11,000 models, including models from OpenAI, Anthropic, Mistral, xAI, and Microsoft's MAI family. He said Microsoft had announced more than a dozen MAI models across image, voice, transcription, coding, security, and reasoning, and that MAI models on Maya 200 delivered 40% better performance per watt; those are company claims from the earnings call, not an independent bake-off. The company is also positioning MAI Cyber One Flash plus its multi-agent security harness against Anthropic's Mythos. This makes multi-model delivery a competitive sales claim from the largest Microsoft 365 vendor, not just an architect's hobby.",
+      "money_ideas": [
+        "Take one workflow you might sell—prospect research, seller-packet triage, or follow-up drafting—and store its test set, prompts, source links, human edits, latency, and cost outside any one provider's chat history.",
+        "Quote the client for a reviewed outcome and a monthly model scorecard, with a named fallback model, rather than promising a specific vendor will remain cheapest or available."
+      ]
+    },
+    {
+      "id": "97854c7d00",
+      "source": "Hacker News",
+      "title": "Show HN: Open-source engine running Gemma 4 26B in 2 GB RAM on any M-series Mac",
+      "url": "https://github.com/drumih/turbo-fieldfare",
+      "published": "2026-07-29T15:05:43Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49098510",
+      "category": "Local AI",
+      "summary": "TurboFieldfare is an Apache-2.0 Swift and Metal runtime for Gemma 4 26B-A4B that keeps a roughly 1.35GB shared core and a 4K FP16 KV cache in memory while streaming needed experts from SSD. Its documented installed text model is about 14.3GB; its Mac app, CLI, and experimental loopback OpenAI-compatible server run on Apple Silicon.",
+      "money_angle": "Your 128GB M5 Max does not need the 2GB trick, but it can use the same private 26B first-draft engine while other local work is already eating memory. Test it on de-identified notes and document chores first; the sellable result is a measured private workflow with human approval, not a benchmark screenshot.",
+      "details": "The repository documents 5.1–6.3 tokens per second on an 8GB M2 Air and 31–35 tokens per second on a 24GB M5 Pro; it does not publish an M5 Max result. It requires Apple Silicon, macOS 26, Metal 4, Xcode 26, Swift 6.2, and about 15GB of initial download capacity. It is model-specific rather than a wrapper around MLX or llama.cpp, and the model weights are downloaded separately under their own terms. The README says the model can repeat itself or be wrong, and the runtime itself exposes no tool execution; a client must authorize any tool call returned by the local server.",
+      "money_ideas": [
+        "Run 100 de-identified BDM or property-document tasks through it on the M5 Max. Log pass rate, seconds, manual edits, and the cloud calls you avoided before treating it as a production lane.",
+        "If it clears that test, package a private first-draft proof for a small firm: local text processing, no unattended sends or CRM writes, and a human-approved final output."
+      ]
+    },
+    {
+      "id": "8095150695",
+      "source": "Ars Technica",
+      "title": "Anthropic is finding bugs faster than Microsoft can fix them",
+      "url": "https://arstechnica.com/security/2026/07/anthropic-is-finding-bugs-faster-than-microsoft-can-fix-them/",
+      "published": "2026-07-29T15:52:48+00:00",
+      "category": "AI Security",
+      "summary": "Microsoft engineers said Anthropic's Mythos Preview was finding software flaws faster than they could patch them. An internal April slide cited 90 critical and 141 important SharePoint bugs; Microsoft released patches for more than 600 bugs on July 14, according to the ProPublica reporting carried by Ars.",
+      "money_angle": "If a small business runs Microsoft 365, Teams, SharePoint, or Copilot-connected workflows, old patches and broad credentials are now a wider attack surface. Do the basic work before an agent pilot: update systems, remove stale accounts, give integrations the minimum access, and write down how the connection gets shut off.",
+      "details": "The reporting says Microsoft's Project Glasswing team had about 50 full-time employees with Mythos access and was working to harden critical services before public tools caught up. Microsoft said it prioritizes by exploitability and customer impact, while a former NSA AI official warned that AI can chain several low- or moderate-severity flaws into a serious attack. The internal records covered part of Microsoft rather than every product, and there is no evidence in the story that a specific Mythos-found Microsoft bug has been exploited. The practical signal is the patch backlog: AI bug discovery is turning old technical debt into a fire hose.",
+      "money_ideas": [
+        "Before connecting an AI tool to a Microsoft 365 tenant, make a one-page access map: account, data reached, permission, owner, logs, patch owner, and kill switch.",
+        "Keep a client-facing AI pilot read-only until its Microsoft accounts are patched and its least-privilege access has been tested."
+      ]
+    },
+    {
+      "id": "b066f12120",
+      "source": "TechCrunch",
+      "title": "Hint, a new AI startup co-founded by Martha Stewart, offers an AI assistant for homeowners",
+      "url": "https://techcrunch.com/2026/07/29/hint-a-new-ai-startup-co-founded-by-martha-stewart-offers-an-ai-assistant-for-homeowners/",
+      "published": "2026-07-29T15:35:09+00:00",
+      "category": "Homeowner AI",
+      "summary": "Hint launched a free iOS homeowner app that builds a profile from an address and public data, then lets an owner add reports, warranties, invoices, and appliance photos for maintenance reminders and document questions. It uses commercial libraries including OpenAI and Gemini for image work, while its future business model includes premium multi-property features and service-provider affiliate revenue.",
+      "money_angle": "This is a clean signal that homeowner records and maintenance anxiety are a real AI wedge around the Cash Home Rescue world. Do not feed a seller's documents into a third-party app without explicit permission; use the idea to build consented education and intake around the paperwork owners already lose on the kitchen counter.",
+      "details": "Hint says it draws on property records, weather, soil data, utilities, and user-uploaded home documents to answer questions such as the last AC service or electricity price. It also offers maintenance reminders, environmental reports, insurance guidance, and a home score. The company says its service-provider partner network is firewalled from the AI recommendations; that is the company's description, not an independent privacy or recommendation audit. The app is currently free, without subscriptions or ads, and backed by $10 million in funding according to TechCrunch.",
+      "money_ideas": [
+        "Test the address-only profile on your own or a fully consented property. Compare every public-record fact and maintenance inference against the paper file before treating it as useful research.",
+        "Make a plain homeowner document checklist for Cash Home Rescue content—inspection, warranty, repair invoices, insurance, and utility history—with a clear consent line before collecting anything sensitive."
+      ]
+    },
     {
       "id": "e803514874",
       "source": "The Verge",
@@ -292,52 +353,6 @@
       "money_ideas": [
         "Use a fixed spoken template after five prospect calls: pain, budget signal, decision maker, promised next step, and follow-up date; compare completion rates against your present notes.",
         "Make the CRM-entry and email-send steps human-only until a sample of drafts proves it preserves every critical fact."
-      ]
-    },
-    {
-      "id": "bc4da3fea4",
-      "source": "Hacker News",
-      "title": "Show HN: Cactus Hybrid: We taught Gemma 4 to know when it's wrong",
-      "url": "https://github.com/cactus-compute/cactus-hybrid",
-      "published": "2026-07-22T17:56:29Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49010782",
-      "category": "Local AI",
-      "summary": "Cactus Hybrid adds a confidence probe to a Gemma 4 E2B checkpoint, returning a 0–1 score with each answer so a local app can hand uncertain requests to a larger model. The project includes an MLX example, making it directly testable on Apple Silicon.",
-      "money_angle": "This is a real private-first workflow to test on the M5 Max: answer routine document or lead questions locally, then pay for cloud only when the confidence rule sends a case upstairs. The product is not the confidence number; it is a measured handoff rate and error rate on a client's real, reviewed work.",
-      "details": "Cactus says its probe returns structured confidence data rather than trying to infer certainty from the generated text. Its README shows an MLX loading path and exposes the score as `model.last_confidence`; it also documents Cactus and llama.cpp paths. The authors report that the small model can match Gemini 3.1 Flash-Lite on many listed benchmarks while handing off 15–35% of requests, but that is their own evaluation. Quantization changes the claimed handoff rate, so a 4-bit local build needs its own test before it touches client work.",
-      "money_ideas": [
-        "Run 100 sanitized lead-packet or document questions through the MLX build. Log confidence, the human-reviewed answer, cloud handoffs, and every miss before setting a threshold.",
-        "If the numbers hold, sell a private document-triage proof: local first pass, cloud escalation for low-confidence cases, and mandatory human approval for every final output."
-      ]
-    },
-    {
-      "id": "d64f4f789a",
-      "source": "Simon Willison",
-      "title": "Quoting Seth Larson",
-      "url": "https://simonwillison.net/2026/Jul/23/seth-larson/#atom-everything",
-      "published": "2026-07-23T11:50:36+00:00",
-      "category": "Supply Chain",
-      "summary": "PyPI now rejects new files added to a release more than 14 days old. The rule closes a path where a stolen publishing token or compromised release workflow could add a poisoned file to an old, trusted version.",
-      "money_angle": "Every Python tool you sell or run needs locked dependencies and a release path that makes a fresh version instead of patching an old one. That is dull work until a client installs a compromised package; then it is the floor under the whole AI build.",
-      "details": "PyPI says it made the change to protect old, long-stable releases, while noting it is not aware of the attack having been used. The project considers it acceptable for maintainers to bump to the next version when they need to support a late build target instead of adding a file to an old release. PyPI says release-state semantics and an API to check them are planned under PEP 694, not available yet. The related Warehouse change was merged July 8, 2026.",
-      "money_ideas": [
-        "For each Python project on the desk, freeze a tested requirements file with hashes and review anything that installs from an unpinned dependency range.",
-        "Offer a fixed package-trust check for a small team: inventory dependencies, pin versions and hashes, remove dead publishing keys, and document how a clean release is cut."
-      ]
-    },
-    {
-      "id": "ad3e75f937",
-      "source": "The Verge",
-      "title": "AMD commits up to $5 billion to Anthropic",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal",
-      "published": "2026-07-22T21:44:27+00:00",
-      "category": "AI Infrastructure",
-      "summary": "AMD says it will make a future equity investment of up to $5 billion in Anthropic, while Anthropic plans to deploy up to 2 gigawatts of AMD MI450-series GPUs in Helios systems. The first gigawatt is targeted for the first half of 2027.",
-      "money_angle": "The cloud-model bill is tied to a hardware arms race with no quiet ending in sight. Keep paid workflows portable: record quality, latency, token cost, and human rework across at least two cloud models, and keep local work on the M5 Max where privacy or volume makes it cheaper.",
-      "details": "AMD's announcement says the Helios deployment will use MI455X GPUs, EPYC Venice CPUs, Pensando networking, and ROCm software; it builds on Anthropic's existing use of MI355X. The companies also announced a multi-year engineering collaboration in which AMD will use Claude in software, engineering, and product work. The $5 billion is a commitment for a future equity investment, not a disclosed cash transfer today. The 2-gigawatt deployment is an announced plan, so dates and scale remain execution risk rather than delivered capacity.",
-      "money_ideas": [
-        "Build a 20-case model scorecard for one paid workflow now—output quality, seconds, tokens, API cost, and edits—then rerun it whenever a provider price or capability change lands.",
-        "Quote clients for a measured result and a model-agnostic delivery path, not a promise that one vendor's API price will stay still."
       ]
     }
   ]
