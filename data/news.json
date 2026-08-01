@@ -1,6 +1,68 @@
 {
-  "updated": "2026-07-31T05:03:13-07:00",
+  "updated": "2026-08-01T05:03:44-07:00",
   "items": [
+    {
+      "id": "49a3b4c1ef",
+      "source": "Simon Willison",
+      "title": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "url": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything",
+      "published": "2026-07-31T23:59:44+00:00",
+      "category": "Model Economics",
+      "summary": "DeepSeek released the official V4 Flash 0731 after post-training the preview model; Hugging Face lists 304B parameters and substantially enhanced agentic capabilities. Simon Willison lists API pricing of $0.14 per million input tokens and $0.27 per million output tokens, making it worth a hard cost-and-quality test.",
+      "money_angle": "Run it on 20 sanitized research, follow-up, or document tasks beside the model you pay for now. The lower token price matters only if human corrections, wall time, and factual misses also fall.",
+      "details": "DeepSeek says its own benchmark results put this release ahead of its V4-Pro Preview on several agent tests, but those are vendor results using DeepSeek's harness and settings. The release exposes `low`, `high`, and `max` reasoning-effort levels; Willison's image example improved when he raised the setting, which is a useful reminder to test the actual configuration, not just the model name. This is not a sane local-Mac deployment target: DeepSeek's sample serving setup uses one 4×GB300 node, while the Hugging Face listing shows 304B parameters.",
+      "money_ideas": [
+        "Build a 20-case redacted scorecard with a fixed prompt, token ceiling, fact checks, edit minutes, latency, and API cost for V4 Flash versus your current default.",
+        "Keep the first pass read-only. Quote a client only after the measured pass rate clears the human-review bar on their kind of work."
+      ]
+    },
+    {
+      "id": "1310d77c86",
+      "source": "Simon Willison",
+      "title": "smevals - a small eval suite for evaluating models, prompts, and harnesses",
+      "url": "https://simonwillison.net/2026/Jul/31/smevals/#atom-everything",
+      "published": "2026-07-31T21:15:23+00:00",
+      "category": "Model Evals",
+      "summary": "smevals is a new open-source command-line framework for running small task suites across models, prompts, and agent harnesses, then grading the results. It stores runs separately from grades and can build a static HTML report from the evidence.",
+      "money_angle": "This gives you a repeatable floor for every claimed AI saving: use real but sanitized BDM, homeowner, or side-hustle tasks and show the pass rate, rework, and cost. A client can buy a measured workflow review; no one should buy a benchmark screenshot.",
+      "details": "The tool defines an eval as tasks plus configurations, where a configuration can include a model, prompt, tools, and other settings. Its runner records immutable runs, and a non-zero harness exit is kept for debugging but excluded from grades and reports instead of being mistaken for model performance. `uvx smevals run`, `grade`, `report`, and `build` cover the loop from execution to a static evidence page; repeated runs can help expose non-deterministic behavior.",
+      "money_ideas": [
+        "Start with 10 redacted tasks that have known good answers—seller-packet fact extraction, account research, or post-call follow-up—and write a pass/fail check for each.",
+        "Run two models five times per task, count errors separately from bad answers, and save the static report with the client proposal or internal decision."
+      ]
+    },
+    {
+      "id": "24b8b6659a",
+      "source": "Hacker News",
+      "title": "Flint: A Visualization Language for the AI Era",
+      "url": "https://microsoft.github.io/flint-chart/",
+      "published": "2026-08-01T02:45:09Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49130604",
+      "category": "AI Reporting",
+      "summary": "Microsoft Research's open-source Flint lets an agent make charts from a compact, human-editable spec instead of hand-tuning axes, layouts, and spacing. It supports 50 chart types across Vega-Lite, ECharts, Chart.js, Plotly, and editable Excel output.",
+      "money_angle": "Turn a verified staffing pipeline, seller lead, or small-business report into a readable chart pack—not a swamp of AI prose. The paid deliverable is the underlying clean sheet plus editable charts and a human who can explain every number.",
+      "details": "Flint uses semantic field types such as YearMonth, Quantity, Category, Profit, and Rank to derive chart settings from the data and chart spec. The project offers an npm package, MCP server, and agent skill; its July 24 v0.4.0 update added 38 Plotly chart types and 18 native editable Excel templates. It can make a polished chart from bad data too, so source links, row-level checks, and a named owner still belong on every client report.",
+      "money_ideas": [
+        "Take one live pipeline export, remove personal data, and make a one-page weekly report with leads by source, stage aging, appointment rate, and closed value; reconcile every total to the source sheet.",
+        "Offer a fixed dashboard cleanup: standardize the client's columns, build three decision charts, deliver the editable workbook, and document the weekly refresh steps."
+      ]
+    },
+    {
+      "id": "c3b2c774b8",
+      "source": "Hacker News",
+      "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
+      "url": "https://blog.google/security/chrome-stronger-with-every-update/",
+      "published": "2026-07-31T07:29:22Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49120097",
+      "category": "AI Security",
+      "summary": "Google says Chrome 149 and 150 fixed 1,072 security bugs—more than the prior 23 milestones combined—after it put AI into discovery, triage, candidate fixes, and test writing. Its agents run on locked-down machines without general internet access, with network interception and strict allowlists.",
+      "money_angle": "For a Cash Home Rescue, staffing, or side-hustle agent, the useful lesson is not 'let it loose.' Copy the boring cage: narrow data folders, no general web access, outbound allowlists, human review of every write, and a kill switch you have tested.",
+      "details": "Google says its triage flow filters reports, reproduces bugs, adds metadata, and routes work to a human owner; it estimates that process saves hundreds of developer hours monthly. Its fixing, critic, and test-writing agents produce candidate work before developer review, while the company says the models have no access outside designated source directories. These are Google's accounts of its own program, not independent proof that a small firm's agent will produce the same result. The key evidence is the control boundary: more automation came with constrained machines, separated roles, and humans still in the loop.",
+      "money_ideas": [
+        "Before any agent touches a CRM or inbox, write one access card: data folders, allowed domains, credentials, outbound actions, log location, human approver, and tested shutdown method.",
+        "Sell a fixed-scope agent boundary check to a small firm: remove unused permissions, test a blocked action and the kill switch, then hand over the access card."
+      ]
+    },
     {
       "id": "cc6d8492c6",
       "source": "Simon Willison",
@@ -290,52 +352,6 @@
         "Sell a fixed crawler-policy pass: inventory the site, choose Search/Agent/Training rules with the owner, take before-and-after screenshots, and document a rollback path."
       ],
       "id": "53c12c6d64"
-    },
-    {
-      "id": "204fa3eb1b",
-      "source": "TechCrunch",
-      "title": "Anthropic launches Opus 5",
-      "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
-      "published": "2026-07-25T00:00:00+00:00",
-      "category": "Model Economics",
-      "summary": "Anthropic released Claude Opus 5 at $5 per million input tokens and $25 per million output tokens. Ars reports that it is pitched as near-Fable 5 coding performance at about half Fable’s price, not a giant capability jump.",
-      "money_angle": "Put it through 20 sanitized BDM research, document, or coding tasks beside the model you pay for now. Switch a client workflow only if the scorecard shows lower cost or rework after human review—not because a benchmark card looks good.",
-      "details": "Anthropic says Opus 5 is stronger at verifying its work and iterating until it succeeds. TechCrunch reports that it is not subject to the 30-day data-retention policy that covers Fable and Mythos, and that API users can opt into beta Automatic Fallbacks when a safety classifier triggers. Ars says its listed price matches Opus 4.8: $5 per million input tokens and $25 per million output tokens. The cited coding results come from Anthropic’s benchmarks, so they are a test lead, not proof that it beats your current stack.",
-      "money_ideas": [
-        "Build a 20-case scorecard from sanitized prospect research, lead packets, or code fixes: pass rate, wall time, tokens, API cost, and every correction.",
-        "Offer a fixed model-cost audit only after the scorecard proves a better result on the client’s own work."
-      ]
-    },
-    {
-      "id": "75e11e424e",
-      "source": "TechCrunch",
-      "title": "OpenAI’s new voice mode makes it to the ChatGPT desktop app",
-      "url": "https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/",
-      "published": "2026-07-24T20:36:42+00:00",
-      "category": "Voice Agents",
-      "summary": "OpenAI added ChatGPT Voice to its desktop app, where it can direct ChatGPT Work and Codex agents and use computer-use skills to look up websites and apps. On macOS, Appshots can let the app access what is on the screen, including alt text.",
-      "money_angle": "Run a five-call pilot: dictate a fixed BDM debrief, have the agent prepare a research brief and follow-up draft, then check facts and send manually. The paid result is faster, accurate follow-up—not an agent loose in a CRM.",
-      "details": "TechCrunch reports that the feature uses OpenAI’s ChatGPT-Live voice-model family. The desktop version accepts multi-step spoken commands and can ask for input while the work runs; OpenAI’s demo showed a developer creating a pull request and investigating a bug from one voice command. It works with ChatGPT Work and Codex, and can use computer-use skills to inspect websites and apps. Screen and app access widen the blast radius, so keep sensitive client records out of a first test and do not give it unattended write access.",
-      "money_ideas": [
-        "After five prospect calls, compare voice-built drafts against your present follow-up: missing facts, edit time, and same-day send rate.",
-        "Give a pilot only read access to the small set of pages it needs; keep CRM edits, email sends, pricing, and commitments human-approved."
-      ]
-    },
-    {
-      "id": "174358ddfc",
-      "source": "Hacker News",
-      "title": "UK AISI / Caisi Preliminary Assessment of Kimi K3's Cyber Capabilities",
-      "url": "https://www.nist.gov/news-events/news/2026/07/uk-aisi-caisi-preliminary-assessment-kimi-k3s-cyber-capabilities",
-      "published": "2026-07-25T04:20:21Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49044492",
-      "category": "Open Model Safety",
-      "summary": "A joint UK AISI and U.S. CAISI preliminary evaluation found Kimi K3 reached step 17 on average in a 32-step simulated network attack, against 28.5 for the most cyber-capable U.S. models. It completed the range in one of 10 attempts, and its safeguards did not stop agentic exploit-development attempts in the evaluation.",
-      "money_angle": "Cheap or open-weight agents belong in a clean sandbox before they touch a client’s files, tools, or network. A sellable safety review is concrete: scoped credentials, an egress allowlist, action logs, and a human gate before any write or send.",
-      "details": "NIST says the evaluation used a selective set of cyber tests and was preliminary, with results from a small mix of public and private benchmarks. On ExploitBench’s 41 post-2023 V8 vulnerabilities, Kimi K3 scored 32% versus GLM-5.2’s 24%, but achieved arbitrary code execution on none of 41 samples. In the 32-step simulated range, it reached step 17 on average and completed the range once within a 100-million-token limit. The range has an intentional attack path and lacks active defenders, so it is not a real-client-network prediction—but it is enough evidence to keep agent permissions narrow.",
-      "money_ideas": [
-        "Build an agent test cage with dummy data, disposable credentials, blocked outbound traffic by default, and logs for every tool call.",
-        "Sell a fixed agent-access check: list each tool, cut its permissions to the minimum, test denied actions, and document a kill switch."
-      ]
     }
   ]
 }
