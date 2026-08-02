@@ -1,6 +1,52 @@
 {
-  "updated": "2026-08-01T05:03:44-07:00",
+  "updated": "2026-08-02T05:08:16.942787-07:00",
   "items": [
+    {
+      "id": "53418fe0d5",
+      "source": "Hacker News",
+      "title": "Generative AI floods and dilutes the market for books",
+      "url": "https://arxiv.org/abs/2607.20349",
+      "published": "2026-08-02T11:06:07Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49143289",
+      "category": "Content Economics",
+      "summary": "A working paper matched daily sales data through June 2026 to full-text AI detection for 14,419 self-published genre-fiction books sold on Amazon. It found selling titles grew 19.2-fold while quarterly revenue grew 8.9-fold, cutting revenue per selling book across most genres as books with substantial detected AI text took more catalog space and top ranks.",
+      "money_angle": "Do not bet a Cash Home Rescue or staffing side hustle on dumping generic AI books or posts into an already crowded shelf. The defensible product is local evidence: real East Valley questions, source-backed answers, original photos or records, and a human who owns the claim.",
+      "details": "The authors label a book as having substantial AI text when more than 25% of its full text is detected as AI-produced; none of the studied books disclosed AI use. They report that non-AI books lost the most ground in genres with high AI diffusion, especially where Kindle Unlimited availability was high. The paper is under review, uses a proprietary Amazon sales panel, and studies self-published genre fiction rather than all online content. Its detector-based classification and market scope are limits, but the measured supply-versus-revenue gap is a hard warning against a volume-only content play.",
+      "money_ideas": [
+        "Make a 20-question East Valley seller or hiring FAQ from calls and primary local sources. Publish only answers that name the source, date, and owner of each fact.",
+        "Sell a content evidence pack rather than word count: verified questions, source links, approved claims, original client material, and a dated refresh list."
+      ]
+    },
+    {
+      "id": "2290c5b63e",
+      "source": "Simon Willison",
+      "title": "datasette-apps 0.2a0",
+      "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything",
+      "published": "2026-08-01T21:23:56+00:00",
+      "category": "Agent QA",
+      "summary": "datasette-apps 0.2a0 adds `app_debug()`, which lets Datasette Agent open an app in an invisible, non-interactive iframe and run agent-provided JavaScript for a smoke test. It also adds `app_list()` so the agent can list apps the user may edit.",
+      "money_angle": "A small client dashboard or intake tool needs proof that a button, filter, and saved record work—not a screenshot of AI-written code. Charge for the tested app and its handover; keep the agent inside a narrow edit-and-test box.",
+      "details": "The debug path runs the app in an `opacity: 0` iframe with `pointer-events: none`, then executes JavaScript inside that sandboxed frame; it can also measure element dimensions. It uses the new `context.browser_task()` mechanism from datasette-agent 0.4a0. The release is marked as a pre-release. A smoke test can catch a broken screen, but it does not prove security, permission boundaries, or correctness of the data beneath it.",
+      "money_ideas": [
+        "Build one throwaway lead or property-status app with only fake data. Make the agent prove a record can be listed, filtered, saved, and reloaded before you show it to anyone.",
+        "Deliver a one-page acceptance sheet with each client micro-app: test cases, result, data owner, edit boundary, and the human who approves a production change."
+      ]
+    },
+    {
+      "id": "e2f861af97",
+      "source": "Simon Willison",
+      "title": "Ten advances in mathematics and theoretical computer science",
+      "url": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything",
+      "published": "2026-08-01T20:34:49+00:00",
+      "category": "AI Research",
+      "summary": "OpenAI says an internal version of its next major model, Astra, found results for ten mathematics and theoretical-computer-science problems whose main results had seen no progress for at least a decade. It says each result was prepared into a human manuscript and formalized as a Lean certificate, with the solution search costing roughly $2,000 at GPT-5.6 Sol API rates.",
+      "money_angle": "This is not a ready-to-buy research worker, but it changes the ceiling on a bounded research bet. Where a result has an independent check, a fixed-budget agent sprint can be priced as an experiment instead of sold as magic.",
+      "details": "OpenAI's list spans sphere packing, coding theory, non-sofic groups, circuit complexity, quantum games, lattice cryptography, and extremal combinatorics. It published a paper, model reasoning walkthroughs, and a public repository containing Lean 4 formalizations, which can be independently built and checked. The claims come from OpenAI; Astra, the prompts, and the count and cost of failed attempts are not public. Formal checking supports the encoded theorem, but the mathematical community still has to judge the statements and their importance.",
+      "money_ideas": [
+        "For a technical research task, quote a fixed, capped sprint with a known acceptance test, source ledger, human verifier, and a full record of rejected results—not an unlimited autonomous-research promise.",
+        "Use the same gate for a side project: no result enters a client brief until a named person can reproduce its source trail or test it against known facts."
+      ]
+    },
     {
       "id": "49a3b4c1ef",
       "source": "Simon Willison",
@@ -305,53 +351,6 @@
         "Before releasing a public demo, fire concurrent test requests against a disposable account and prove that its cap, alert, and kill switch stop spend where you set them.",
         "Offer a fixed API-spend check: inventory keys and public endpoints, set per-user budgets and concurrency limits, then document the incident shutoff path."
       ]
-    },
-    {
-      "source": "TechCrunch",
-      "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
-      "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
-      "published": "2026-07-26T08:30:00+00:00",
-      "category": "Workforce Shifts",
-      "summary": "Monday.com said it will cut about 20% of its workforce—just over 600 roles—in a restructuring tied to its AI-driven strategy. TechCrunch's running list says U.S. tech companies have cut nearly 140,000 jobs this year, but the stated AI link ranges from direct automation to data-center spending and post-pandemic over-hiring.",
-      "money_angle": "Use layoff chatter as a sourcing and account-mapping signal, not your pitch. Track the job families being cut and the hybrid roles being opened, then bring a named candidate slate to the bottleneck the employer still has.",
-      "details": "Monday.com expects $45 million to $55 million in restructuring charges and still projects up to 20% year-over-year revenue growth in 2026. Its co-founder told employees the cuts were not made to reduce costs or replace people with AI, even as the SEC filing tied the plan to an AI-driven strategy. The article cites Financial Times analysis that companies citing AI in cuts have trailed the Nasdaq by almost 10% in the 30 trading days after their announcements. It is a running account of companies' statements, not proof that AI directly caused each layoff.",
-      "money_ideas": [
-        "Keep a weekly sheet with employer, roles cut, roles opened, stated reason, Arizona footprint, and one warm contact; call only where a real hiring gap remains.",
-        "Lead with the stated operational gap and a candidate for an adjacent hard-to-fill role—not an unprovable claim that AI caused the cuts."
-      ],
-      "id": "a43cd096a1"
-    },
-    {
-      "source": "Hacker News",
-      "title": "What is happening to jobs? Separating AI hype from reality",
-      "url": "https://siepr.stanford.edu/publications/policy-brief/what-really-happening-jobs-separating-ai-hype-reality",
-      "published": "2026-07-25T22:51:10Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49052570",
-      "category": "Labor Market",
-      "summary": "Stanford SIEPR's July policy brief finds little evidence of broad AI-driven job loss so far: unemployment in the most AI-exposed occupations has not risen faster than in the least-exposed group. Its sharper warning is at the entry level, where recent-graduate unemployment reached 5.6% in early 2026 and research points to weaker demand in AI-exposed work, though causes remain tangled.",
-      "money_angle": "For staffing discovery, drop blanket replacement talk. Ask where tasks have been consolidated, which junior hires are being deferred, and which experienced people now carry the work; sell a measured candidate plan against that named gap.",
-      "details": "Since 2022, unemployment rose 0.77 percentage points in the most AI-exposed occupational quintile and 0.85 points in the least-exposed quintile, which SIEPR reads as a broadly softer market rather than broad AI displacement. The brief says enterprise-AI adopters grew employment 10% in the two years after adoption, driven by the highest per-capita AI spenders. It finds more credible pressure on early-career workers in software development and customer service, but notes interest rates, pandemic over-hiring, and remote work muddy simple claims. The authors call the evidence early and adoption uneven.",
-      "money_ideas": [
-        "Put five discovery questions in every account call: tasks removed, output volume, roles consolidated, junior hiring changes, and the next role the manager cannot leave open.",
-        "Build an East Valley candidate brief for one AI-adjacent role with verified skills and a 30-day ramp plan; use it as proof that staffing can absorb the work shift instead of merely narrating it."
-      ],
-      "id": "6876b03407"
-    },
-    {
-      "source": "Hacker News",
-      "title": "Cloudflare's new AI traffic options for customers",
-      "url": "https://blog.cloudflare.com/content-independence-day-ai-options/",
-      "published": "2026-07-25T22:50:49Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49052564",
-      "category": "Web Traffic",
-      "summary": "Cloudflare now lets customers manage AI traffic by three stated uses: Search, Agent, and Training; the controls are available on its Free tier. Starting September 15, Cloudflare says new domains will block Training and Agent bots by default on ad pages, while Search stays allowed by default.",
-      "money_angle": "If a Cash Home Rescue or client site sits behind Cloudflare, make an explicit crawler policy before defaults make the choice for you. A small paid review can map pages, bot purposes, lead risk, and the one setting each business owner actually wants.",
-      "details": "Cloudflare says its older managed preset focused on single-purpose training crawlers, while the new controls separate search indexing, real-time agent visits, and model training. It says multi-purpose Search-plus-Training crawlers will follow the most restrictive selected rule, which can block Googlebot, Applebot, or Bingbot for customers that block Training. Owners can opt out of the planned default changes in Cloudflare's Security settings before September 15. Enterprise customers also get BotBase, a directory of tracked bots and agents.",
-      "money_ideas": [
-        "For each Cloudflare-backed site, record the current rule, pages with ads or lead forms, referral baseline, and form volume before changing anything; inspect the numbers two weeks later.",
-        "Sell a fixed crawler-policy pass: inventory the site, choose Search/Agent/Training rules with the owner, take before-and-after screenshots, and document a rollback path."
-      ],
-      "id": "53c12c6d64"
     }
   ]
 }
