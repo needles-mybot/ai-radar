@@ -1,6 +1,53 @@
 {
-  "updated": "2026-08-02T05:08:16.942787-07:00",
+  "updated": "2026-08-03T05:12:46-07:00",
   "items": [
+    {
+      "id": "92f8a54631",
+      "source": "The Verge",
+      "title": "China’s Alibaba takes another swipe at America’s AI supremacy",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai",
+      "published": "2026-08-03T11:20:37+00:00",
+      "category": "Model Economics",
+      "summary": "Alibaba released Qwen3.8-Max through QwenCloud and says its open weights will follow next week. Qwen lists 2.4 trillion parameters, 95 billion active parameters, text-and-image input, and a 1 million-token context window.",
+      "money_angle": "This is another real cloud candidate for document and account research, not a buying decision from a benchmark sheet. Run 15 redacted, scoreable staffing and property tasks through it; source citations, correct field extraction, human edit minutes, and cost decide whether it earns a lane.",
+      "details": "Qwen's release page says the model is available through QwenCloud and exposes an OpenAI-compatible configuration with a 65,536-token maximum output. Its claims about a 10-plus-day autonomous coding run and a five-day paper-reproduction experiment are vendor demonstrations, not independent client results. The company says weights are planned for next week, so there is no local-Mac install to test today. Keep a first trial read-only and make it reproduce the evidence behind each answer before any client-facing use.",
+      "money_ideas": [
+        "Make a 15-row scorecard from de-identified seller-packet extraction and BDM account-research tasks, each with a known answer and source link.",
+        "Run the same locked prompt through Qwen3.8-Max and the current default, then keep the raw output, edit minutes, missed facts, tokens, and cost in one sheet."
+      ]
+    },
+    {
+      "id": "6ff715560b",
+      "source": "Hacker News",
+      "title": "Critical CVE issued for hallucinated SQLite vulnerability",
+      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
+      "published": "2026-08-03T11:28:54Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49154332",
+      "category": "AI Security",
+      "summary": "JFrog says a newly created GitHub repository seeded 55 mostly fabricated vulnerability advisories, including SQLite claims that reached NVD and CISA's ADP system. In JFrog's tests, cited functions or line numbers did not exist in the named versions, or the proof-of-concept payload failed; it says 54 of the 55 advisories were fabricated.",
+      "money_angle": "The damage is burnt staff time, not just a bad patch. If an AI workflow surfaces a \"critical\" claim, require a vendor advisory, target-version code check, and reproducible proof before a human opens an urgent ticket; that evidence gate keeps a client service out of the landfill.",
+      "details": "JFrog tested official SQLite releases in isolated Docker containers with AddressSanitizer and compared the reports with source code, vendor advisories, NVD, and GHSA data. It reports that one claimed critical SQLite issue referenced a function introduced years after the target version, while other claims cited impossible line numbers or invalid SQL. The firm says the wider vulnerability pipeline is drowning in reports and does not require proof-of-concept reproduction before ingestion. These are JFrog's findings, so do not label any CVE false from an AI detector alone: reproduce the claim and check the maintainer's record.",
+      "money_ideas": [
+        "Add three required fields to any AI-generated security or technical alert: vendor link, affected-version evidence, and a repeatable test result.",
+        "For a software client, sell a fixed review of its last ten AI-generated or scanner-generated critical tickets and separate real evidence from empty noise."
+      ]
+    },
+    {
+      "id": "53ea25548c",
+      "source": "Hacker News",
+      "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+      "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+      "published": "2026-08-03T09:32:07Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49153374",
+      "category": "AI Build",
+      "summary": "Developer Ankur Sethi has coding agents show each proposed change in chat, then types and adapts it himself instead of granting file access. He says the slower loop helps him catch hallucinations and bad design while building a working mental map of the codebase.",
+      "money_angle": "Do not sell a client a black-box micro-app you cannot fix. On early side projects, let the model draft but make one owner apply and explain every change; charge for the working app, test record, handover, and support boundary—not a fake overnight build.",
+      "details": "Sethi's agent instructions prohibit file edits, moves, dependency installs, and other repository mutations unless he explicitly asks for them. He estimates the approach feels roughly twice as fast as working without an assistant, rather than the tenfold speed he thinks a hands-off workflow might claim. That is a personal report, not a controlled study, and manual retyping is not the right control for every low-risk repetitive change. The durable point is ownership: if no one can trace a change from prompt to file to test, the code debt is on the floor waiting for a customer to trip over it.",
+      "money_ideas": [
+        "For the first two weeks of a new client micro-app, put the agent in proposal-only mode and keep every accepted edit beside its test result in the project log.",
+        "Before handover, have the project owner explain the five most important files and rerun the acceptance tests without the coding agent."
+      ]
+    },
     {
       "id": "53418fe0d5",
       "source": "Hacker News",
@@ -54,7 +101,7 @@
       "url": "https://simonwillison.net/2026/Jul/31/deepseek-v4-flash-0731/#atom-everything",
       "published": "2026-07-31T23:59:44+00:00",
       "category": "Model Economics",
-      "summary": "DeepSeek released the official V4 Flash 0731 after post-training the preview model; Hugging Face lists 304B parameters and substantially enhanced agentic capabilities. Simon Willison lists API pricing of $0.14 per million input tokens and $0.27 per million output tokens, making it worth a hard cost-and-quality test.",
+      "summary": "DeepSeek released the official V4 Flash 0731; Hugging Face lists 304B parameters and substantially enhanced agentic capabilities. Simon Willison lists API pricing of $0.14 per million input tokens and $0.27 per million output tokens, making it worth a hard cost-and-quality test.",
       "money_angle": "Run it on 20 sanitized research, follow-up, or document tasks beside the model you pay for now. The lower token price matters only if human corrections, wall time, and factual misses also fall.",
       "details": "DeepSeek says its own benchmark results put this release ahead of its V4-Pro Preview on several agent tests, but those are vendor results using DeepSeek's harness and settings. The release exposes `low`, `high`, and `max` reasoning-effort levels; Willison's image example improved when he raised the setting, which is a useful reminder to test the actual configuration, not just the model name. This is not a sane local-Mac deployment target: DeepSeek's sample serving setup uses one 4×GB300 node, while the Hugging Face listing shows 304B parameters.",
       "money_ideas": [
@@ -320,36 +367,6 @@
       "money_ideas": [
         "Take 100 sanitized past tasks with known answers; measure the model's actual pass rate by any confidence band before allowing that band to skip review.",
         "Replace a decorative confidence number with statuses such as 'source checked,' 'source missing,' and 'human approval required,' each tied to an auditable rule."
-      ]
-    },
-    {
-      "id": "05c09dc2d7",
-      "source": "Ars Technica",
-      "title": "Artist sues AI meme generator for selling deeply personal comic as ad template",
-      "url": "https://arstechnica.com/tech-policy/2026/07/artist-sues-ai-meme-generator-for-selling-deeply-personal-comic-as-ad-template/",
-      "published": "2026-07-27T10:50:37+00:00",
-      "category": "AI Copyright",
-      "summary": "Artist Elmer Saflor sued Memes Apps LLC, alleging its paid AI ad generator returns copies of his 2017 \"Running Away Balloon\" comic as a template. The case begins with allegations: Ars could not confirm any generated ad used the work, and Saflor says he has not seen one.",
-      "money_angle": "For Cash Home Rescue or client ad work, treat a viral meme as license-required stock, not free prompt material. Keep a source-and-permission line for every image template; original or licensed assets make a service you can defend and resell.",
-      "details": "Saflor filed the suit earlier this month against the operator of Memes.ai and Memes AI Studio, seeking discovery and an order to stop use of the comic. Ars reports the service sells subscriptions at $40 or $199 a month, which makes the alleged copying commercial rather than ordinary personal meme sharing. Internet-law expert Eric Goldman told Ars that a 2024 ruling over the Success Kid meme supports a distinction between noncommercial sharing and ad use, but said the case could still face hard questions because it targets the generator rather than individual advertisers.",
-      "money_ideas": [
-        "Add an asset ledger to every paid content job: file, source, creator or license, allowed use, date acquired, and client approval.",
-        "Build property and staffing ad packs from client shoots, licensed stock, and original graphics; do not base the offer on copied meme templates."
-      ]
-    },
-    {
-      "id": "e7bd166c2d",
-      "source": "Simon Willison",
-      "title": "An Inside Look at the Relay Market Powering Token Resellers and Fraud",
-      "url": "https://simonwillison.net/2026/Jul/26/relay-market/#atom-everything",
-      "published": "2026-07-26T19:30:54+00:00",
-      "category": "API Security",
-      "summary": "An investigation traced a market of LLM relay services that resell heavily discounted model access through pooled accounts; reported abuse paths include free-trial farming, chargebacks, stolen cards, and exposed support bots. The open-source gateways behind many relays are legitimate software—the fraud is in keys and accounts that operators do not own or are not allowed to resell.",
-      "money_angle": "Do not put client work through a mystery discount relay. For any public AI tool you build, the sellable safety layer is a gateway with per-customer caps, concurrency limits, alerts, and a shutoff switch before a token thief turns the billing page into a landfill.",
-      "details": "Vectoral's investigation, highlighted by Simon Willison, found relay prices as low as an effective $0.13 of official usage for each $1 of list-price access, based on a cited forum package. It describes account pools that rotate credentials behind a single OpenAI-compatible endpoint and notes that one-api and new-api can be used lawfully as internal gateways. The report recommends reserving budget for in-flight requests, capping new accounts, watching anomalous usage, and quietly throttling suspicious traffic instead of advertising the detection rule.",
-      "money_ideas": [
-        "Before releasing a public demo, fire concurrent test requests against a disposable account and prove that its cap, alert, and kill switch stop spend where you set them.",
-        "Offer a fixed API-spend check: inventory keys and public endpoints, set per-user budgets and concurrency limits, then document the incident shutoff path."
       ]
     }
   ]
