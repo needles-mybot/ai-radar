@@ -1,6 +1,67 @@
 {
-  "updated": "2026-08-03T05:12:46-07:00",
+  "updated": "2026-08-04T05:03:23.446326-07:00",
   "items": [
+    {
+      "id": "a1ab18b7db",
+      "source": "Hacker News",
+      "title": "Homebench – Benchmark local LLMs for speed, memory, and quality",
+      "url": "https://github.com/david-g-3654/homebench",
+      "published": "2026-08-04T09:48:43Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49166308",
+      "category": "Local AI",
+      "summary": "Homebench is an MIT-licensed local benchmark CLI that finds models in Ollama, LM Studio, llama.cpp, vLLM, or another local OpenAI-compatible server, then measures quality, tokens per second, time to first token, and memory on the machine in front of it. Its default quick run tests the three smallest discovered models without cloud access or API keys.",
+      "money_angle": "Your M5 Max is a test lab, not a trophy. Run your real, de-identified seller-packet and BDM tasks through the models already on disk; keep the cheapest model only where its measured pass rate and edit time clear the bar.",
+      "details": "The repository supports custom YAML task packs, JSON and Markdown exports, saved run history, and diffs, so a model, quantization, or runner change can leave a before-and-after record. Its built-in quality suite has 31 deterministically graded tasks covering math, reasoning, factual recall, instruction following, extraction, and code understanding; an optional model judge adds open-ended tasks. The default quick pass is only a screen: the README says hardware figures vary by laptop and moment. The missing test is your own work, with known answers and a human grader.",
+      "money_ideas": [
+        "Build a 20-task pack from sanitized work: property-packet fields, account research, follow-up drafts, and objections; put a known answer or source link beside every task.",
+        "Run each contender five times and sell only the lane where you can show pass rate, median seconds, human edit minutes, and zero unattended sends or CRM writes."
+      ]
+    },
+    {
+      "id": "71649e0749",
+      "source": "The Verge",
+      "title": "Can Reddit fend off a new wave of AI SEO spam?",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/973098/reddit-ai-search-seo-marketing-brands-spam",
+      "published": "2026-08-04T02:04:10+00:00",
+      "category": "Search Visibility",
+      "summary": "The Verge reports that Semrush found Reddit was the most-cited domain in May across ChatGPT, Perplexity, Gemini, and Google's AI Mode. That prize is drawing brands and agencies into Reddit with promotional posts that moderators are flagging or filtering as spam.",
+      "money_angle": "Do not seed fake Cash Home Rescue praise or pay for a bot to do it; one caught account can poison a local brand. The paid work is a source-backed answer library and real participation where Aaron or the client can stand behind every sentence, not an AI-search manipulation stunt.",
+      "details": "The story follows repeated Honeydew Labs product praise from one Reddit profile across skincare threads; after users called it out, a moderator said the subreddit would automatically filter the brand's posts for review. Semrush's citation measure is not proof that a Reddit mention produces a lead, and the report does not establish who ran the account. But it shows why AI-search chasing is piling junk into communities and why the response is a moderation wall, not durable discovery. Real experience, primary sources, disclosure, and a named human give content a chance to survive the filter.",
+      "money_ideas": [
+        "Make a 20-question East Valley seller FAQ from recorded calls and primary local sources; publish the source date and page owner under every answer.",
+        "For each community where a business already has a genuine presence, keep a simple ledger of the question, answer, disclosure, source, and outcome. Stop if the post is promotional rather than helpful."
+      ]
+    },
+    {
+      "id": "3a82c94b10",
+      "source": "TechCrunch",
+      "title": "AWS is helping vibe-coding startup Superblocks, and the implications are big",
+      "url": "https://techcrunch.com/2026/08/03/aws-is-helping-vibe-coding-startup-superblocks-and-the-implications-are-big/",
+      "published": "2026-08-03T20:00:00+00:00",
+      "category": "Agent Delivery",
+      "summary": "Superblocks announced a multiyear joint marketing agreement with AWS that lets customers run its business-user app builder inside their private AWS cloud. The setup creates Aurora databases in the customer's account, integrates with Amazon Bedrock, and puts the resulting apps under the customer's existing auditing, encryption, and network controls.",
+      "money_angle": "The sellable thing is moving from a clever prompt to a client-owned workflow with a named data store, access boundary, model choice, audit trail, and human approval. Do not pretend a small local automation needs a private AWS cloud; copy the ownership and review boundary at the scale the client can actually run.",
+      "details": "TechCrunch says AWS will also help sell Superblocks through its Marketplace partner channel. Superblocks CEO Brad Menezes says buyers have recently shifted from demanding one named model to accepting multiple models behind the same application harness; that is a vendor's sales observation, not a market census. The company had 50 employees and had raised $60 million by its May 2025 Series A, according to the report. The important shift is architectural: the app, data, controls, and model are becoming separable purchase decisions.",
+      "money_ideas": [
+        "For one small workflow, write a one-page ownership card: inputs, data location, model, allowed actions, audit log, approver, retention rule, and shutoff method.",
+        "Offer a fixed client build only after that card is signed: a reviewed intake or reporting tool that runs in the client's chosen account, with no unattended messages, payments, or CRM edits."
+      ]
+    },
+    {
+      "id": "52116e7a3a",
+      "source": "TechCrunch",
+      "title": "Design Arena creators raise $7.9 million to bring taste to AI models",
+      "url": "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models/",
+      "published": "2026-08-03T19:28:57+00:00",
+      "category": "AI Evals",
+      "summary": "Intelligence, the company behind Design Arena, announced a $7.9 million seed round after building a side-by-side ranking tool for AI-made websites, images, and other visual work. It says 5.3 million people use the tool and that its enterprise feedback business is at $60 million in annual recurring revenue.",
+      "money_angle": "The money signal is not another image generator; it is human preference measured against competing outputs. Before selling a landing page, ad, follow-up sequence, or dashboard, run a blind A-versus-B review with people who own the business result and keep the winner, the comments, and the metric.",
+      "details": "Design Arena shows users competing model outputs and asks them to rank a handful of results from best to worst; users log in to retrieve their outputs, letting the company track preferences over time and geography. Its buyers use those human rankings as feedback for media-generating models, while automated benchmarks can be gamed or miss taste. The $60 million ARR figure is the company's claim to TechCrunch, not an audited filing. This is evidence that evaluators and clear rubrics have commercial value, not evidence that generic crowdwork is an easy side hustle.",
+      "money_ideas": [
+        "For the next Cash Home Rescue page or ad, put two AI-assisted versions in front of five people who actually handle seller conversations. Score trust, clarity, and the action they would take before publishing either one.",
+        "Package a small-business content test as a fixed deliverable: three drafts, a blind five-person review, the scored comments, one chosen version, and a dated outcome check."
+      ]
+    },
     {
       "id": "92f8a54631",
       "source": "The Verge",
@@ -321,52 +382,6 @@
       "money_ideas": [
         "Add four questions to BDM calls: which task AI drafts, where human review still bottlenecks, which output volume rose, and which role cannot stay open.",
         "Build one East Valley candidate brief around a real review or field-technical bottleneck, with verified skills and a 30-day ramp plan instead of an AI-replacement pitch."
-      ]
-    },
-    {
-      "id": "64db355e6a",
-      "source": "Simon Willison",
-      "title": "moonshotai/Kimi-K3",
-      "url": "https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything",
-      "published": "2026-07-27T23:39:04+00:00",
-      "category": "Open Models",
-      "summary": "Moonshot released Kimi K3's full 2.8-trillion-parameter weights: an open-weight, multimodal agent model with a 1-million-token context window. The 1.56TB download and 104B active parameters make it a hosted-model test for the M5 Max, not a sensible local install.",
-      "money_angle": "Run K3 as a capped API bake-off against your present cloud model on a narrow research or coding job; do not mistake released weights for a free local workstation. Its license requires a separate Moonshot agreement for Model-as-a-Service businesses above $20 million in aggregate revenue over 12 months.",
-      "details": "Moonshot's model card lists 2.8T total parameters, 104B activated parameters, text-and-image input, and a 1,048,576-token context window. Simon Willison reports that the full weights are 1.56TB; he also found K3 available through seven OpenRouter providers, commonly at $3 per million input tokens and $15 per million output tokens. Moonshot calls it open weight, not open source, and its Kimi K3 License carries the large-service condition. The published capability tables are Moonshot's own results and mix model harnesses, so they are a reason to test rather than a buying decision.",
-      "money_ideas": [
-        "Run ten sanitized tasks from real work with a fixed token cap; log pass rate, seconds, API cost, and every human correction beside the model you use now.",
-        "Keep the first K3 trial read-only and free of client PII; use the measured scorecard, not the benchmark sheet, before quoting a cheaper delivery price."
-      ]
-    },
-    {
-      "id": "ec9dddb29c",
-      "source": "TechCrunch",
-      "title": "Google’s AI search is rapidly becoming the default, new data shows",
-      "url": "https://techcrunch.com/2026/07/27/googles-ai-search-is-rapidly-becoming-the-default-new-data-shows/",
-      "published": "2026-07-27T15:57:12+00:00",
-      "category": "Search Visibility",
-      "summary": "Similarweb says Google's AI Overviews appeared in 43% of searches, up from 15% a year earlier. Its data also puts AI Mode visits at 279 million in May 2026, up from 126 million in June 2025.",
-      "money_angle": "For Cash Home Rescue and local clients, pages alone no longer prove discovery. A clean paid offer is an AI-search baseline: inspect 20 real seller or customer queries, record the overview, cited pages, and competitors, then compare Search Console and lead data after publishing verified answers.",
-      "details": "TechCrunch's account of Similarweb's report says Google is moving people from short keywords toward longer, conversational queries and keeping more research inside Google. The report says AI responses carrying citations rose more than fivefold over the year, while only 6.8% of U.S. ChatGPT desktop queries included citations in May. It also reports that after a May 7 ChatGPT search update, the share of U.S. desktop referrals landing on webpages rose from 25% in March to nearly 60% by May 30. These are platform-wide traffic measures, not a promise that a specific page will be cited or bring a lead.",
-      "money_ideas": [
-        "Search 20 East Valley seller-intent queries from a clean browser and save the result page, cited domains, local-pack result, and your page's position in one sheet.",
-        "Publish only fact-checked pages that answer the questions the audit exposes, then revisit in 30 days with Search Console impressions, calls, forms, and any AI-referred sessions."
-      ]
-    },
-    {
-      "id": "449fc3ec34",
-      "source": "Hacker News",
-      "title": "Don't ask an LLM for a confidence score",
-      "url": "https://justinflick.com/2026/07/27/llm-confidence-scores.html",
-      "published": "2026-07-28T00:06:53Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49077443",
-      "category": "AI Reliability",
-      "summary": "A self-reported 0–100 confidence field from an LLM is not a calibrated measure of whether its answer is right, argues Justin Flick. He points to research where more than 78% of six models' scores landed on only three values, and to the missing work: held-out ground truth, calibration, and reliability testing.",
-      "money_angle": "Never tell a staffing, seller, or client that a draft is '90% accurate' because the model printed 90. The sellable control is an evidence ledger—current sources, task checks, human approval where needed, and an error rate measured on a labeled sample.",
-      "details": "The post separates a raw model self-report from a score that has actually been trained and checked against outcomes. It notes that even conventional classifier probabilities need post-hoc calibration and cites semantic-entropy work that samples multiple answers and compares their meanings instead of trusting one generated float. If a workflow needs uncertainty labels, the author argues for defined categories and a test against ground truth rather than an untested 0–100 scale. This is an opinion piece backed by linked research, not a proof that every purpose-built confidence system fails.",
-      "money_ideas": [
-        "Take 100 sanitized past tasks with known answers; measure the model's actual pass rate by any confidence band before allowing that band to skip review.",
-        "Replace a decorative confidence number with statuses such as 'source checked,' 'source missing,' and 'human approval required,' each tied to an auditable rule."
       ]
     }
   ]
