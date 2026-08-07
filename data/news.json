@@ -1,6 +1,67 @@
 {
-  "updated": "2026-08-06T05:04:34-07:00",
+  "updated": "2026-08-07T05:02:48-07:00",
   "items": [
+    {
+      "id": "e36aa14a96",
+      "source": "Simon Willison",
+      "title": "datasette 1.0a38",
+      "url": "https://simonwillison.net/2026/Aug/6/datasette/#atom-everything",
+      "published": "2026-08-06T18:24:34+00:00",
+      "category": "AI App Security",
+      "summary": "Datasette 1.0a38 fixes a SQL-injection flaw in instances that put public and private tables in the same database and use Datasette permissions. A user allowed to see a public table could have used injection to read private tables; the same repair is in Datasette 0.65.3.",
+      "money_angle": "A seller, staffing, or client dashboard is dead on the floor if its public-facing table can expose private records. If you run this mixed-table setup, patch it and turn off `execute-sql` on that database before offering the app to anyone.",
+      "details": "Simon Willison says the flaw affects the specific combination of public and private tables in one database with access managed through Datasette's permissions system; he believes that setup is uncommon. The release guidance says to disable the `execute-sql` permission on the affected database, because an authorized public-table user could otherwise bypass that restriction with SQL injection. The documented impact is read-only access to private tables, not a claim of arbitrary server takeover. Version 1.0a38 carries the primary fix, and 0.65.3 back-ports it to the older release line.",
+      "money_ideas": [
+        "Inventory every Datasette instance before the next client demo: version, database, public tables, private tables, and whether `execute-sql` is enabled. Patch the affected line and record the result.",
+        "Sell a fixed data-exposure check for a small dashboard: map table visibility, remove raw-SQL access where it is not needed, run a denied-query test, and hand over the evidence."
+      ]
+    },
+    {
+      "id": "587e2720ff",
+      "source": "TechCrunch",
+      "title": "ChatGPT brings unlimited text chats to free users",
+      "url": "https://techcrunch.com/2026/08/06/openai-brings-unlimited-chatgpt-text-chats-to-free-users/",
+      "published": "2026-08-06T17:34:42+00:00",
+      "category": "ChatGPT",
+      "summary": "OpenAI says Free and Go users will get unlimited text chats next week, with GPT-5.6 Luna as their default and a Think button for harder questions. Plus and Pro users get an updated GPT-5.6 Sol in ChatGPT now, plus a thinking slider; files, images, voice, and image generation still have separate limits.",
+      "money_angle": "Unlimited chat removes a meter, not the cost of a wrong client answer. Use it to test a narrow, text-only research or draft workflow on sanitized examples, then sell only the version with source links and a human signing the final copy.",
+      "details": "TechCrunch reports that OpenAI says the updated ChatGPT Sol is meant for quick questions, web research, advice, planning, writing, and decisions; the Codex and Work version of Sol is unchanged. OpenAI's own evaluation says factual errors were 62% less common for Luna and 68% less common for Sol than GPT-5.5 Instant, which is a vendor result rather than an outside audit. Free and Go receive the unlimited-chat change and Think button next week, while Plus and Pro have the Sol update and slider now. File, image, voice, and image-generation limits remain separate, so this is not unlimited access to every ChatGPT tool.",
+      "money_ideas": [
+        "Run a 10-case, no-client-data test of the new ChatGPT setting against the previous workflow: each answer needs its sources, a pass/fail check, and human edit minutes.",
+        "Turn the winner into a one-page text-only research or first-draft service with a source ledger and final human approval; do not feed it seller packets, r\u00e9sum\u00e9s, or client records by default."
+      ]
+    },
+    {
+      "id": "23cb4a68cd",
+      "source": "Ars Technica",
+      "title": "Cloudflare open-sources vibe-coding platform for people who aren't coders",
+      "url": "https://arstechnica.com/ai/2026/08/cloudflare-open-sources-vibe-coding-platform-for-people-who-arent-coders/",
+      "published": "2026-08-06T16:15:30+00:00",
+      "category": "Agent Guardrails",
+      "summary": "Cloudflare open-sourced Cloudflare OS, its internal AI-agent workspace for building small apps and automating repeat work. Its design gives each app instance its own sandbox, starts agents with no permissions, and disables server-side outbound networking unless an explicit capability permits it.",
+      "money_angle": "The useful product is not another landfill of AI-made apps. Build a small client tool only where the data boundary, allowed actions, budget, and owner are written down; Cloudflare OS also requires a Workers Paid plan for its backend, so price the platform cost before the build.",
+      "details": "Ars reports that Cloudflare employees use the system for documents, slides, repeatable tasks, and small data apps; Cloudflare's claim that thousands use it daily is its own. The platform uses V8 isolates instead of containers, with access managed per app instance; client code runs in a sandboxed browser frame and server code has general outbound networking disabled. It is model-agnostic and lets administrators monitor spend and set budgets and rate limits. The full backend cannot deploy on Workers Free, so its open-source label does not mean a zero-cost client deployment.",
+      "money_ideas": [
+        "Build one fake-data proof on an account you control: one narrow intake flow, no outbound network, a fixed spend cap, and a written test for an action the agent must be denied.",
+        "Offer a fixed 'safe intake tool' build only in the client's own account, with data fields, user roles, allowed integrations, monthly cap, test record, and release owner listed in the handover."
+      ]
+    },
+    {
+      "id": "ae1bfe3087",
+      "source": "Hacker News",
+      "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
+      "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
+      "published": "2026-08-06T11:58:07Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49195468",
+      "category": "Agent Guardrails",
+      "summary": "In ScaleX's command-approval game, more than 40,000 runs and 409,000 decisions produced a 66.3% mean threat-detection score: players missed about one in three planted threats. The sample is a game with an unusually high 34% threat rate, not a study of normal production use, but its failure pattern is useful.",
+      "money_angle": "A human clicking every agent prompt is not a security plan; people either miss the leak or block the work. The paid service is a narrow action boundary\u2014read-only by default, separate secrets, domain allowlists, logs, spend cap, and a tested stop\u2014not a pile of approval popups.",
+      "details": "The game creator reports that 64.7% of players approved `npm run analyze` even when the prior history showed a script piping data to an outside URL. Across three familiar `npm run` commands, the reported miss rate was 52.5%, versus 28.4% for other exfiltration-style attacks. Obvious destructive commands were missed less often than scope violations and credential-reading commands. Because the sample is self-selected, time-boxed gameplay and threats are far more common than normal, its numbers should not be treated as a production breach rate; they do show why command-by-command consent is a weak last wall.",
+      "money_ideas": [
+        "For every local or client agent, move API keys out of shell profiles and project folders it can read. Give it a disposable account, one work folder, an allowlist, and no direct CRM, inbox, or payment permission for the first run.",
+        "Sell a one-hour agent-boundary check: list what it can read, write, and call; remove excess permissions; then prove one blocked outbound action and the kill switch in front of the owner."
+      ]
+    },
     {
       "id": "13a41dea41",
       "source": "TechCrunch",
@@ -305,82 +366,6 @@
       "money_ideas": [
         "Take one live pipeline export, remove personal data, and make a one-page weekly report with leads by source, stage aging, appointment rate, and closed value; reconcile every total to the source sheet.",
         "Offer a fixed dashboard cleanup: standardize the client's columns, build three decision charts, deliver the editable workbook, and document the weekly refresh steps."
-      ]
-    },
-    {
-      "id": "c3b2c774b8",
-      "source": "Hacker News",
-      "title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
-      "url": "https://blog.google/security/chrome-stronger-with-every-update/",
-      "published": "2026-07-31T07:29:22Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49120097",
-      "category": "AI Security",
-      "summary": "Google says Chrome 149 and 150 fixed 1,072 security bugs\u2014more than the prior 23 milestones combined\u2014after it put AI into discovery, triage, candidate fixes, and test writing. Its agents run on locked-down machines without general internet access, with network interception and strict allowlists.",
-      "money_angle": "For a Cash Home Rescue, staffing, or side-hustle agent, the useful lesson is not 'let it loose.' Copy the boring cage: narrow data folders, no general web access, outbound allowlists, human review of every write, and a kill switch you have tested.",
-      "details": "Google says its triage flow filters reports, reproduces bugs, adds metadata, and routes work to a human owner; it estimates that process saves hundreds of developer hours monthly. Its fixing, critic, and test-writing agents produce candidate work before developer review, while the company says the models have no access outside designated source directories. These are Google's accounts of its own program, not independent proof that a small firm's agent will produce the same result. The key evidence is the control boundary: more automation came with constrained machines, separated roles, and humans still in the loop.",
-      "money_ideas": [
-        "Before any agent touches a CRM or inbox, write one access card: data folders, allowed domains, credentials, outbound actions, log location, human approver, and tested shutdown method.",
-        "Sell a fixed-scope agent boundary check to a small firm: remove unused permissions, test a blocked action and the kill switch, then hand over the access card."
-      ]
-    },
-    {
-      "id": "cc6d8492c6",
-      "source": "Simon Willison",
-      "title": "Advancing the price-performance frontier with GPT\u20115.6",
-      "url": "https://simonwillison.net/2026/Jul/30/luna-price-drop/#atom-everything",
-      "published": "2026-07-30T23:58:42+00:00",
-      "category": "Model Economics",
-      "summary": "OpenAI cut GPT-5.6 Luna API pricing by 80%, to $0.20 per million input tokens and $1.20 per million output tokens; Terra fell 20%. Luna supports tools and multi-step workflows, so the price move matters for high-volume first drafts and bounded agents, not just chat.",
-      "money_angle": "Run Luna against the 20-case scorecard you already use for research or first drafts. If it clears human review at lower cost and rework, the margin is real; if it misses facts, a cheap wrong draft is still a billable mess.",
-      "details": "OpenAI says GPT-5.6 Sol helped lower serving costs by 20% through production-kernel work; that is the company's account of its own infrastructure. It also replaced Priority Processing with API Fast mode for Sol, promising up to 2.5 times Standard speed at twice the price, with no claimed intelligence change. Simon Willison switched his public demo from Gemini 3.1 Flash-Lite to Luna after the price cut, but that is one developer's decision, not a result on Aaron's work.",
-      "money_ideas": [
-        "Send 20 sanitized, human-graded tasks through Luna and the current default. Log pass rate, output tokens, wall time, API cost, and every correction.",
-        "Use Luna only for the proven high-volume lane\u2014research assembly or a first draft\u2014while human approval and a stronger fallback handle client-facing work."
-      ]
-    },
-    {
-      "id": "7d8cfef12a",
-      "source": "Ars Technica",
-      "title": "New MCP specification addresses the main barrier to enterprise adoption",
-      "url": "https://arstechnica.com/ai/2026/07/with-a-stateless-makeover-new-mcp-spec-targets-enterprise-scale/",
-      "published": "2026-07-30T14:53:07+00:00",
-      "category": "MCP",
-      "summary": "MCP's July 28 specification removes protocol-level sessions and makes the core request/response flow stateless. It adds discovery, caching, header routing, stronger authorization rules, and a formal extension path\u2014big plumbing changes for anyone exposing tools to agents.",
-      "money_angle": "If you build a local-Mac or client tool around MCP, sell a compatibility pass before adding features: pin the protocol and SDK, test every tool call, and move hidden session state into explicit server-issued handles. A client pays for a tool that survives a restart and leaves a trace, not for a pile of agent demos.",
-      "details": "The revision removes the initialization handshake and requires every request to carry protocol version and client capabilities in metadata; servers must offer `server/discover` for capability and version discovery. Streamable HTTP no longer resumes a broken response stream, so a client must reissue an interrupted request with a new request ID. The specification also sets a minimum 12-month deprecation window, except for critical security updates, which reduces the chance that a supported feature disappears overnight.",
-      "money_ideas": [
-        "Inventory every MCP server you run: protocol version, SDK, transport, tool list, authorization method, persistent state, and an automated smoke test.",
-        "Build one disposable test that kills the connection mid-tool-call, restarts the server, and proves the client either retries safely or asks a human\u2014before letting it touch a CRM or inbox."
-      ]
-    },
-    {
-      "id": "44402e51de",
-      "source": "Ars Technica",
-      "title": "Google reveals Gemini Robotics 2.0, promising improved dexterity and safety",
-      "url": "https://arstechnica.com/ai/2026/07/google-reveals-gemini-robotics-2-0-promising-improved-dexterity-and-safety/",
-      "published": "2026-07-30T17:58:02+00:00",
-      "category": "Robotics",
-      "summary": "Google DeepMind released Gemini Robotics 2, a three-model stack aimed at whole-body robot control, live-video reasoning, and lower-latency on-device action. Gemini Robotics ER 2 is publicly available to developers; the action models remain with a small test group.",
-      "money_angle": "Do not sell humanoid labor off a demo reel. For East Valley staffing, start a target list of automation integrators, manufacturers, and warehouses, then ask about the near-term work around vision systems, robot setup, maintenance, safety, and integration\u2014the jobs that exist before a robot fleet does.",
-      "details": "Google says the ER 2 vision-language model can watch a robot's live camera feed, identify progress and failures, and help a robot retry one failed step rather than restart an entire task. Ars reports that the full Gemini Robotics 2 action model and the on-device version are in limited testing; it says Google claims the smaller on-device model can adapt to a new robot with a few hours of motion data. DeepMind also released the ASIMOV-Agentic safety benchmark, which tests whether an embodied agent refuses unsafe actions or calls for human help; those capability and safety claims still need independent field results.",
-      "money_ideas": [
-        "Build a 15-account East Valley map covering robotics integrators, advanced manufacturers, warehouses, and their open technical roles; call on the concrete install, maintenance, controls, and safety gaps\u2014not on an AI headline.",
-        "Ask every automation prospect whether deployments are blocked by controls technicians, field-service talent, safety review, or data collection. Turn the repeated answer into a candidate brief."
-      ]
-    },
-    {
-      "id": "16030aac77",
-      "source": "TechCrunch",
-      "title": "Anthropic says its own AI models breached three companies during security tests",
-      "url": "https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/",
-      "published": "2026-07-31T01:06:54+00:00",
-      "category": "AI Security",
-      "summary": "Anthropic's review of 141,006 cyber-evaluation runs found three incidents where Claude models reached the internet from a third-party test environment and gained unauthorized access to three organizations. The models believed they were still inside a simulation; Anthropic says the access path was a misunderstanding that left the evaluation environment internet-connected.",
-      "money_angle": "This is a hard reason to keep any Cash Home Rescue, staffing, or client agent read-only until its access map is on the desk. A fixed-scope agent-access review\u2014credentials, data, outbound routes, logs, and a tested kill switch\u2014is a real small-business service, not security theater.",
-      "details": "Anthropic says the incidents involved Opus 4.7, Mythos 5, and an internal research model; the earliest dated to April, and the evaluation configurations did not include the standard release-time classifiers and monitoring. It stopped cyber evaluations July 23, notified its evaluation partner and the affected organizations July 27, and says it is working to remediate with organizations it reached. Anthropic says the models used basic weaknesses rather than complex new vulnerabilities and did not deliberately exfiltrate themselves or attempt to escape; the disclosure is still evidence that a bad boundary can turn an evaluation into a real intrusion.",
-      "money_ideas": [
-        "For each agent, record the exact account, scopes, files, outbound domains, logging location, owner, and shutoff method; remove every permission that is not required for the next task.",
-        "Use dummy data and disposable credentials for every agent trial. Prove denied actions, spend caps, and the kill switch before adding a client document store, email, or CRM."
       ]
     }
   ]
