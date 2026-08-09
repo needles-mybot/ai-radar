@@ -1,6 +1,36 @@
 {
-  "updated": "2026-08-08T05:03:52-07:00",
+  "updated": "2026-08-09T05:03:00-07:00",
   "items": [
+    {
+      "id": "f43ad03370",
+      "source": "Simon Willison",
+      "title": "Auto mode is now the default in Claude Code for Pro, Max, and Team plans",
+      "url": "https://simonwillison.net/2026/Aug/8/auto-mode/#atom-everything",
+      "published": "2026-08-08T22:36:03+00:00",
+      "category": "Agent Guardrails",
+      "summary": "Anthropic will make auto mode the default for new Claude Code sessions on Pro, Max, and Team plans on August 14. Instead of seeking permission at every step, it sends tool calls through a classifier intended to block irreversible, destructive, or out-of-environment actions; a manually pinned default stays unchanged.",
+      "money_angle": "This can cut permission-clicking during long coding jobs, but the safety and productivity figures are Anthropic's own. For a local build or client micro-app, test it only in a fake-data repo and sell reviewed patches with passing tests\u2014not a model holding live credentials.",
+      "details": "Anthropic says auto mode falls back to manual approvals after three consecutive blocks or 20 blocks in a session, and that its classifier overhead is now free on these plans. In its controlled test of 1,053 paid testers, people refused a planted dangerous command 13.6% of the time while auto mode blocked 89% of the same commands; that is vendor-run evidence, not an independent production audit. Anthropic says Enterprise, API, AWS, Bedrock, Google Cloud, and Microsoft Foundry users remain opt-in for now, although Enterprise administrators can set the default through managed settings.",
+      "money_ideas": [
+        "Before August 14, pin your chosen permission mode if you do not want new sessions to change. Run one disposable-repo trial with fake data, a written allowed-command and allowed-domain list, a fixed budget, and saved test output.",
+        "For a coding side hustle, hand over the scoped diff, acceptance-test output, and a human review record. Keep client inboxes, CRMs, production databases, and permanent API keys outside the trial."
+      ]
+    },
+    {
+      "id": "3ce57b9e70",
+      "source": "Ars Technica",
+      "title": "DeepMind\u2019s hurricane breakthrough has surprised weather scientists",
+      "url": "https://arstechnica.com/science/2026/08/deepminds-hurricane-model-bought-forecasters-an-extra-day/",
+      "published": "2026-08-08T11:05:50+00:00",
+      "category": "AI Science",
+      "summary": "A Nature paper reports that Google's WeatherNext model gave cyclone forecasters roughly one extra day of comparable track-and-intensity accuracy while using lower-resolution weather inputs. Google has released the WeatherNext 2 and WeatherNext Cyclones code and weights to the research community, but official warnings still come from weather agencies.",
+      "money_angle": "This is not an M5 side hustle or a substitute for an official forecast. For staffing, it is a market-map clue for disaster-restoration, utility, logistics, and insurance employers\u2014but outreach should follow official warnings and visible hiring demand, not an AI weather prediction.",
+      "details": "Google says WeatherNext forecast Hurricane Melissa would reach Jamaica at Category 5 five days ahead with 80% confidence, then near 100% three days ahead; the National Hurricane Center used it alongside physics-based models and real-time observations. The model generates scenario ensembles instead of a single forecast, and the NHC's 2025 verification report found it the top individual model for its tested track and intensity guidance. The Nature result and Google's release are meaningful research evidence, but the DeepMind account says national meteorological agencies alone issue official alerts and warnings.",
+      "money_ideas": [
+        "Make a seasonal prospect sheet for restoration, electrical, logistics, and insurance firms with actual role openings, service area, and decision-maker; trigger outreach only after an official warning or a documented surge in work.",
+        "Do not sell weather predictions. A staffing offer needs a real demand signal, named candidate pool, and a clear response-time commitment."
+      ]
+    },
     {
       "id": "0aaa4cc9a3",
       "source": "Simon Willison",
@@ -157,7 +187,7 @@
     {
       "id": "1baa27119c",
       "source": "Ars Technica",
-      "title": "Anthropic’s AI used fake identities, malware in rogue attack on GitHub project",
+      "title": "Anthropic\u2019s AI used fake identities, malware in rogue attack on GitHub project",
       "url": "https://arstechnica.com/security/2026/08/anthropics-ai-used-fake-identities-malware-in-rogue-attack-on-github-project/",
       "published": "2026-08-05T20:47:11+00:00",
       "category": "AI Security",
@@ -335,52 +365,6 @@
       "money_ideas": [
         "For the first two weeks of a new client micro-app, put the agent in proposal-only mode and keep every accepted edit beside its test result in the project log.",
         "Before handover, have the project owner explain the five most important files and rerun the acceptance tests without the coding agent."
-      ]
-    },
-    {
-      "id": "53418fe0d5",
-      "source": "Hacker News",
-      "title": "Generative AI floods and dilutes the market for books",
-      "url": "https://arxiv.org/abs/2607.20349",
-      "published": "2026-08-02T11:06:07Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49143289",
-      "category": "Content Economics",
-      "summary": "A working paper matched daily sales data through June 2026 to full-text AI detection for 14,419 self-published genre-fiction books sold on Amazon. It found selling titles grew 19.2-fold while quarterly revenue grew 8.9-fold, cutting revenue per selling book across most genres as books with substantial detected AI text took more catalog space and top ranks.",
-      "money_angle": "Do not bet a Cash Home Rescue or staffing side hustle on dumping generic AI books or posts into an already crowded shelf. The defensible product is local evidence: real East Valley questions, source-backed answers, original photos or records, and a human who owns the claim.",
-      "details": "The authors label a book as having substantial AI text when more than 25% of its full text is detected as AI-produced; none of the studied books disclosed AI use. They report that non-AI books lost the most ground in genres with high AI diffusion, especially where Kindle Unlimited availability was high. The paper is under review, uses a proprietary Amazon sales panel, and studies self-published genre fiction rather than all online content. Its detector-based classification and market scope are limits, but the measured supply-versus-revenue gap is a hard warning against a volume-only content play.",
-      "money_ideas": [
-        "Make a 20-question East Valley seller or hiring FAQ from calls and primary local sources. Publish only answers that name the source, date, and owner of each fact.",
-        "Sell a content evidence pack rather than word count: verified questions, source links, approved claims, original client material, and a dated refresh list."
-      ]
-    },
-    {
-      "id": "2290c5b63e",
-      "source": "Simon Willison",
-      "title": "datasette-apps 0.2a0",
-      "url": "https://simonwillison.net/2026/Aug/1/datasette-apps/#atom-everything",
-      "published": "2026-08-01T21:23:56+00:00",
-      "category": "Agent QA",
-      "summary": "datasette-apps 0.2a0 adds `app_debug()`, which lets Datasette Agent open an app in an invisible, non-interactive iframe and run agent-provided JavaScript for a smoke test. It also adds `app_list()` so the agent can list apps the user may edit.",
-      "money_angle": "A small client dashboard or intake tool needs proof that a button, filter, and saved record work\u2014not a screenshot of AI-written code. Charge for the tested app and its handover; keep the agent inside a narrow edit-and-test box.",
-      "details": "The debug path runs the app in an `opacity: 0` iframe with `pointer-events: none`, then executes JavaScript inside that sandboxed frame; it can also measure element dimensions. It uses the new `context.browser_task()` mechanism from datasette-agent 0.4a0. The release is marked as a pre-release. A smoke test can catch a broken screen, but it does not prove security, permission boundaries, or correctness of the data beneath it.",
-      "money_ideas": [
-        "Build one throwaway lead or property-status app with only fake data. Make the agent prove a record can be listed, filtered, saved, and reloaded before you show it to anyone.",
-        "Deliver a one-page acceptance sheet with each client micro-app: test cases, result, data owner, edit boundary, and the human who approves a production change."
-      ]
-    },
-    {
-      "id": "e2f861af97",
-      "source": "Simon Willison",
-      "title": "Ten advances in mathematics and theoretical computer science",
-      "url": "https://simonwillison.net/2026/Aug/1/ten-advances-in-mathematics/#atom-everything",
-      "published": "2026-08-01T20:34:49+00:00",
-      "category": "AI Research",
-      "summary": "OpenAI says an internal version of its next major model, Astra, found results for ten mathematics and theoretical-computer-science problems whose main results had seen no progress for at least a decade. It says each result was prepared into a human manuscript and formalized as a Lean certificate, with the solution search costing roughly $2,000 at GPT-5.6 Sol API rates.",
-      "money_angle": "This is not a ready-to-buy research worker, but it changes the ceiling on a bounded research bet. Where a result has an independent check, a fixed-budget agent sprint can be priced as an experiment instead of sold as magic.",
-      "details": "OpenAI's list spans sphere packing, coding theory, non-sofic groups, circuit complexity, quantum games, lattice cryptography, and extremal combinatorics. It published a paper, model reasoning walkthroughs, and a public repository containing Lean 4 formalizations, which can be independently built and checked. The claims come from OpenAI; Astra, the prompts, and the count and cost of failed attempts are not public. Formal checking supports the encoded theorem, but the mathematical community still has to judge the statements and their importance.",
-      "money_ideas": [
-        "For a technical research task, quote a fixed, capped sprint with a known acceptance test, source ledger, human verifier, and a full record of rejected results\u2014not an unlimited autonomous-research promise.",
-        "Use the same gate for a side project: no result enters a client brief until a named person can reproduce its source trail or test it against known facts."
       ]
     }
   ]
