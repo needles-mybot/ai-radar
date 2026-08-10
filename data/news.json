@@ -1,6 +1,52 @@
 {
-  "updated": "2026-08-09T05:03:00-07:00",
+  "updated": "2026-08-10T05:00:23-07:00",
   "items": [
+    {
+      "id": "3835de70aa",
+      "source": "The Verge",
+      "title": "An Amazon data center could have the worst polluting power plant in the country",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/977124/amazon-data-center-worst-polluting-power-plant",
+      "published": "2026-08-10T11:06:58+00:00",
+      "category": "AI Infrastructure",
+      "summary": "Amazon has bought the GW Ranch site in Pecos County, Texas, and plans to buy power from its proposed gas plant for a new data-center campus. Texas permitted up to 33 million tons of CO2, a ceiling rather than a forecast of what the plant will actually emit.",
+      "money_angle": "This is a hard signal that AI buildouts create work outside model labs: power, generators, cooling, controls, construction, and maintenance. For staffing, do not pitch a vague AI labor story; find the physical bottleneck at an operating or permitted East Valley site, then bring a candidate slate for that job.",
+      "details": "The Verge reports that 35 natural-gas turbines would mainly supply 7.65 GW to the campus instead of initially connecting to Texas's grid. It notes that plants rarely emit their full permitted amount, so the 33-million-ton figure is an authorized maximum, not an annual emissions prediction. Amazon says the site is intended to transition to grid-connected service as interconnection timelines permit and that the long-term campus is expected to create thousands of jobs; those are Amazon statements.",
+      "money_ideas": [
+        "Build a 15-account East Valley map of data centers, power contractors, generator firms, cooling companies, and advanced manufacturers. Mark only projects with a public permit, construction notice, or actual job opening.",
+        "On each BDM call, ask which role is holding the site up today: electrical construction, controls, generator service, cooling, commissioning, or ongoing maintenance. Turn repeated answers into one candidate brief."
+      ]
+    },
+    {
+      "id": "778cdf7794",
+      "source": "Hacker News",
+      "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+      "url": "https://www.docker.com/products/docker-sandboxes/",
+      "published": "2026-08-10T06:02:38Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49239751",
+      "category": "Agent Sandboxes",
+      "summary": "Docker Sandboxes (`sbx`) runs coding agents in disposable microVMs with a project workspace mounted in, leaving the host outside the agent's environment. Docker lists Claude Code, Gemini CLI, Copilot CLI, Codex, OpenCode, and Kiro as supported, and says Docker Desktop is not required.",
+      "money_angle": "Your M5 Max can run a coding-agent trial without handing the agent the desk. Clone one fake-data micro-app, define its network and filesystem boundary, run the acceptance test before and after, then sell only the reviewed patch and test record—not unattended access to a client's machine.",
+      "details": "Docker says each agent gets a dedicated microVM where it can install packages, change configuration, and run containers while the host remains untouched. Its product page lists customizable network and filesystem controls and says the sandbox is disposable by default. That wall is useful only if the mounted repo, credentials, and permitted network destinations are also narrow; a sandbox is not permission to feed it client records or production secrets.",
+      "money_ideas": [
+        "Install `sbx` on a disposable test repo, mount only that repo, block everything except the package registry it needs, and run one known failing test. Keep the proposed diff, test output, elapsed time, and manual-review decision in the job folder.",
+        "Package a small code repair as a fixed deliverable: isolated run, scoped diff, passing acceptance test, source and dependency list, and handover notes. Keep client credentials, inboxes, CRMs, and production databases outside the sandbox trial."
+      ]
+    },
+    {
+      "id": "1aa79843a7",
+      "source": "Simon Willison",
+      "title": "GitHub Models is now retired",
+      "url": "https://simonwillison.net/2026/Aug/9/github-models-is-now-retired/#atom-everything",
+      "published": "2026-08-09T22:48:05+00:00",
+      "category": "AI Operations",
+      "summary": "GitHub Models retired on July 30: its playground, model catalog, inference API, and bring-your-own-key path are gone for every customer. Any GitHub Actions workflow still calling that inference service needs a replacement and a regression run.",
+      "money_angle": "A broken scheduled AI job is a pile of silent failures. Move each workflow to a named provider with a spend cap, record the model and key owner, and charge for the tested output and upkeep—not a one-off prompt wedged into an Action.",
+      "details": "GitHub's changelog says the retirement applies even to customers with active usage and completes the shutdown announced on July 1. GitHub points new and existing projects toward Microsoft Foundry or GitHub Copilot for model access. Simon Willison reports that a GitHub Actions task in his own repository failed during the retirement brownout; he replaced it with an OpenAI API key carrying a monthly spending limit. I found no GitHub Models references in this radar repository.",
+      "money_ideas": [
+        "Inventory every GitHub Action that calls a model. For each one, write the replacement provider, model ID, secret owner, monthly cap, expected output, and a one-command smoke test before changing it.",
+        "Offer a fixed repair for a small business's failing AI automation: migrate one workflow, run it against saved input, compare its output to the known good result, and hand over the budget and failure alert."
+      ]
+    },
     {
       "id": "f43ad03370",
       "source": "Simon Willison",
@@ -318,53 +364,6 @@
       "money_ideas": [
         "For the next Cash Home Rescue page or ad, put two AI-assisted versions in front of five people who actually handle seller conversations. Score trust, clarity, and the action they would take before publishing either one.",
         "Package a small-business content test as a fixed deliverable: three drafts, a blind five-person review, the scored comments, one chosen version, and a dated outcome check."
-      ]
-    },
-    {
-      "id": "92f8a54631",
-      "source": "The Verge",
-      "title": "China\u2019s Alibaba takes another swipe at America\u2019s AI supremacy",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai",
-      "published": "2026-08-03T11:20:37+00:00",
-      "category": "Model Economics",
-      "summary": "Alibaba released Qwen3.8-Max through QwenCloud and says its open weights will follow next week. Qwen lists 2.4 trillion parameters, 95 billion active parameters, text-and-image input, and a 1 million-token context window.",
-      "money_angle": "This is another real cloud candidate for document and account research, not a buying decision from a benchmark sheet. Run 15 redacted, scoreable staffing and property tasks through it; source citations, correct field extraction, human edit minutes, and cost decide whether it earns a lane.",
-      "details": "Qwen's release page says the model is available through QwenCloud and exposes an OpenAI-compatible configuration with a 65,536-token maximum output. Its claims about a 10-plus-day autonomous coding run and a five-day paper-reproduction experiment are vendor demonstrations, not independent client results. The company says weights are planned for next week, so there is no local-Mac install to test today. Keep a first trial read-only and make it reproduce the evidence behind each answer before any client-facing use.",
-      "money_ideas": [
-        "Make a 15-row scorecard from de-identified seller-packet extraction and BDM account-research tasks, each with a known answer and source link.",
-        "Run the same locked prompt through Qwen3.8-Max and the current default, then keep the raw output, edit minutes, missed facts, tokens, and cost in one sheet."
-      ]
-    },
-    {
-      "id": "6ff715560b",
-      "source": "Hacker News",
-      "title": "Critical CVE issued for hallucinated SQLite vulnerability",
-      "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
-      "published": "2026-08-03T11:28:54Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49154332",
-      "category": "AI Security",
-      "summary": "JFrog says a newly created GitHub repository seeded 55 mostly fabricated vulnerability advisories, including SQLite claims that reached NVD and CISA's ADP system. In JFrog's tests, cited functions or line numbers did not exist in the named versions, or the proof-of-concept payload failed; it says 54 of the 55 advisories were fabricated.",
-      "money_angle": "The damage is burnt staff time, not just a bad patch. If an AI workflow surfaces a \"critical\" claim, require a vendor advisory, target-version code check, and reproducible proof before a human opens an urgent ticket; that evidence gate keeps a client service out of the landfill.",
-      "details": "JFrog tested official SQLite releases in isolated Docker containers with AddressSanitizer and compared the reports with source code, vendor advisories, NVD, and GHSA data. It reports that one claimed critical SQLite issue referenced a function introduced years after the target version, while other claims cited impossible line numbers or invalid SQL. The firm says the wider vulnerability pipeline is drowning in reports and does not require proof-of-concept reproduction before ingestion. These are JFrog's findings, so do not label any CVE false from an AI detector alone: reproduce the claim and check the maintainer's record.",
-      "money_ideas": [
-        "Add three required fields to any AI-generated security or technical alert: vendor link, affected-version evidence, and a repeatable test result.",
-        "For a software client, sell a fixed review of its last ten AI-generated or scanner-generated critical tickets and separate real evidence from empty noise."
-      ]
-    },
-    {
-      "id": "53ea25548c",
-      "source": "Hacker News",
-      "title": "Prevent cognitive debt by manually retyping LLM-generated code",
-      "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
-      "published": "2026-08-03T09:32:07Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49153374",
-      "category": "AI Build",
-      "summary": "Developer Ankur Sethi has coding agents show each proposed change in chat, then types and adapts it himself instead of granting file access. He says the slower loop helps him catch hallucinations and bad design while building a working mental map of the codebase.",
-      "money_angle": "Do not sell a client a black-box micro-app you cannot fix. On early side projects, let the model draft but make one owner apply and explain every change; charge for the working app, test record, handover, and support boundary\u2014not a fake overnight build.",
-      "details": "Sethi's agent instructions prohibit file edits, moves, dependency installs, and other repository mutations unless he explicitly asks for them. He estimates the approach feels roughly twice as fast as working without an assistant, rather than the tenfold speed he thinks a hands-off workflow might claim. That is a personal report, not a controlled study, and manual retyping is not the right control for every low-risk repetitive change. The durable point is ownership: if no one can trace a change from prompt to file to test, the code debt is on the floor waiting for a customer to trip over it.",
-      "money_ideas": [
-        "For the first two weeks of a new client micro-app, put the agent in proposal-only mode and keep every accepted edit beside its test result in the project log.",
-        "Before handover, have the project owner explain the five most important files and rerun the acceptance tests without the coding agent."
       ]
     }
   ]
