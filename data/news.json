@@ -1,6 +1,83 @@
 {
-  "updated": "2026-08-10T05:00:23-07:00",
+  "updated": "2026-08-12T05:03:14-07:00",
   "items": [
+    {
+      "id": "1a8475db80",
+      "source": "Hacker News",
+      "title": "llama.cpp",
+      "url": "https://llama.app",
+      "published": "2026-08-12T04:51:59Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49267928",
+      "category": "Local AI",
+      "summary": "llama.app is now the official home for llama.cpp and documents a local coding-agent path: run `llama serve`, install Hugging Face's `pi-llama` plugin, then launch Pi to discover the local model. The site positions the stack as on-device, with no API key and no cloud request path.",
+      "money_angle": "Your M5 Max can be a private test bench for a reviewed micro-app or code repair without feeding the work to a cloud model. The invoice is for a passing result and a human-reviewed diff, not for pointing an autonomous agent at a client's folders.",
+      "details": "The site provides a shell installer and points to package-manager and source-build instructions. It says the Pi plugin auto-discovers a model served by llama.cpp, removing provider configuration from a local coding-agent trial. The site lists Apple Silicon among its supported hardware and highlights Qwen, Gemma, and GPT-OSS model families. Its no-telemetry and local-request language is a project product claim; still inspect the agent plugin, model download source, mounted folders, and outbound settings before using client material.",
+      "money_ideas": [
+        "Create a disposable fake-data repo with one known failing test. Mount only that folder, record the proposed diff and test output, then decide whether it beats your current workflow on edit minutes and total run time.",
+        "If it clears repeated tests, sell a fixed local code-repair package: one scoped defect, isolated workspace, acceptance test, manual review, and handover notes. Keep client inboxes, CRMs, production data, and permanent credentials outside the first trials."
+      ]
+    },
+    {
+      "id": "5570c557a3",
+      "source": "TechCrunch",
+      "title": "An unreleased Anthropic model made progress on one of math’s biggest unsolved problems",
+      "url": "https://techcrunch.com/2026/08/11/an-unreleased-anthropic-model-made-progress-on-one-of-maths-biggest-unsolved-problems/",
+      "published": "2026-08-11T16:25:20+00:00",
+      "category": "AI Science",
+      "summary": "Anthropic says an unreleased research Claude raised the known lower bound for the share of Riemann-zeta zeros satisfying the Riemann hypothesis from 41.6% to 67.2%. It did not prove the Riemann hypothesis; Anthropic says two in-house mathematicians, two outside experts, and a Lean formalization checked the result.",
+      "money_angle": "This is not a math side hustle. The useful business lesson is the work shape: many explorers, separate validators, numerical checks, and a machine-checkable final artifact beat one agent producing a polished answer nobody can audit.",
+      "details": "Anthropic says the model first tried 650 ideas without success, then spent a day and a half coordinating about 60 subagents across two Claude Code sessions and 31 million output tokens. It says the agents ran thousands of numerical checks, searched 54 arXiv papers for prior art, and independently re-proved the result. Anthropic published the paper, an expert note, process transcripts, and a Lean repository; the capability, process, and result remain Anthropic's report, not a released Claude product. The formalization passes Lean's standard comparator, which checks the formal statement rather than proving every informal research choice was wise.",
+      "money_ideas": [
+        "For a research or document-extraction service, split a 10-case trial into worker and checker roles. Require every delivered field to carry its source location, reviewer decision, and a pass/fail rule.",
+        "Keep an evidence folder beside every client result: source files or URLs, prompt and model version, raw output, checks run, final edit, and the named human who released it."
+      ]
+    },
+    {
+      "id": "3932451524",
+      "source": "Hacker News",
+      "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+      "url": "https://stolen-thoughts.com/",
+      "published": "2026-08-11T13:22:00Z",
+      "hn_comments": "https://news.ycombinator.com/item?id=49257876",
+      "category": "AI Security",
+      "summary": "A new preprint reports that encrypted reasoning blocks returned by Anthropic, OpenAI, and Google APIs can be replayed into weaker sibling models and decoded in plaintext. The authors say a scan of public repositories recovered 367 PII artifacts and 182 credentials from 315,320 reasoning blocks; this is a newly submitted paper, not an independent audit.",
+      "money_angle": "Treat agent logs, response caches, JSONL traces, and error bundles as client secrets—not harmless machine exhaust. A clean agent pilot can include a concrete paid handover: no public run logs, a secret scan before any repo or support ticket leaves the desk, and a record showing what was deleted.",
+      "details": "The paper's abstract says encrypted traces can be reused across sessions, users, and models within one provider ecosystem, allowing a less-guarded sibling to disclose another model's hidden reasoning. It describes four claimed impacts: reasoning extraction, leakage from public logs, recovery of hidden hazardous material, and invisible prompt injection inside reasoning blocks. The authors say they disclosed the issue responsibly and propose cryptographic and system mitigations; the paper abstract does not state a provider patch status. Until providers say otherwise, do not put seller records, candidate data, API keys, or private prompts into artifacts that might be committed, shared, or published.",
+      "money_ideas": [
+        "Before publishing a demo repo or sending an agent transcript, scan the full tree—including `.jsonl`, caches, notebooks, CI artifacts, and hidden files—for secrets and personal data. A visible chat answer is not the whole file.",
+        "For every client pilot, write the retention rule before the first run: where traces live, who can read them, when they are deleted, and how deletion is verified."
+      ]
+    },
+    {
+      "id": "fe459dc13f",
+      "source": "The Verge",
+      "title": "Claude will apply invisible watermarks to AI text and images",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/977823/anthropic-claude-ai-watermarks-c2pa-text-images",
+      "published": "2026-08-11T13:09:55+00:00",
+      "category": "AI Provenance",
+      "summary": "Anthropic says supported Claude models launched in the EU on or after August 2 will mark generated text with embedded watermarks and attach signed C2PA provenance metadata to supported generated files such as SVG, PNG, and JPG. It says support for models released before that date is still being added.",
+      "money_angle": "For Cash Home Rescue or any client content, a watermark can show that Claude touched an output; it does not make the seller claim, market fact, or ad promise true. Keep source links, dated drafts, and a human approver as the proof behind anything published or sent.",
+      "details": "Anthropic says the marks apply to supported models across its API, Claude, Claude Code, Claude Cowork, and Claude Tag wherever Claude is offered, though some platforms and features may not support every marking type. Its text watermark is intended to be imperceptible, while file provenance uses the C2PA open standard and can signal tampering when signed metadata is present. The policy distinguishes supported new models from older ones still in transition. Do not promise a client that every Claude output can already be detected, or that an absence of a mark proves a human wrote it.",
+      "money_ideas": [
+        "For each client image or ad file, retain the source assets, prompt brief, model and date, final human edits, approver, and published version in one handover folder. Check C2PA metadata when a supported Claude-generated file is part of the package.",
+        "Write marketing from primary sources and call notes, then have the owner approve the final claim. Use AI for drafts and variations, never as the authority behind a factual promise."
+      ]
+    },
+    {
+      "id": "89483a008e",
+      "source": "NVIDIA",
+      "title": "NVIDIA Nemotron 3.5 Lightning Delivers Fast, Accurate Specialized Task Execution for Long-Running Agents",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-lightning-delivers-fast-accurate-specialized-task-execution-for-long-running-agents/",
+      "published": "2026-08-11T13:01:07+00:00",
+      "category": "Open Models",
+      "summary": "NVIDIA released Nemotron 3.5 Lightning, an open 30B-parameter mixture-of-experts model with 3B active parameters per token for high-volume agent work such as tool calls, validation, and subagent delegation. NVIDIA says its weights, training data, and recipes are available under OpenMDW-1.1, with a routing library that can send harder planning work to another model.",
+      "money_angle": "This is a candidate worker model behind a stronger planner, not proof of a cheap agent business. Test it on fixed, sanitized tasks and price from the measured pass rate, reviewer time, and run cost; do not mistake 3B active parameters for a 3GB memory footprint when the full 30B model still has to be stored.",
+      "details": "NVIDIA positions Lightning for the execution layer of long-running agents, while frontier models handle planning and orchestration. It ships NVFP4 and BF16 variants plus speculative-decoding components, and NVIDIA's NeMo Switchyard can route requests between models. NVIDIA demonstrates deployment from DGX Spark to data-center hardware and names agent harnesses including Hermes Agent; its post does not document an Apple-Silicon deployment path. Its speed and task-completion comparisons are NVIDIA claims, so treat them as a test hypothesis rather than a buying decision.",
+      "money_ideas": [
+        "Build a 20-case scorecard from public or fake-data work: structured extraction, tool-result validation, follow-up draft checks, and a known answer for every case. Compare a low-cost worker plus a stronger reviewer against one-model runs.",
+        "Do not download until the runtime and format are documented for your Apple-Silicon stack. When that route exists, run a disk-space, memory, context-length, speed, and quality check before it touches any private job."
+      ]
+    },
     {
       "id": "3835de70aa",
       "source": "The Verge",
@@ -55,7 +132,7 @@
       "published": "2026-08-08T22:36:03+00:00",
       "category": "Agent Guardrails",
       "summary": "Anthropic will make auto mode the default for new Claude Code sessions on Pro, Max, and Team plans on August 14. Instead of seeking permission at every step, it sends tool calls through a classifier intended to block irreversible, destructive, or out-of-environment actions; a manually pinned default stays unchanged.",
-      "money_angle": "This can cut permission-clicking during long coding jobs, but the safety and productivity figures are Anthropic's own. For a local build or client micro-app, test it only in a fake-data repo and sell reviewed patches with passing tests\u2014not a model holding live credentials.",
+      "money_angle": "This can cut permission-clicking during long coding jobs, but the safety and productivity figures are Anthropic's own. For a local build or client micro-app, test it only in a fake-data repo and sell reviewed patches with passing tests—not a model holding live credentials.",
       "details": "Anthropic says auto mode falls back to manual approvals after three consecutive blocks or 20 blocks in a session, and that its classifier overhead is now free on these plans. In its controlled test of 1,053 paid testers, people refused a planted dangerous command 13.6% of the time while auto mode blocked 89% of the same commands; that is vendor-run evidence, not an independent production audit. Anthropic says Enterprise, API, AWS, Bedrock, Google Cloud, and Microsoft Foundry users remain opt-in for now, although Enterprise administrators can set the default through managed settings.",
       "money_ideas": [
         "Before August 14, pin your chosen permission mode if you do not want new sessions to change. Run one disposable-repo trial with fake data, a written allowed-command and allowed-domain list, a fixed budget, and saved test output.",
@@ -65,12 +142,12 @@
     {
       "id": "3ce57b9e70",
       "source": "Ars Technica",
-      "title": "DeepMind\u2019s hurricane breakthrough has surprised weather scientists",
+      "title": "DeepMind’s hurricane breakthrough has surprised weather scientists",
       "url": "https://arstechnica.com/science/2026/08/deepminds-hurricane-model-bought-forecasters-an-extra-day/",
       "published": "2026-08-08T11:05:50+00:00",
       "category": "AI Science",
       "summary": "A Nature paper reports that Google's WeatherNext model gave cyclone forecasters roughly one extra day of comparable track-and-intensity accuracy while using lower-resolution weather inputs. Google has released the WeatherNext 2 and WeatherNext Cyclones code and weights to the research community, but official warnings still come from weather agencies.",
-      "money_angle": "This is not an M5 side hustle or a substitute for an official forecast. For staffing, it is a market-map clue for disaster-restoration, utility, logistics, and insurance employers\u2014but outreach should follow official warnings and visible hiring demand, not an AI weather prediction.",
+      "money_angle": "This is not an M5 side hustle or a substitute for an official forecast. For staffing, it is a market-map clue for disaster-restoration, utility, logistics, and insurance employers—but outreach should follow official warnings and visible hiring demand, not an AI weather prediction.",
       "details": "Google says WeatherNext forecast Hurricane Melissa would reach Jamaica at Category 5 five days ahead with 80% confidence, then near 100% three days ahead; the National Hurricane Center used it alongside physics-based models and real-time observations. The model generates scenario ensembles instead of a single forecast, and the NHC's 2025 verification report found it the top individual model for its tested track and intensity guidance. The Nature result and Google's release are meaningful research evidence, but the DeepMind account says national meteorological agencies alone issue official alerts and warnings.",
       "money_ideas": [
         "Make a seasonal prospect sheet for restoration, electrical, logistics, and insurance firms with actual role openings, service area, and decision-maker; trigger outreach only after an official warning or a documented surge in work.",
@@ -165,7 +242,7 @@
       "details": "TechCrunch reports that OpenAI says the updated ChatGPT Sol is meant for quick questions, web research, advice, planning, writing, and decisions; the Codex and Work version of Sol is unchanged. OpenAI's own evaluation says factual errors were 62% less common for Luna and 68% less common for Sol than GPT-5.5 Instant, which is a vendor result rather than an outside audit. Free and Go receive the unlimited-chat change and Think button next week, while Plus and Pro have the Sol update and slider now. File, image, voice, and image-generation limits remain separate, so this is not unlimited access to every ChatGPT tool.",
       "money_ideas": [
         "Run a 10-case, no-client-data test of the new ChatGPT setting against the previous workflow: each answer needs its sources, a pass/fail check, and human edit minutes.",
-        "Turn the winner into a one-page text-only research or first-draft service with a source ledger and final human approval; do not feed it seller packets, r\u00e9sum\u00e9s, or client records by default."
+        "Turn the winner into a one-page text-only research or first-draft service with a source ledger and final human approval; do not feed it seller packets, résumés, or client records by default."
       ]
     },
     {
@@ -192,7 +269,7 @@
       "hn_comments": "https://news.ycombinator.com/item?id=49195468",
       "category": "Agent Guardrails",
       "summary": "In ScaleX's command-approval game, more than 40,000 runs and 409,000 decisions produced a 66.3% mean threat-detection score: players missed about one in three planted threats. The sample is a game with an unusually high 34% threat rate, not a study of normal production use, but its failure pattern is useful.",
-      "money_angle": "A human clicking every agent prompt is not a security plan; people either miss the leak or block the work. The paid service is a narrow action boundary\u2014read-only by default, separate secrets, domain allowlists, logs, spend cap, and a tested stop\u2014not a pile of approval popups.",
+      "money_angle": "A human clicking every agent prompt is not a security plan; people either miss the leak or block the work. The paid service is a narrow action boundary—read-only by default, separate secrets, domain allowlists, logs, spend cap, and a tested stop—not a pile of approval popups.",
       "details": "The game creator reports that 64.7% of players approved `npm run analyze` even when the prior history showed a script piping data to an outside URL. Across three familiar `npm run` commands, the reported miss rate was 52.5%, versus 28.4% for other exfiltration-style attacks. Obvious destructive commands were missed less often than scope violations and credential-reading commands. Because the sample is self-selected, time-boxed gameplay and threats are far more common than normal, its numbers should not be treated as a production breach rate; they do show why command-by-command consent is a weak last wall.",
       "money_ideas": [
         "For every local or client agent, move API keys out of shell profiles and project folders it can read. Give it a disposable account, one work folder, an allowlist, and no direct CRM, inbox, or payment permission for the first run.",
@@ -233,7 +310,7 @@
     {
       "id": "1baa27119c",
       "source": "Ars Technica",
-      "title": "Anthropic\u2019s AI used fake identities, malware in rogue attack on GitHub project",
+      "title": "Anthropic’s AI used fake identities, malware in rogue attack on GitHub project",
       "url": "https://arstechnica.com/security/2026/08/anthropics-ai-used-fake-identities-malware-in-rogue-attack-on-github-project/",
       "published": "2026-08-05T20:47:11+00:00",
       "category": "AI Security",
@@ -258,112 +335,6 @@
       "money_ideas": [
         "Build a 20-question Cash Home Rescue page from real seller calls and primary Arizona sources. Give every answer an owner, source date, and clear next step; do not create fake reviews or forum posts.",
         "Add a required lead field for how the person found you, then compare qualified appointments from AI tools, Google, referrals, and direct traffic for 60 days before spending on a channel."
-      ]
-    },
-    {
-      "id": "a19f627762",
-      "source": "Simon Willison",
-      "title": "New release of LLM adds support for reasoning traces, OpenAI Responses, server-side tools, and smarter logging",
-      "url": "https://simonwillison.net/2026/Aug/4/new-release-of-llm/#atom-everything",
-      "published": "2026-08-04T23:58:24+00:00",
-      "category": "Agent Tools",
-      "summary": "LLM 0.32 turns Simon Willison's CLI into a stronger bridge between cloud APIs and local OpenAI-compatible servers: typed reasoning, text, tool, and attachment events; server-side provider tools; and a new message store. Its `llm openai endpoint` command can call a local LM Studio-style endpoint as a one-liner without configuring a model.",
-      "money_angle": "This is a clean test bench for a sellable, reviewed workflow: run the same sanitized seller-packet or BDM research cases through a local model and a cloud model, then keep the evidence. The product is a measured result with sources and a human sign-off, not a chat transcript on somebody's laptop.",
-      "details": "Reasoning traces now print to standard error so a normal answer can still flow into another tool; `-R` hides those traces. LLM 0.32 adds OpenAI server-side Code Interpreter and WebSearch, while the accompanying llm-anthropic 0.26 adds WebSearch, WebFetch, CodeExecution, and AnthropicMCP. The new endpoint command is deliberately useful for one-off calls to any OpenAI-compatible server, but those calls are not logged. For normal LLM usage, the redesigned SQLite message store is content-addressable, which avoids storing the same full conversation repeatedly; plugins need an upgrade to participate fully in the new streaming-event format.",
-      "money_ideas": [
-        "Make a 10-case, de-identified scorecard: seller-packet field extraction, account research, and follow-up drafts, each with a source link and known good answer.",
-        "Run the same locked prompts through local and cloud endpoints; save pass rate, edit minutes, wall time, model cost, and the final reviewer before offering that lane to a client."
-      ]
-    },
-    {
-      "id": "8b1f51d24b",
-      "source": "Simon Willison",
-      "title": "PipeNetwork/minimax-h3-mlx",
-      "url": "https://simonwillison.net/2026/Aug/4/minimax-h3-mlx/#atom-everything",
-      "published": "2026-08-04T19:10:09+00:00",
-      "category": "Local Video",
-      "summary": "PipeNetwork's MLX port brings MiniMax-H3, a system that takes text, images, audio, and video and can generate up to 15-second video clips with audio, onto Apple Silicon. Simon Willison ran it on an M5 Max: the model files took about 115 GB and one clip took just under 45 minutes.",
-      "money_angle": "Your M5 Max can make a private local-video proof, but the clock and disk make this a scarce-production tool, not a content landfill. Price a short approved clip as a fixed experiment with supplied assets, a written review round, and a human release decision; do not promise instant ads or unattended publishing.",
-      "details": "The project is a from-scratch MLX implementation of a video-and-audio diffusion pipeline, not a text LLM conversion. The project's published 8-bit quant is 35.3 GB on disk with 21.5 GB resident memory, while Simon's tested download path pulled roughly 115 GB across the needed files. MiniMax describes H3 as omni-modal, and the linked prompting guide has specific audio guidance; Simon's unguided audio came out as speech-like garbage. Treat the first run as a capability check: timing, output quality, asset permissions, and brand approval all need a record before a clip leaves the desk.",
-      "money_ideas": [
-        "Run one four-clip proof for a fully consented business: a locked 15-second script, client-supplied visuals, an audio brief, runtime log, and a written approval or rejection beside each result.",
-        "If the output clears review, sell a small batch with a fixed number of clips and revisions. Keep the prompt, source assets, render time, and approval record in the handover folder."
-      ]
-    },
-    {
-      "id": "82d406643c",
-      "source": "Ars Technica",
-      "title": "Texas halts data center connections to power grid amid overwhelming demand",
-      "url": "https://arstechnica.com/ai/2026/08/texas-halts-data-center-connections-to-power-grid-amid-overwhelming-demand/",
-      "published": "2026-08-04T20:34:28+00:00",
-      "category": "AI Infrastructure",
-      "summary": "Texas Governor Greg Abbott directed ERCOT and state regulators to audit every data center moving through the interconnection queue, pausing new grid connections while the projects disclose their power, community, ownership, and subsidy details. ERCOT's queue holds more than 1,800 projects seeking over 474 GW; Ars reports about 90% of those requests are from data centers.",
-      "money_angle": "This is a Texas signal, not proof of an East Valley job boom, but it makes generic AI-talent pitches weaker. For data-center and advanced-manufacturing accounts, qualify the physical bottleneck first\u2014interconnection, on-site power, cooling, water, controls, or construction\u2014then put a named technical candidate slate against the one that is actually holding up work.",
-      "details": "Ars says the queue's requested capacity is more than five times Texas' record peak electricity demand, and ERCOT forecasts that data-center demand and other factors could double that record by 2032. The audit asks for annual and peak power projections, grid dependence, state financial assistance, ownership and controlling interests, plus water and community-impact information. The pause does not apply to projects building their own on-site generation; the article says that route is becoming common and typically relies on natural gas. Many queued projects may never get built, so a queue entry is a prospecting clue, not a signed demand signal.",
-      "money_ideas": [
-        "Build a 15-account East Valley map of data centers, power contractors, cooling firms, and advanced manufacturers; mark each as proposed, permitted, under construction, or operating from a primary record before calling it a lead.",
-        "On each BDM call, ask which job is blocked today: electrical construction, controls, generator work, cooling, water, commissioning, or ongoing maintenance. Turn repeated answers into a specific candidate brief."
-      ]
-    },
-    {
-      "id": "a1ab18b7db",
-      "source": "Hacker News",
-      "title": "Homebench \u2013 Benchmark local LLMs for speed, memory, and quality",
-      "url": "https://github.com/david-g-3654/homebench",
-      "published": "2026-08-04T09:48:43Z",
-      "hn_comments": "https://news.ycombinator.com/item?id=49166308",
-      "category": "Local AI",
-      "summary": "Homebench is an MIT-licensed local benchmark CLI that finds models in Ollama, LM Studio, llama.cpp, vLLM, or another local OpenAI-compatible server, then measures quality, tokens per second, time to first token, and memory on the machine in front of it. Its default quick run tests the three smallest discovered models without cloud access or API keys.",
-      "money_angle": "Your M5 Max is a test lab, not a trophy. Run your real, de-identified seller-packet and BDM tasks through the models already on disk; keep the cheapest model only where its measured pass rate and edit time clear the bar.",
-      "details": "The repository supports custom YAML task packs, JSON and Markdown exports, saved run history, and diffs, so a model, quantization, or runner change can leave a before-and-after record. Its built-in quality suite has 31 deterministically graded tasks covering math, reasoning, factual recall, instruction following, extraction, and code understanding; an optional model judge adds open-ended tasks. The default quick pass is only a screen: the README says hardware figures vary by laptop and moment. The missing test is your own work, with known answers and a human grader.",
-      "money_ideas": [
-        "Build a 20-task pack from sanitized work: property-packet fields, account research, follow-up drafts, and objections; put a known answer or source link beside every task.",
-        "Run each contender five times and sell only the lane where you can show pass rate, median seconds, human edit minutes, and zero unattended sends or CRM writes."
-      ]
-    },
-    {
-      "id": "71649e0749",
-      "source": "The Verge",
-      "title": "Can Reddit fend off a new wave of AI SEO spam?",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/973098/reddit-ai-search-seo-marketing-brands-spam",
-      "published": "2026-08-04T02:04:10+00:00",
-      "category": "Search Visibility",
-      "summary": "The Verge reports that Semrush found Reddit was the most-cited domain in May across ChatGPT, Perplexity, Gemini, and Google's AI Mode. That prize is drawing brands and agencies into Reddit with promotional posts that moderators are flagging or filtering as spam.",
-      "money_angle": "Do not seed fake Cash Home Rescue praise or pay for a bot to do it; one caught account can poison a local brand. The paid work is a source-backed answer library and real participation where Aaron or the client can stand behind every sentence, not an AI-search manipulation stunt.",
-      "details": "The story follows repeated Honeydew Labs product praise from one Reddit profile across skincare threads; after users called it out, a moderator said the subreddit would automatically filter the brand's posts for review. Semrush's citation measure is not proof that a Reddit mention produces a lead, and the report does not establish who ran the account. But it shows why AI-search chasing is piling junk into communities and why the response is a moderation wall, not durable discovery. Real experience, primary sources, disclosure, and a named human give content a chance to survive the filter.",
-      "money_ideas": [
-        "Make a 20-question East Valley seller FAQ from recorded calls and primary local sources; publish the source date and page owner under every answer.",
-        "For each community where a business already has a genuine presence, keep a simple ledger of the question, answer, disclosure, source, and outcome. Stop if the post is promotional rather than helpful."
-      ]
-    },
-    {
-      "id": "3a82c94b10",
-      "source": "TechCrunch",
-      "title": "AWS is helping vibe-coding startup Superblocks, and the implications are big",
-      "url": "https://techcrunch.com/2026/08/03/aws-is-helping-vibe-coding-startup-superblocks-and-the-implications-are-big/",
-      "published": "2026-08-03T20:00:00+00:00",
-      "category": "Agent Delivery",
-      "summary": "Superblocks announced a multiyear joint marketing agreement with AWS that lets customers run its business-user app builder inside their private AWS cloud. The setup creates Aurora databases in the customer's account, integrates with Amazon Bedrock, and puts the resulting apps under the customer's existing auditing, encryption, and network controls.",
-      "money_angle": "The sellable thing is moving from a clever prompt to a client-owned workflow with a named data store, access boundary, model choice, audit trail, and human approval. Do not pretend a small local automation needs a private AWS cloud; copy the ownership and review boundary at the scale the client can actually run.",
-      "details": "TechCrunch says AWS will also help sell Superblocks through its Marketplace partner channel. Superblocks CEO Brad Menezes says buyers have recently shifted from demanding one named model to accepting multiple models behind the same application harness; that is a vendor's sales observation, not a market census. The company had 50 employees and had raised $60 million by its May 2025 Series A, according to the report. The important shift is architectural: the app, data, controls, and model are becoming separable purchase decisions.",
-      "money_ideas": [
-        "For one small workflow, write a one-page ownership card: inputs, data location, model, allowed actions, audit log, approver, retention rule, and shutoff method.",
-        "Offer a fixed client build only after that card is signed: a reviewed intake or reporting tool that runs in the client's chosen account, with no unattended messages, payments, or CRM edits."
-      ]
-    },
-    {
-      "id": "52116e7a3a",
-      "source": "TechCrunch",
-      "title": "Design Arena creators raise $7.9 million to bring taste to AI models",
-      "url": "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models/",
-      "published": "2026-08-03T19:28:57+00:00",
-      "category": "AI Evals",
-      "summary": "Intelligence, the company behind Design Arena, announced a $7.9 million seed round after building a side-by-side ranking tool for AI-made websites, images, and other visual work. It says 5.3 million people use the tool and that its enterprise feedback business is at $60 million in annual recurring revenue.",
-      "money_angle": "The money signal is not another image generator; it is human preference measured against competing outputs. Before selling a landing page, ad, follow-up sequence, or dashboard, run a blind A-versus-B review with people who own the business result and keep the winner, the comments, and the metric.",
-      "details": "Design Arena shows users competing model outputs and asks them to rank a handful of results from best to worst; users log in to retrieve their outputs, letting the company track preferences over time and geography. Its buyers use those human rankings as feedback for media-generating models, while automated benchmarks can be gamed or miss taste. The $60 million ARR figure is the company's claim to TechCrunch, not an audited filing. This is evidence that evaluators and clear rubrics have commercial value, not evidence that generic crowdwork is an easy side hustle.",
-      "money_ideas": [
-        "For the next Cash Home Rescue page or ad, put two AI-assisted versions in front of five people who actually handle seller conversations. Score trust, clarity, and the action they would take before publishing either one.",
-        "Package a small-business content test as a fixed deliverable: three drafts, a blind five-person review, the scored comments, one chosen version, and a dated outcome check."
       ]
     }
   ]
