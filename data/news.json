@@ -1,6 +1,102 @@
 {
-  "updated": "2026-08-14T12:00:00+00:00",
+  "updated": "2026-08-15T12:00:00+00:00",
   "items": [
+    {
+      "id": "a1b2c3d4e5",
+      "source": "Reuters",
+      "title": "Anthropic IPO valuation hinges on $190-200B 2028 revenue forecast",
+      "url": "https://www.reuters.com/business/anthropic-ipo-valuation-hinges-190-200-billion-2028-revenue-forecast-sources-say-2026-08-15/",
+      "published": "2026-08-14T20:08:00Z",
+      "category": "AI Business",
+      "summary": "Anthropic projects 2028 revenue of $190-200B, dwarfing its $47B current run rate. Bankers are valuing it using 2028 revenue multiples; peers under consideration include Palantir (53x revenue), Cloudflare, and SpaceX (both 41.6x). Q2 revenue was $10.9B with first quarterly operating profit of $559M.",
+      "money_angle": "A $2T-cap AI industry means massive downstream hiring. The Anthropic IPO pipeline — data center construction, GPU procurement, enterprise implementation teams — creates real staffing demand. Watch for open roles at Anthropic's partners and customers; those are your BDM leads.",
+      "details": "Anthropic's 2028 revenue projection is more than four times its May-announced $47B run rate. Bankers and investors are using EV-to-revenue multiples based on 2028 forecasts, looking further ahead than is typical for IPOs. Cloudflare, Palantir, and SpaceX are being used as comparables. Q2 2026 revenue was $10.9B (up 130% from prior quarter), on track for its first quarterly operating profit of $559M. Anthropic's revenue has grown 10x+ annually for three years through early 2026. The company has an analyst day upcoming.",
+      "money_ideas": [
+        "Track Anthropic's IPO timeline and open roles — data center construction, GPU procurement, enterprise sales, and implementation teams hire ahead of the listing.",
+        "Build a prospect sheet of companies that are partners or customers of Anthropic and OpenAI. These firms are spending heavily on AI and need the exact roles your staffing firm fills."
+      ],
+      "hn_comments": null
+    },
+    {
+      "id": "f6g7h8i9j0",
+      "source": "Qwen",
+      "title": "Qwen3.8-27B: dense multimodal model that runs on consumer hardware",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "published": "2026-08-14T00:00:00Z",
+      "category": "Local AI",
+      "summary": "Qwen released Qwen3.8-27B, a 27B-parameter dense multimodal model under Apache 2.0. It beats Muse Glimmer-30B on SWE-bench Pro (61.7 vs 51.2), leads on SWE-MM (38.6), OSWorld-Verified (84.3), and WebArena-Verified (64.8). Native vision-language, 262k context (extensible to 1M). FP8 needs ~28GB VRAM — fits a 24GB GPU with quantization.",
+      "money_angle": "This is the model to benchmark on your M5 Max. At FP8 quantization it needs ~28GB, which is tight on 128GB but workable with swap. Use it to score your saved task suite against cloud models — the invoice is for a passing diff and human-reviewed output, not for a model that fits.",
+      "details": "Qwen3.8-27B is a native vision-language model using a hybrid architecture with Gated DeltaNet and Gated Attention. It has 64 layers, 5120 hidden dimension, 248,320 token vocabulary. Thinking mode is on by default with adjustable effort levels (xhigh, medium, low). Benchmarks show it leads Muse Glimmer-30B on SWE-bench Pro (61.7 vs 51.2), SWE-MM (38.6), OSWorld-Verified (84.3), WebArena-Verified (64.8), AndroidWorld (81.9), and CoWorkBench (70.7). It trails GPT-5.6 Sol on Terminal Bench 2.1 (73.0 vs 78.2) and GPQA Diamond (89.2 vs 91.3) but leads on most agentic and multimodal tasks. Weights are on Hugging Face under Apache 2.0. Community has 306 quantized variants available.",
+      "money_ideas": [
+        "Download the FP8 quantization and run your five known-answer tasks on the M5 Max. Score edit minutes, pass rate, and total cost vs cloud models.",
+        "Package a local code-repair or document-extraction service using Qwen3.8-27B. The invoice is for a passing result and a human-reviewed diff, not for the model itself."
+      ],
+      "hn_comments": null
+    },
+    {
+      "id": "k1l2m3n4o5",
+      "source": "Google",
+      "title": "Gemini app hits 1 billion monthly active users",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/",
+      "published": "2026-08-11T00:00:00Z",
+      "category": "AI Business",
+      "summary": "Google's Gemini app surpassed 1 billion monthly active users, becoming the fastest-growing product in Google's history. CEO Sundar Pichai announced the milestone publicly.",
+      "money_angle": "One billion users means Google is pushing AI assistant features into Android at scale. For your Cash Home Rescue angle, this is a signal that homeowners are already interacting with AI daily — the friction to adopt AI-assisted services is dropping. For staffing, it's a macro signal that AI infrastructure and content teams are expanding inside Google and its ecosystem.",
+      "details": "The Gemini app crossed the 1 billion monthly active user mark on August 11, 2026. It is now the 14th Google product to reach this milestone and the fastest-growing. CEO Sundar Pichai announced the milestone. The app powers free-tier access to Gemini models and has become a primary entry point for AI usage for billions of users.",
+      "money_ideas": [
+        "Use the 1B-user figure in BDM conversations: AI is no longer niche — it's mainstream infrastructure. Companies that treat it as optional are falling behind.",
+        "For Cash Home Rescue, the mainstream adoption of AI assistants means homeowners will increasingly expect AI-powered services. Position your outreach as 'AI-augmented' to match buyer expectations."
+      ],
+      "hn_comments": null
+    },
+    {
+      "id": "p6q7r8s9t0",
+      "source": "Ars Technica (FT)",
+      "title": "OpenAI and Anthropic in price war as Chinese AI rivals gain ground",
+      "url": "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/",
+      "published": "2026-08-14T14:27:14Z",
+      "category": "AI Costs",
+      "summary": "OpenAI cut GPT-5.6 Luna 80% to $0.20/$1.20/M; Anthropic launched Claude Opus 5 at half the price of Fable 5; Anthropic called off a planned Sonnet 5 price hike. Silicon Data's token price index shows US lab prices down ~25% since mid-July. Companies like DoorDash and Airbnb are using Chinese models to cut bills.",
+      "money_angle": "The price war is real and it's happening now. For your own agent workflows, this means cheaper cloud inference for testing and scaling. For staffing clients, it means AI budgets are being scrutinized — price-sensitive buyers are the ones making decisions.",
+      "details": "OpenAI cut GPT-5.6 Luna from $1/$6 to $0.20/$1.20 per million tokens. Anthropic launched Claude Opus 5 at $5/$25 per million tokens — half the price of Fable 5 — and cancelled a planned Sonnet 5 price increase that was set for September 1. The cuts mark a shift for US labs that previously competed primarily on performance. Chinese models from Moonshot (Kimi K3) and DeepSeek (V4 Flash) are gaining ground. Anthropic's Opus 5 at medium effort delivers similar performance and cost per task to Moonshot's Kimi K3 at max effort. OpenAI's GPT-5.6 Luna at max performed similarly to DeepSeek V4 Flash but cost nearly twice as much per task. Anthropic and OpenAI are shifting some enterprise customers from flat subscriptions to usage-based billing, which has increased some bills and prompted companies to impose caps or test cheaper alternatives.",
+      "money_ideas": [
+        "Swap your agent workflows to the cheaper models now — GPT-5.6 Luna at $0.20/M and Claude Opus 5 at $5/M are both meaningful cuts. Log the savings on your saved task suite.",
+        "For staffing clients, AI budget scrutiny is real. Position your AI-readiness consulting as a cost-control service: map their current model usage, identify waste, and recommend a cheaper model mix."
+      ],
+      "hn_comments": null
+    },
+    {
+      "id": "u1v2w3x4y5",
+      "source": "Hacker News",
+      "title": "Google is making private AI practical with homomorphic encryption",
+      "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+      "published": "2026-08-14T15:43:10Z",
+      "category": "AI Security",
+      "summary": "417 points, 253 comments on HN. Google published a blog post on making homomorphic encryption practical for AI inference, enabling computation on encrypted data without decryption. A major step toward privacy-preserving AI that could unlock sensitive use cases in healthcare, finance, and legal.",
+      "money_angle": "Homomorphic encryption for AI inference is a gate opener for sensitive data use cases. For Cash Home Rescue, this means confidential property data could eventually be processed by AI without exposing it. For staffing, companies that adopt privacy-preserving AI need security engineers, compliance specialists, and infrastructure teams — roles your firm can fill.",
+      "details": "Google's blog post details a practical approach to homomorphic encryption for AI inference, allowing models to run on encrypted data without ever decrypting it. This has been a long-standing challenge in cryptography — homomorphic encryption has historically been too slow for practical AI workloads. Google's approach aims to make it viable for real inference tasks. The post has generated significant discussion on Hacker News (417 points, 253 comments), indicating strong interest in privacy-preserving AI. This technology could unlock sensitive use cases in healthcare (patient data), finance (trading data), and legal (client documents) where data privacy is a hard requirement.",
+      "money_ideas": [
+        "For Cash Home Rescue, homomorphic encryption means property data could eventually be processed by AI without exposure. Watch this technology — it could be a differentiator for confidential property valuations.",
+        "Build a prospect list of healthcare, finance, and legal firms that handle sensitive data. When they announce AI adoption, they'll need security engineers and compliance specialists — roles you can fill."
+      ],
+      "hn_comments": "https://news.ycombinator.com/item?id=49300314"
+    },
+    {
+      "id": "z6a7b8c9d0",
+      "source": "Hacker News",
+      "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+      "url": "https://chenxiachan.github.io/thoughtdag/",
+      "published": "2026-08-15T04:42:07Z",
+      "category": "AI Tools",
+      "summary": "48 points, 14 comments on HN. ThoughtDAG is an editable context graph tool for LLM conversations, allowing users to visualize and manipulate the flow of context through a conversation as a graph rather than a linear thread.",
+      "money_angle": "Graph-based conversation tools could be useful for complex document analysis or research workflows — think invoice extraction, legal document review, or market research where context branches matter. For your side-hustle lens, this is a tool pattern worth watching for building niche AI services.",
+      "details": "ThoughtDAG presents LLM conversations as an editable graph rather than a linear message thread. This allows users to visualize how context flows through a conversation, branch and merge different reasoning paths, and maintain a more structured view of complex multi-step tasks. The tool is particularly relevant for workflows where context management is critical — research tasks, document analysis, and complex problem-solving that benefit from non-linear reasoning paths.",
+      "money_ideas": [
+        "For document extraction or research services, a graph-based context tool could let you manage complex multi-document analysis more efficiently than linear chat interfaces.",
+        "Watch this pattern — graph-based context management could become a standard tool for AI service providers who need to show clients how their data flows through the analysis."
+      ],
+      "hn_comments": "https://news.ycombinator.com/item?id=49307700"
+    },
     {
       "id": "e6c53596b4",
       "source": "Z.ai",
